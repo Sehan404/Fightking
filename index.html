@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>우리반 격투왕</title>
+<title>PFC</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Black+Han+Sans&family=Noto+Sans+KR:wght@500;700;900&display=swap" rel="stylesheet">
@@ -153,6 +153,126 @@ input[type=range]{accent-color:var(--red);width:100%}
 .hero .nm{font-family:var(--display);font-style:italic;font-size:28px;line-height:1.05;word-break:break-all}
 canvas#crop{border-radius:50%;border:3px solid var(--ink);touch-action:none;align-self:center;background:#000}
 kbd{font-family:var(--display);background:var(--ink);color:#000;padding:0 6px;font-size:13px}
+
+/* --- 정리된 화면: 장식을 걷어내고 강조는 빨강 한 가지만 --- */
+#app::before{background:linear-gradient(180deg,#1a0d10,transparent 240px)}
+.ov::before{display:none}
+#view,.ov .pad{gap:18px;padding:20px 18px 28px}
+h1{font-size:30px;transform:none;text-shadow:none;font-style:normal;letter-spacing:0}
+h2{background:none;color:var(--dim);clip-path:none;padding:0 0 0 10px;border-left:3px solid var(--red);font-style:normal;font-size:14px;letter-spacing:1px}
+.card,.tile,.rank,.note{box-shadow:none;border-radius:8px}
+.card{border-color:var(--line);gap:14px;padding:16px}
+.modal .card{box-shadow:none;border:1px solid #45454f}
+.btn{box-shadow:none;border-radius:8px;border-color:transparent;background:#24242a}
+.btn:active{transform:scale(.97);box-shadow:none}
+.btn.gold{background:var(--ink);color:#000}
+.btn.red{background:var(--red);border-color:transparent}
+.btn.mint{background:#24242a;border:0;color:var(--ink)}
+.btn.ghost{border:1px solid var(--line);color:var(--sky)}
+.btn.big{clip-path:none;font-style:normal;font-size:22px;letter-spacing:1px;padding:15px}
+.tile.on{background:var(--card);border-color:var(--red)}
+.tile .emo{font-style:normal;font-size:28px}
+.pill{border-radius:6px;border-color:transparent;background:#1f1f24}
+.hero{background:var(--card);box-shadow:none;border-radius:8px;align-items:center}
+.hero .nm{font-style:normal;font-size:24px}
+#tabs{border-top:1px solid var(--line)}
+#tabs button{font-weight:700}
+#tabs button.on{background:none;clip-path:none;color:#fff;box-shadow:inset 0 3px 0 var(--red)}
+.seg{border-radius:8px} .seg button{border-radius:6px} .seg button.on{clip-path:none}
+#toast div{clip-path:none;border-radius:8px}
+.rank .no{font-style:normal}
+.bar{transform:none;border-radius:4px;border-color:#3a3a42} .bar>i{border-radius:0}
+#hud .who.r .bar{transform:scaleX(-1)}
+#hud .bar{border:1px solid #6a6a74} #hud #bt{text-shadow:none;font-size:34px}
+#arena{background:radial-gradient(60% 50% at 50% 40%,#ffffff0d,transparent 70%),linear-gradient(180deg,transparent 0 78%,#1c1c21 78% 79%,#101013 79% 100%)}
+#arena::after{display:none}
+#ctl{border-top:1px solid var(--line);gap:8px;padding:10px 10px 14px}
+#ctl .btn{font-style:normal;border:0;border-radius:10px;font-size:18px;background:#24242a;color:var(--ink)}
+#ctl .btn small{display:none}
+#ctl #bj{font-size:26px;background:var(--red)} #ctl #bh{background:#3a3a42;color:#fff}
+#ctl #bs{background:#24242a;color:var(--dim)} #ctl #bs:not(:disabled){background:var(--gold);color:#000}
+#ann b{font-size:64px;clip-path:none;border-radius:6px}
+.pop{font-style:normal} .pop.tag{border-radius:4px}
+.mash{box-shadow:none;border-color:var(--line)}
+#arena.g3{display:block;padding:0;background:#08080a}
+#arena.g3 canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#lbl{position:absolute;inset:0;overflow:hidden}
+.fcard.c3{position:absolute;justify-content:flex-start;font-size:10px}
+.fcard.c3 .mini{width:64px;transform:translateY(-22px)}
+.fcard.c3.me .mini{opacity:.85}
+.fcard.c3.tg::after{top:-34px}
+.fcard.c3 .pop{top:6%}
+#ctl{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;padding:10px 12px 16px}
+#joy{position:relative;width:118px;height:118px;border-radius:50%;background:#141418;border:2px solid var(--line);touch-action:none;flex:none}
+#knob{position:absolute;left:50%;top:50%;width:52px;height:52px;margin:-26px;border-radius:50%;background:#55555f;pointer-events:none}
+#atk{display:grid;grid-template-columns:78px 78px;gap:8px;flex:none}
+#atk .btn{grid-area:auto}
+#ctl #atk .btn,#ctl #bj,#ctl #bh{height:58px;font-size:18px}
+#ctl #bj{font-size:24px}
+#ctl #bd{width:58px;height:58px;border-radius:50%;font-size:15px;flex:none}
+#ghead{position:relative;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;background:#000;border-bottom:1px solid var(--line)}
+#ghead b{font-size:18px}
+#gstage{position:relative;flex:1;min-height:0;background:#0b0b0d;cursor:pointer;touch-action:manipulation}
+#gstage canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#gfx{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+#gfx .pop{top:28%} #gfx .pop.tag{top:16%}
+#ghint{position:absolute;left:0;right:0;bottom:10px;margin:0;text-align:center;font-size:12px;color:var(--dim);pointer-events:none}
+.gflat{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.gflat svg{width:150px;height:150px} .gflat.hop svg{animation:hop .2s}
+@keyframes hop{50%{transform:scale(.88)}}
+#gpanel{position:relative;display:flex;flex-direction:column;gap:10px;padding:12px 16px 18px;background:#000;border-top:1px solid var(--line)}
+#gw button{display:flex;flex-direction:column;align-items:center;gap:1px;padding:7px 2px}
+#gw small{font-size:10px;font-weight:500;opacity:.7} #gw button.lock{opacity:.35}
+#gpanel .btn.big{padding:13px}
+#tabs{grid-template-columns:repeat(6,1fr)} #tabs button{font-size:12px;padding:14px 0 13px}
+.skb{display:inline-flex;align-items:center;gap:6px;padding:4px 9px;border-radius:6px;background:#1f1f24;border:1px solid var(--gc);font-size:12px}
+.skb b{color:var(--gc)}
+.gtag{display:inline-block;padding:1px 7px;border-radius:4px;font-size:11px;font-weight:900;color:#000;background:var(--gc,#9aa0a8);vertical-align:middle}
+.skc{display:flex;flex-direction:column;gap:7px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gc);border-radius:8px;padding:12px 14px}
+.skc p{margin:0}
+.slot{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:6px;padding:10px 12px;border-radius:8px;border:1px dashed #45454f;background:#111114;min-height:66px;text-align:left}
+.gp{display:flex;align-items:center;gap:10px}
+.pulls{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;max-height:60vh;overflow:auto;perspective:600px} .pulls.one{grid-template-columns:1fr}
+.pc{display:flex;flex-direction:column;gap:3px;padding:10px;border-radius:8px;background:#141418;border:2px solid var(--gc);animation:flip .45s both}
+.pc .gtag{align-self:flex-start} .pc.g3{box-shadow:0 0 18px var(--gc)} .pc.g2{box-shadow:0 0 10px var(--gc)}
+@keyframes flip{from{transform:rotateY(90deg) scale(.8);opacity:0}}
+.frow{display:flex;align-items:center;gap:8px}
+.dot{width:9px;height:9px;border-radius:50%;background:#45454f;flex:none} .dot.on{background:var(--mint)}
+.invite{position:absolute;left:12px;right:12px;top:12px;z-index:70;background:#111114;border:1px solid var(--red);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:8px;box-shadow:0 10px 30px #000c}
+.invite p{margin:0}
+.champ{display:flex;align-items:center;gap:12px;padding:12px;border-radius:8px;border:1px solid var(--gold);background:linear-gradient(120deg,#3a2c05,var(--card) 60%)}
+.champ .ft{font-size:7px} .champ .nm{font-size:22px;font-weight:900}
+#hud{grid-template-columns:1fr 66px 1fr}
+#rt{display:flex;flex-direction:column;align-items:center;gap:1px} #rt #rd{font-size:10px;font-weight:900;color:var(--dim)} #rt .tt{font-size:9px;font-weight:900;color:#000;background:var(--gold);padding:0 4px;border-radius:3px}
+#hud #bt{font-size:28px}
+#atk{display:grid;grid-template-columns:repeat(3,70px);gap:7px}
+#ctl #atk .btn{height:56px;font-size:17px;padding:0;width:auto;border-radius:10px}
+#ctl #atk .btn.sk{font-size:14px;background:#1d1d24;border:1px solid #3a3a46;line-height:1.15;color:var(--ink)}
+#ctl .btn.sk small{display:block;font-size:10px;opacity:.65;font-weight:500;font-family:var(--body)}
+#ctl #atk .btn.sk.rdy{border-color:var(--gold);color:var(--gold)}
+#ctl #atk #bj{background:var(--red);font-size:22px} #ctl #atk #bh{background:#3a3a42}
+#joy{width:108px;height:108px}
+#hurt{position:absolute;inset:0;pointer-events:none;z-index:6}
+#hurt.on{animation:hurt .4s}
+@keyframes hurt{0%{box-shadow:inset 0 0 70px 24px rgba(224,22,43,.75)}100%{box-shadow:inset 0 0 0 0 rgba(224,22,43,0)}}
+#subov{position:absolute;left:10px;right:10px;bottom:10px;z-index:9;display:none;flex-direction:column;gap:8px;padding:12px;background:rgba(0,0,0,.84);border:1px solid var(--line);border-radius:10px}
+#subov.on{display:flex}
+#subov .st{margin:0;font-weight:900}
+#subov .btn.big{padding:12px;font-size:20px}
+.tbar{position:relative;height:30px;border-radius:6px;background:#26262c;overflow:hidden}
+.tbar .zone{position:absolute;top:0;bottom:0;background:rgba(123,224,74,.5);border-left:2px solid var(--mint);border-right:2px solid var(--mint)}
+.tbar .ndl{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 8px #fff}
+.sbar{height:16px} .sbar>i{background:var(--mint)} .sbar.danger>i{background:var(--red)}
+.sflash{position:absolute;right:14px;top:10px;font-weight:900;opacity:0} .sflash.on{animation:sfl .5s}
+@keyframes sfl{0%{opacity:1;transform:scale(1.3)}100%{opacity:0}}
+#ann b.kd{background:#fff;color:var(--red);font-size:50px} #ann b.sm{font-size:34px;background:#26262c}
+#cer{position:absolute;inset:0;z-index:12;display:none;flex-direction:column;align-items:center;justify-content:flex-end;gap:6px;text-align:center;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,.75));padding:20px 20px 28px;cursor:pointer}
+#cer.on{display:flex;animation:pop .4s}
+#cer p{margin:0} #cer .w1{font-family:var(--display);font-size:62px;line-height:1;font-style:italic;color:var(--gold);text-shadow:3px 3px 0 #000}
+#cer .w2{font-size:26px;font-weight:900} #cer .w3{font-family:var(--display);font-size:32px;color:var(--gold);letter-spacing:2px}
+#cer .w4{font-size:14px;font-weight:700;background:#000a;padding:4px 10px;border-radius:6px}
+.pop.crit{font-size:40px;color:#fff;text-shadow:0 0 12px var(--red),2px 2px 0 #000}
+.sc{display:flex;gap:6px;flex-wrap:wrap;justify-content:center} .sc span{background:#1f1f24;padding:3px 8px;border-radius:6px;font-size:12px}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -195,11 +315,40 @@ const CAT={
 };
 const CATNAME={color:"컬러",hat:"헤드",outfit:"의상",fx:"타격"};
 const item=(k,id)=>CAT[k].find(x=>x[0]===id)||CAT[k][0];
+/* ---------- 스킬·티어·규칙 ---------- */
+const GRADE=[["일반","#9aa0a8",60],["희귀","#3b9bff",28],["영웅","#b45cff",10],["전설","#ffb21a",2]];
+const SK={
+  s1:{n:"원투 콤비네이션",s:"원투",g:0,c:"펀치",t:"p",b:20,u:3,d:"잽이 맞으면 확률로 스트레이트가 이어서 들어가요."},
+  s2:{n:"카프킥",s:"카프킥",g:0,c:"킥",t:"p",b:20,u:3,d:"강타가 확률로 종아리 킥이 되어 상대 이동이 3초간 느려져요."},
+  s3:{n:"더블렉 테이크다운",s:"태클",g:0,c:"레슬링",t:"a",b:55,u:4,cost:30,rng:2.3,d:"달려들어 넘어뜨려요. 넘어진 상대는 2.5초간 못 움직이고 더 아프게 맞고 서브미션이 잘 들어가요."},
+  s4:{n:"바디샷",s:"바디샷",g:1,c:"펀치",t:"p",b:15,u:3,d:"공격이 맞으면 확률로 몸통을 때려 피해가 늘고 상대 기세가 20 줄어요."},
+  s5:{n:"하이킥",s:"하이킥",g:1,c:"킥",t:"a",b:60,u:3,cost:35,rng:2.9,dm:2.4,kd:25,d:"머리를 노리는 발차기. 피해가 크고 넉다운을 일으킬 수 있어요."},
+  s6:{n:"암바",s:"암바",g:1,c:"주짓수",t:"s",m:"timing",b:45,u:4,cost:50,rng:1.9,d:"넘어졌거나 경직된 상대에게 써요. 움직이는 바늘을 초록 구간에서 2번 멈추면 탭아웃."},
+  s7:{n:"카운터 펀치",s:"카운터",g:2,c:"펀치",t:"p",b:30,u:4,d:"회피로 상대 공격을 흘리면 확률로 바로 큰 반격을 넣어요."},
+  s8:{n:"리어 네이키드 초크",s:"초크",g:2,c:"주짓수",t:"s",m:"mash",b:50,u:4,cost:55,rng:1.9,d:"넘어졌거나 경직된 상대에게 써요. 4.5초 안에 연타로 조르기 게이지를 채우면 탭아웃."},
+  s9:{n:"스피닝 백킥",s:"백킥",g:3,c:"킥",t:"a",b:50,u:4,cost:45,rng:3.0,dm:3.0,kd:40,d:"몸을 돌려 차는 한 방. 피해가 가장 크고 넉다운 확률이 높아요."},
+  s10:{n:"길로틴 초크",s:"길로틴",g:3,c:"주짓수",t:"s",m:"both",b:55,u:4,cost:60,rng:2.0,d:"서 있는 상대에게도 써요. 타이밍 1번 성공 뒤 연타로 조르면 탭아웃."}
+};
+const SKID=Object.keys(SK), SKMAX=10;
+const skRate=(id,lv)=>Math.min(95,SK[id].b+SK[id].u*(clamp(lv,1,SKMAX)-1));
+const skDmg=lv=>1+.06*(clamp(lv,1,SKMAX)-1);
+const skNeed=lv=>({cp:lv,c:60*lv});
+const SKTYPE={p:"패시브",a:"액티브",s:"서브미션"};
+const TIERS=[["브론즈",0,"#c58a52"],["실버",200,"#c3cad6"],["골드",500,"#ffc21a"],["플래티넘",900,"#4fd1c5"],["다이아",1400,"#7ab8ff"],["마스터",2000,"#ff4d6d"]];
+const tierOf=bp=>{let i=0;for(let k=0;k<TIERS.length;k++)if((bp||0)>=TIERS[k][1])i=k;return i};
+const tierPill=bp=>{const t=TIERS[tierOf(bp)];return `<span class="pill" style="color:${t[2]}">${t[0]} <span class="num">${bp||0}</span></span>`};
+const recStr=p=>(p.wins||0)+"-"+(p.losses||0)+"-"+(p.draws||0);
+const ROUND_S=45, BREAK_S=6;
+const METH={KO:"KO",TKO:"TKO",SUB:"서브미션",UD:"판정 · 만장일치",SD:"판정 · 스플릿",MD:"판정 · 다수결",DRAW:"무승부"};
+let LADDER=[];
+const ladderIdx=u=>u?LADDER.indexOf(u):-1;
+const ladderLabel=u=>{const i=ladderIdx(u);return i===0?"챔피언":i>0?"랭킹 #"+i:"랭킹 없음"};
 
 /* ---------- 프로필 ---------- */
 let P=null, uid=null, room=null, cloud=false, booted=false, F=null, fdb=null, netErr="";
+let srvOff=0; const now_=()=>Date.now()+srvOff;
 let others={}, faceCache={}, LOBBY={}, onlineN=0, rankAt=0, faceSaved=null;
-function blank(){return {nick:"",face:"",emo:"a",lvl:1,xp:0,pts:10,al:{atk:0,def:0,spd:0,hp:0},tr:{atk:0,def:0,spd:0,hp:0},coins:100,rating:1000,wins:0,losses:0,en:10,enAt:Date.now(),eq:{color:"c1",hat:"h0",outfit:"o0",fx:"f0"},own:["c1","c2","c3","h0","o0","f0"],made:false,last:""}}
+function blank(){return {nick:"",face:"",emo:"a",lvl:1,xp:0,pts:10,al:{atk:0,def:0,spd:0,hp:0},tr:{atk:0,def:0,spd:0,hp:0},coins:100,rating:1000,wins:0,losses:0,en:10,enAt:Date.now(),tp:{atk:0,def:0,spd:0,hp:0},wt:{atk:0,def:0,spd:0,hp:0},eq:{color:"c1",hat:"h0",outfit:"o0",fx:"f0"},own:["c1","c2","c3","h0","o0","f0"],made:false,last:"",bp:0,draws:0,sk:{s1:{lv:1,cp:0},s3:{lv:1,cp:0}},eqs:{a:["s3",""],p:["s1",""]}}}
 function okFace(f){return typeof f==="string"&&f.length<24000&&/^data:image\/jpeg;base64,[A-Za-z0-9+/=]+$/.test(f)?f:""}
 function clean(d){
   const b=blank(); if(!d||typeof d!=="object") return b;
@@ -211,6 +360,11 @@ function clean(d){
   b.en=clamp(int(d.en,10),0,10); b.enAt=int(d.enAt,Date.now());
   for(const k in CAT){const v=d.eq&&d.eq[k]; b.eq[k]=item(k,v)[0]}
   b.own=Array.isArray(d.own)?d.own.filter(x=>typeof x==="string").slice(0,60):b.own;
+  for(const k of KEYS){b.tp[k]=clamp(Math.round(fnum(d.tp&&d.tp[k],0)*10)/10,0,100000); b.wt[k]=clamp(int(d.wt&&d.wt[k],0),0,3)}
+  b.bp=clamp(int(d.bp,0),0,99999); b.draws=Math.max(0,int(d.draws,0));
+  if(d.sk&&typeof d.sk==="object"){ const sk={}; for(const id of SKID){const v=d.sk[id]; if(v&&typeof v==="object")sk[id]={lv:clamp(int(v.lv,1),1,SKMAX),cp:clamp(int(v.cp,0),0,999)}} if(Object.keys(sk).length)b.sk=sk }
+  if(d.eqs&&typeof d.eqs==="object"){ const ea=d.eqs.a||[], ep=d.eqs.p||[]; b.eqs={a:[0,1].map(i=>b.sk[ea[i]]&&SK[ea[i]].t!=="p"?ea[i]:""),p:[0,1].map(i=>b.sk[ep[i]]&&SK[ep[i]].t==="p"?ep[i]:"")};
+    if(b.eqs.a[0]&&b.eqs.a[0]===b.eqs.a[1])b.eqs.a[1]=""; if(b.eqs.p[0]&&b.eqs.p[0]===b.eqs.p[1])b.eqs.p[1]="" }
   b.made=!!d.made; b.last=String(d.last||"").slice(0,20);
   return b;
 }
@@ -225,7 +379,8 @@ function energy(){return Math.min(10,P.en+Math.floor(Math.max(0,Date.now()-P.enA
 function useEnergy(){const n=energy(),g=n-P.en; if(n<1)return false; if(n>=10)P.enAt=Date.now(); else P.enAt+=g*600000; P.en=n-1; return true}
 function addXp(n){P.xp+=n; let up=0; while(P.xp>=need(P.lvl)){P.xp-=need(P.lvl);P.lvl++;P.pts+=3;up++} if(up)toast("LEVEL UP  Lv."+P.lvl+" · 스탯 포인트 +"+up*3)}
 let saving=false,dirty=false;
-function save(){try{localStorage.setItem(LS,JSON.stringify(P))}catch(e){} if(cloud){dirty=true;pump()}}
+const lsKey=()=>uid?LS+"_"+uid:LS;
+function save(){try{localStorage.setItem(lsKey(),JSON.stringify(P))}catch(e){} if(cloud){dirty=true;pump()}}
 async function pump(){ if(saving)return; saving=true;
   while(dirty&&cloud){dirty=false;
     try{ const d=Object.assign({},P,{at:Date.now()}); delete d.face; await F.set(F.ref(fdb,"players/"+uid),d);
@@ -235,7 +390,7 @@ async function pump(){ if(saving)return; saving=true;
 function faceFor(u){ if(!u||!cloud)return ""; if(u===uid)return P.face; if(u in faceCache)return faceCache[u]; faceCache[u]="";
   F.get(F.ref(fdb,"faces/"+u)).then(s=>{faceCache[u]=okFace(s.val()); if(faceCache[u]&&tab==="rank"&&!M.on)renderRank()}).catch(()=>{}); return "" }
 function loadRanks(){ if(!cloud||Date.now()-rankAt<15000)return; rankAt=Date.now();
-  F.get(F.ref(fdb,"players")).then(s=>{const v=s.val()||{},o={}; for(const k in v)if(k!==uid)o[k]=clean(v[k]); others=o; if(tab==="rank"&&!M.on)renderRank()}).catch(()=>{}) }
+  F.get(F.ref(fdb,"players")).then(s=>{const v=s.val()||{},o={}; for(const k in v)if(k!==uid)o[k]=clean(v[k]); others=o; if(tab==="rank"&&!M.on)renderRank(); else if(tab==="fight"&&!M.on&&!document.activeElement.matches("input"))renderLobby()}).catch(()=>{}) }
 
 /* ---------- 캐릭터 그리기 (SVG, 오른쪽을 보는 격투 자세) ---------- */
 let fid=0;
@@ -287,27 +442,81 @@ const coin=n=>`<span class="pill"><i class="cn"></i><span class="num">${n}</span
 
 /* ---------- 화면 틀 ---------- */
 let tab="home";
-const TABS=[["home","프로필"],["gym","체육관"],["fight","대전"],["shop","상점"],["rank","랭킹"]];
+const TABS=[["home","프로필"],["skill","스킬"],["gym","체육관"],["fight","대전"],["shop","상점"],["rank","랭킹"]];
 function render(){
   const v=$("#view"), t=$("#tabs");
-  if(!booted){t.style.display="none"; v.innerHTML=`<h1>우리반 격투왕</h1><p class="dim">LOADING…</p>`; return}
+  if(!booted){t.style.display="none"; v.innerHTML=`<h1>PFC</h1><p class="dim">LOADING…</p>`; return}
+  if(AUTH==="out"){t.style.display="none"; return renderAuth()}
+  if(AUTH==="anon"){t.style.display="none"; return renderLink()}
   if(!P||!P.made){t.style.display="none"; return renderMake()}
   t.style.display="grid";
   t.innerHTML=TABS.map(x=>`<button class="${tab===x[0]?"on":""}" data-tab="${x[0]}">${x[1]}</button>`).join("");
-  ({home:renderHome,gym:renderGym,fight:renderLobby,shop:renderShop,rank:renderRank})[tab]();
+  ({home:renderHome,skill:renderSkills,gym:renderGym,fight:renderLobby,shop:renderShop,rank:renderRank})[tab]();
 }
 $("#tabs").addEventListener("click",e=>{const b=e.target.closest("[data-tab]"); if(b){tab=b.dataset.tab;render();$("#view").scrollTop=0}});
 const saveNote=()=>cloud?"":`<div class="note">서버에 연결되지 않아 이 기기에만 저장되고 있어요. 인터넷 연결을 확인하고 새로고침해 보세요.${netErr?" ("+esc(netErr)+")":""}</div>`;
+
+/* ---------- 계정 ---------- */
+const NICK_RE=/^[가-힣A-Za-z0-9]{2,8}$/;
+const hexOf=s=>Array.from(new TextEncoder().encode(s.trim().toLowerCase())).map(b=>b.toString(16).padStart(2,"0")).join("");
+const nickKey=n=>"k"+hexOf(n), emailOf=n=>"u"+hexOf(n)+"@fightking.app";
+const AUTHERR={"auth/email-already-in-use":"이미 있는 닉네임이에요","auth/credential-already-in-use":"이미 있는 닉네임이에요","auth/invalid-credential":"닉네임 또는 비밀번호가 틀렸어요",
+  "auth/invalid-login-credentials":"닉네임 또는 비밀번호가 틀렸어요","auth/wrong-password":"닉네임 또는 비밀번호가 틀렸어요","auth/user-not-found":"닉네임 또는 비밀번호가 틀렸어요",
+  "auth/weak-password":"비밀번호는 6자 이상이어야 해요","auth/too-many-requests":"시도가 너무 많아요. 잠시 뒤에 다시 해요","auth/network-request-failed":"인터넷 연결을 확인해요",
+  "auth/operation-not-allowed":"Firebase 콘솔에서 이메일/비밀번호 로그인을 켜야 해요","PERMISSION_DENIED":"Firebase 보안 규칙을 새 버전으로 바꿔야 해요"};
+const authMsg=e=>AUTHERR[e&&e.code]||AUTHERR[String(e&&e.message||"").includes("PERMISSION_DENIED")?"PERMISSION_DENIED":""]||("오류: "+errCode(e));
+let authMode="login", authBusy=false;
+function authForm(su,link){
+  return `<div class="card">
+     <label class="small dim" for="an">닉네임 (아이디)</label><input class="txt" id="an" maxlength="8" autocomplete="username" placeholder="한글·영문·숫자 2~8자" value="${link?esc(P.nick):""}">
+     <label class="small dim" for="ap">비밀번호</label><input class="txt" id="ap" type="password" autocomplete="${su?"new-password":"current-password"}" placeholder="6자 이상">
+     ${su?`<label class="small dim" for="ap2">비밀번호 확인</label><input class="txt" id="ap2" type="password" autocomplete="new-password">`:""}
+     <p class="small" id="aerr" style="color:#ff6b78;min-height:1.2em;margin:0"></p>
+     <button class="btn big red" id="ago">${link?"계정 만들기":su?"가입하고 시작":"로그인"}</button></div>`}
+function authRead(su){ const n=$("#an").value.trim(), pw=$("#ap").value, err=t=>{$("#aerr").textContent=t;return null};
+  if(!NICK_RE.test(n))return err("닉네임은 한글·영문·숫자 2~8자예요"); if(pw.length<6)return err("비밀번호는 6자 이상이에요");
+  if(su&&$("#ap2")&&$("#ap2").value!==pw)return err("비밀번호 확인이 달라요"); return {n,pw} }
+function renderAuth(){
+  const su=authMode==="signup";
+  $("#view").innerHTML=`<h1>PFC</h1>
+   <div class="seg"><button class="${!su?"on":""}" data-am="login">로그인</button><button class="${su?"on":""}" data-am="signup">회원가입</button></div>
+   ${authForm(su,false)}
+   <p class="dim small">닉네임이 아이디예요. 같은 닉네임과 비밀번호로 다른 기기에서도 내 캐릭터로 들어와요. 비밀번호는 찾을 방법이 없으니 꼭 기억해요.</p>`;
+  $("#view").querySelectorAll("[data-am]").forEach(b=>b.onclick=()=>{authMode=b.dataset.am;renderAuth()});
+  const go=async()=>{ if(authBusy)return; const f=authRead(su); if(!f)return; authBusy=true; $("#ago").disabled=true;
+    try{ if(su){ const k=nickKey(f.n), ex=await F.get(F.ref(fdb,"nicks/"+k)); if(ex.exists())throw {code:"auth/email-already-in-use"};
+        const cr=await FA.createUserWithEmailAndPassword(AU,emailOf(f.n),f.pw); await F.set(F.ref(fdb,"nicks/"+k),cr.user.uid); await enterAs(cr.user,f.n) }
+      else { const cr=await FA.signInWithEmailAndPassword(AU,emailOf(f.n),f.pw); await enterAs(cr.user,f.n) } }
+    catch(e){ console.warn(e); if($("#aerr"))$("#aerr").textContent=authMsg(e) }
+    authBusy=false; if($("#ago"))$("#ago").disabled=false };
+  $("#ago").onclick=go; $("#view").querySelectorAll("input").forEach(i=>i.onkeydown=e=>{if(e.key==="Enter")go()});
+}
+function renderLink(){
+  $("#view").innerHTML=`<h1>계정 만들기</h1>
+   <div class="hero">${fighter(P)}<div class="grow"><div class="nm">${esc(P.nick)}</div><p class="dim small">LV ${P.lvl} · 전투력 ${power(P)}</p></div></div>
+   <p class="small">이제 로그인해서 플레이해요. 지금 캐릭터를 그대로 계정에 저장할 닉네임과 비밀번호를 정해요.</p>
+   ${authForm(true,true)}
+   <button class="btn ghost" id="other">다른 계정으로 로그인</button>`;
+  const go=async()=>{ if(authBusy)return; const f=authRead(true); if(!f)return; authBusy=true; $("#ago").disabled=true;
+    try{ const k=nickKey(f.n), ex=await F.get(F.ref(fdb,"nicks/"+k)); if(ex.exists()&&ex.val()!==uid)throw {code:"auth/email-already-in-use"};
+      await FA.linkWithCredential(AU.currentUser,FA.EmailAuthProvider.credential(emailOf(f.n),f.pw)); await F.set(F.ref(fdb,"nicks/"+k),uid);
+      P.nick=f.n; AUTH="in"; save(); startSocial(); render(); toast("계정을 만들었어요") }
+    catch(e){ console.warn(e); if($("#aerr"))$("#aerr").textContent=authMsg(e) }
+    authBusy=false; if($("#ago"))$("#ago").disabled=false };
+  $("#ago").onclick=go;
+  $("#other").onclick=()=>confirmBox("다른 계정으로","계정을 만들지 않고 나가면 지금 캐릭터를 다시 찾을 수 없어요. 나갈까요?",()=>FA.signOut(AU).then(()=>location.reload()));
+}
+function logout(){ confirmBox("로그아웃","로그아웃할까요?",()=>FA.signOut(AU).then(()=>location.reload())) }
 
 /* ---------- 캐릭터 만들기 ---------- */
 let mk={step:1};
 function renderMake(){
   if(!P)P=blank();
-  const v=$("#view");
+  const v=$("#view"), fixed=AUTH==="in"&&P.nick;
   if(mk.step===1){
-    v.innerHTML=`<h1>우리반 격투왕</h1><h2>STEP 1 · 선수 등록</h2>
+    v.innerHTML=`<h1>PFC</h1><h2>STEP 1 · 선수 등록</h2>
     <div class="card" style="align-items:center">${fighter(P)}
-      <input class="txt" id="nick" maxlength="8" placeholder="링네임 (2~8자)" value="${esc(P.nick)}">
+      ${fixed?`<div class="nm" style="font-size:22px;font-weight:900">${esc(P.nick)}</div>`:`<input class="txt" id="nick" maxlength="8" placeholder="링네임 (2~8자)" value="${esc(P.nick)}">`}
       <div class="row wrap" style="justify-content:center">${FACES.map(e=>`<button class="tile ${!P.face&&P.emo===e?"on":""}" data-emo="${e}" style="padding:4px 6px 0;box-shadow:none">${fighter({emo:e,eq:P.eq},"")}</button>`).join("")}</div>
       <button class="btn gold" id="photo">내 사진으로 얼굴 만들기</button>
       ${P.face?`<button class="btn sm ghost" id="nophoto">사진 지우기</button>`:""}
@@ -315,7 +524,7 @@ function renderMake(){
     <div class="note">본인 얼굴 사진만 올려주세요. 다른 사람 사진을 허락 없이 올리면 안 돼요. 올린 사진은 이 게임을 여는 친구들에게 보여요.</div>
     <button class="btn big red" id="next">NEXT</button>`;
     v.querySelectorAll("[data-emo] .ft").forEach(f=>f.style.fontSize="5px");
-    $("#nick").oninput=e=>{P.nick=e.target.value.trim().slice(0,8)};
+    if($("#nick"))$("#nick").oninput=e=>{P.nick=e.target.value.trim().slice(0,8)};
     v.querySelectorAll("[data-emo]").forEach(b=>b.onclick=()=>{P.emo=b.dataset.emo;P.face="";renderMake()});
     $("#photo").onclick=()=>pickPhoto(renderMake);
     if($("#nophoto"))$("#nophoto").onclick=()=>{P.face="";renderMake()};
@@ -326,7 +535,7 @@ function renderMake(){
     <div class="row"><button class="btn ghost" id="back">이전</button><button class="btn big red grow" id="done" ${P.pts>0?"disabled":""}>${P.pts>0?P.pts+" 남음":"ENTER"}</button></div>`;
     bindStats(renderMake);
     $("#back").onclick=()=>{mk.step=1;renderMake()};
-    $("#done").onclick=()=>{P.made=true;save();tab="home";render();toast("등록 완료 · 지급 코인 100")};
+    $("#done").onclick=()=>{P.made=true;save();tab="home";render();toast("등록 완료 · 기본 스킬 2개와 코인 100 지급")};
   }
 }
 function statRows(minus){
@@ -366,28 +575,35 @@ function cropUI(img,after){
 }
 
 /* ---------- 프로필(홈) ---------- */
+function skBadge(id){ const s=SK[id], g=GRADE[s.g], v=P.sk[id]; return `<span class="skb" style="--gc:${g[1]}"><b>${esc(s.s)}</b><span class="num">Lv${v?v.lv:1}</span></span>` }
 function renderHome(){
-  const e=energy();
-  $("#view").innerHTML=`<div class="row between"><h1>우리반 격투왕</h1>${coin(P.coins)}</div>
+  const li=ladderIdx(uid);
+  $("#view").innerHTML=`<div class="row between"><h1>PFC</h1>${coin(P.coins)}</div>
   ${saveNote()}
   <div class="hero">${fighter(P)}
     <div class="grow" style="display:flex;flex-direction:column;gap:7px">
       <div class="nm">${esc(P.nick)}</div>
       <div class="row wrap"><span class="pill">LV <span class="num">${P.lvl}</span></span><span class="pill">전투력 <span class="num" style="color:var(--gold)">${power(P)}</span></span></div>
+      <div class="row wrap">${tierPill(P.bp)}<span class="pill" style="color:${li===0?"var(--gold)":"var(--ink)"}">${li===0?"챔피언":li>0?"랭킹 #"+li:"랭킹 없음"}</span></div>
       <div class="bar xp"><i style="width:${Math.round(P.xp/need(P.lvl)*100)}%"></i></div>
-      <div class="dim small">EXP ${P.xp}/${need(P.lvl)} · RP ${P.rating}</div>
-      <div class="dim small">${P.wins}승 ${P.losses}패 · 기력 ${e}/10</div>
+      <div class="dim small">EXP ${P.xp}/${need(P.lvl)} · 전적 ${recStr(P)} (승-패-무)</div>
     </div></div>
   <div class="row"><button class="btn sm ghost grow" id="photo">얼굴 바꾸기</button>${P.face?`<button class="btn sm ghost" id="nophoto">사진 지우기</button>`:""}</div>
   <button class="btn big red" id="go">FIGHT · 대전 입장</button>
+  <div class="row between"><h2>장착 스킬</h2><button class="btn sm ghost" id="toskill">스킬 관리</button></div>
+  <div class="row wrap">${P.eqs.a.concat(P.eqs.p).filter(Boolean).map(skBadge).join("")||`<span class="dim small">장착한 스킬이 없어요</span>`}</div>
+  ${friendsHtml()}
   <div class="row between"><h2>STATS</h2><span class="pill">남은 포인트 <span class="num" style="color:var(--gold)">${P.pts}</span></span></div>
   <div class="card">${statRows(false)}
     <div class="row between"><span class="dim small" style="flex:1">찍은 포인트를 전부 돌려받아요. 훈련 수치는 유지돼요.</span><button class="btn sm ghost" id="reset">초기화 · 100코인</button></div>
-  </div>`;
-  bindStats(renderHome);
+  </div>
+  ${AUTH==="in"?`<button class="btn ghost" id="logout">로그아웃</button>`:""}`;
+  bindStats(renderHome); bindFriends();
   $("#go").onclick=()=>{tab="fight";render()};
+  $("#toskill").onclick=()=>{tab="skill";render()};
   $("#photo").onclick=()=>pickPhoto(renderHome);
   if($("#nophoto"))$("#nophoto").onclick=()=>{P.face="";save();renderHome()};
+  if($("#logout"))$("#logout").onclick=logout;
   $("#reset").onclick=()=>{const s=KEYS.reduce((a,k)=>a+P.al[k],0); if(!s)return toast("돌려받을 포인트가 없어요"); if(P.coins<100)return toast("코인이 모자라요 (100 필요)");
     confirmBox("스탯 초기화","100코인을 내고 찍은 포인트 "+s+"개를 돌려받을까요?",()=>{P.coins-=100;P.pts+=s;for(const k of KEYS)P.al[k]=0;save();renderHome();toast("포인트 "+s+"개를 돌려받았어요")})};
 }
@@ -395,46 +611,181 @@ function confirmBox(title,msg,yes){const m=document.createElement("div");m.class
   m.innerHTML=`<div class="card"><h2>${esc(title)}</h2><p>${esc(msg)}</p><div class="row"><button class="btn ghost grow" id="no">아니요</button><button class="btn red grow" id="yes">네</button></div></div>`;
   $("#layer").appendChild(m); m.querySelector("#no").onclick=()=>m.remove(); m.querySelector("#yes").onclick=()=>{m.remove();yes()}}
 
-/* ---------- 체육관 ---------- */
-const GYM=[["atk","샌드백","공격"],["def","미트 방어","방어"],["spd","스피드볼","스피드"],["hp","바벨","체력"]];
-function renderGym(){
-  const e=energy(), cap=trCap(P);
-  $("#view").innerHTML=`<div class="row between"><h1>체육관</h1><span class="pill">기력 <span class="num">${e}/10</span></span></div>
-  <p class="dim small">기구를 고르고 8초 동안 연타. 15회 +1, 35회 +2, 55회 +3. 기력은 10분에 1씩 회복돼요.</p>
-  <div class="grid2">${GYM.map(g=>`<button class="tile" data-g="${g[0]}">${ICON[g[0]]}<span>${g[1]}</span><span class="dim small">${g[2]} <span class="num">${P.tr[g[0]]}/${cap}</span></span><div class="bar st" style="width:80%"><i style="width:${P.tr[g[0]]/cap*100}%"></i></div></button>`).join("")}</div>
-  <div class="note">훈련 한계는 레벨이 오르면 늘어나요. 지금 한계 ${cap}.</div>`;
-  $("#view").querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>{const k=b.dataset.g;
-    if(P.tr[k]>=trCap(P))return toast("훈련 한계예요. 레벨을 올려요"); if(energy()<1)return toast("기력이 없어요"); train(k)});
+/* ---------- 친구 ---------- */
+let FRIENDS={}, REQS={}, INVS={}, ONLINE={}, seenInv={}, social=false;
+function friendsHtml(){
+  if(AUTH!=="in")return ""; loadRanks();
+  const reqs=Object.keys(REQS), fr=Object.keys(FRIENDS);
+  return `<div class="row between"><h2>친구 ${fr.length}</h2></div>
+  <div class="card">
+    <div class="row"><input class="txt grow" id="fadd" maxlength="8" placeholder="친구 닉네임"><button class="btn gold" id="faddb">친구 요청</button></div>
+    ${reqs.map(f=>`<div class="row between"><span><b>${esc(String(REQS[f]&&REQS[f].n||"?").slice(0,8))}</b> <span class="dim small">님이 친구 요청</span></span><div class="row"><button class="btn sm red" data-facc="${esc(f)}">수락</button><button class="btn sm ghost" data-fdec="${esc(f)}">거절</button></div></div>`).join("")}
+    ${fr.length?fr.map(f=>{const p=others[f], on=!!ONLINE[f];
+      return `<div class="frow"><i class="dot ${on?"on":""}"></i><div class="grow"><b>${esc(p?p.nick:"…")}</b><div class="dim small">${p?"전적 "+recStr(p)+" · "+TIERS[tierOf(p.bp)][0]+" · "+ladderLabel(f):"불러오는 중"}</div></div>
+        <button class="btn sm red" data-fch="${esc(f)}" ${on?"":"disabled"}>대전</button><button class="btn sm ghost" data-fdel="${esc(f)}">삭제</button></div>`}).join("")
+      :`<p class="dim small">닉네임으로 친구 요청을 보내요. 친구가 접속해 있으면 대전을 신청할 수 있어요.</p>`}
+  </div>`}
+function bindFriends(){
+  const v=$("#view"); if(!$("#faddb"))return;
+  $("#faddb").onclick=()=>sendReq($("#fadd").value);
+  v.querySelectorAll("[data-facc]").forEach(b=>b.onclick=()=>acceptReq(b.dataset.facc));
+  v.querySelectorAll("[data-fdec]").forEach(b=>b.onclick=()=>F.remove(F.ref(fdb,"freq/"+uid+"/"+b.dataset.fdec)).catch(e=>toast(authMsg(e))));
+  v.querySelectorAll("[data-fdel]").forEach(b=>b.onclick=()=>{const f=b.dataset.fdel; confirmBox("친구 삭제",((others[f]||{}).nick||"이 친구")+"님을 친구에서 뺄까요?",()=>F.update(F.ref(fdb),{["friends/"+uid+"/"+f]:null,["friends/"+f+"/"+uid]:null}).catch(e=>toast(authMsg(e))))});
+  v.querySelectorAll("[data-fch]").forEach(b=>b.onclick=()=>challenge(b.dataset.fch));
 }
-function train(k){
-  const g=GYM.find(x=>x[0]===k), L=$("#layer"), o=document.createElement("div"); o.className="ov"; let n=0,t0=0,tm=null,done=false;
-  o.innerHTML=`<div class="pad" style="align-items:center;justify-content:center;text-align:center"><h1>${g[1]}</h1><p class="dim" id="tmsg">누르면 시작 · 8초 연타</p>
-   <div class="num" style="font-size:84px;line-height:1" id="tn">0</div>
-   <button class="mash" id="mash">${ICON[k]}</button><div class="bar st" style="width:80%"><i id="tb" style="width:100%"></i></div>
-   <button class="btn ghost" id="tx">그만두기</button></div>`;
-  L.appendChild(o);
-  const end=()=>{ if(done)return; done=true; clearInterval(tm);
-    const gain=n>=55?3:n>=35?2:n>=15?1:0, left=trCap(P)-P.tr[k], real=Math.min(gain,left);
-    useEnergy(); P.tr[k]+=real; addXp(15); save();
-    o.querySelector("#mash").disabled=true; o.querySelector("#tmsg").textContent=n+"회 · "+KNAME[k]+" +"+real+" · EXP +15";
-    o.querySelector("#tx").textContent="돌아가기"; o.querySelector("#tx").className="btn red big" };
-  o.querySelector("#mash").addEventListener("pointerdown",e=>{e.preventDefault(); if(done)return;
-    if(!t0){t0=Date.now(); tm=setInterval(()=>{const l=8000-(Date.now()-t0); o.querySelector("#tb").style.width=Math.max(0,l/80)+"%"; if(l<=0)end()},50)}
-    n++; o.querySelector("#tn").textContent=n});
-  o.querySelector("#tx").onclick=()=>{clearInterval(tm);o.remove();render()};
+async function sendReq(n){
+  n=String(n||"").trim(); if(!NICK_RE.test(n))return toast("닉네임을 확인해요");
+  try{ const s=await F.get(F.ref(fdb,"nicks/"+nickKey(n))); if(!s.exists())return toast("그 닉네임의 선수가 없어요"); const f=s.val();
+    if(f===uid)return toast("나 자신이에요"); if(FRIENDS[f])return toast("이미 친구예요"); if(REQS[f])return acceptReq(f);
+    await F.set(F.ref(fdb,"freq/"+f+"/"+uid),{n:P.nick,at:now_()}); toast(n+"님에게 친구 요청을 보냈어요"); if($("#fadd"))$("#fadd").value="" }
+  catch(e){ toast(authMsg(e)) } }
+async function acceptReq(f){ try{ await F.update(F.ref(fdb),{["friends/"+uid+"/"+f]:true,["friends/"+f+"/"+uid]:true,["freq/"+uid+"/"+f]:null}); toast("친구가 됐어요") }catch(e){ toast(authMsg(e)) } }
+async function challenge(f){
+  if(M.on)return toast("지금은 경기 중이에요"); const code=String(1000+rnd(9000));
+  await enterRoom(code,"1v1",true,{inv:true}); if(!M.on||M.code!==code)return;
+  try{ await F.set(F.ref(fdb,"invites/"+f+"/"+uid),{n:P.nick,code,at:now_()}); toast("대전을 신청했어요. 친구가 들어오면 시작해요") }catch(e){ toast(authMsg(e)) } }
+function showInvite(from,inv){
+  const d=document.createElement("div"); d.className="invite";
+  d.innerHTML=`<p><b>${esc(String(inv.n||"친구").slice(0,8))}</b>님이 1대1 대전을 신청했어요</p><div class="row"><button class="btn sm ghost grow" data-x>거절</button><button class="btn sm red grow" data-o>수락</button></div>`;
+  $("#app").appendChild(d); const rm=()=>{d.remove();F.remove(F.ref(fdb,"invites/"+uid+"/"+from)).catch(()=>{})};
+  d.querySelector("[data-x]").onclick=rm;
+  d.querySelector("[data-o]").onclick=()=>{ d.remove(); acceptInvite(from,inv) };
+  setTimeout(()=>{ if(document.body.contains(d))d.remove() },60000) }
+function acceptInvite(from,inv){
+  F.remove(F.ref(fdb,"invites/"+uid+"/"+from)).catch(()=>{}); document.querySelectorAll(".invite").forEach(x=>x.remove());
+  if(M.on)return toast("지금은 경기 중이에요"); const c=String(inv&&inv.code||""); if(!/^\d{4}$/.test(c))return toast("신청이 만료됐어요");
+  enterRoom(c,null,false,{ready:true}) }
+function startSocial(){
+  if(social||AUTH!=="in")return; social=true;
+  const re=()=>{ if(booted&&P&&P.made&&!M.on&&!document.activeElement.matches("input")){ if(tab==="home")renderHome(); else if(tab==="fight")renderLobby() } };
+  F.onValue(F.ref(fdb,"friends/"+uid),s=>{FRIENDS=s.val()||{};rankAt=0;re()},()=>{});
+  F.onValue(F.ref(fdb,"freq/"+uid),s=>{const v=s.val()||{}; for(const k in v)if(!REQS[k])toast(String(v[k]&&v[k].n||"누군가").slice(0,8)+"님의 친구 요청"); REQS=v; re()},()=>{});
+  F.onValue(F.ref(fdb,"invites/"+uid),s=>{INVS=s.val()||{}; for(const f in INVS){const v=INVS[f]; if(!v||typeof v!=="object")continue; const key=f+":"+v.at; if(seenInv[key]||now_()-int(v.at,0)>120000)continue; seenInv[key]=1; showInvite(f,v)} re()},()=>{});
+}
+
+/* ---------- 체육관 ---------- */
+const GYM=[["atk","샌드백","공격",["30kg","50kg","70kg","90kg"],"치기","샌드백 무게"],["def","덤벨","방어",["5kg","10kg","15kg","20kg"],"들기","덤벨 무게"],
+  ["spd","스피드볼","스피드",["8oz","10oz","12oz","16oz"],"치기","글러브 무게"],["hp","바벨","체력",["20kg","40kg","60kg","80kg"],"들기","바벨 무게"]];
+const TIER={mult:[1,1.5,2,3],unlock:[0,5,10,20]};
+const REPMS={atk:[260,340,420,520],def:[300,380,460,560],spd:[170,210,250,300],hp:[420,520,620,760]};
+const gNeed=k=>20+P.tr[k]*5;
+let GY=null, svT=null;
+function saveSoon(){ clearTimeout(svT); svT=setTimeout(save,1500) }
+function renderGym(){
+  const cap=trCap(P);
+  $("#view").innerHTML=`<h1>체육관</h1>
+  <p class="dim small">기구를 고르고 화면을 탭해서 운동해요. 정해진 횟수를 채우면 능력치가 1 올라요. 훈련 레벨이 오를수록 필요한 횟수가 늘어요.</p>
+  <div class="grid2">${GYM.map(g=>{const k=g[0],n=gNeed(k),full=P.tr[k]>=cap;
+    return `<button class="tile" data-g="${k}">${ICON[k]}<span>${g[1]}</span><span class="dim small">${g[2]} 훈련 Lv <span class="num">${P.tr[k]}</span></span><div class="bar st" style="width:84%"><i style="width:${full?100:clamp(P.tp[k]/n*100,0,100)}%"></i></div><span class="dim small">${full?"한계 · 레벨업 필요":Math.floor(P.tp[k])+" / "+n}</span></button>`}).join("")}</div>
+  <div class="note">훈련 레벨 한계는 선수 레벨에 따라 정해져요. 지금 한계 ${cap}. 대전과 훈련으로 경험치를 얻어 선수 레벨을 올려요.</div>`;
+  $("#view").querySelectorAll("[data-g]").forEach(b=>b.onclick=()=>openGym(b.dataset.g));
+}
+function openGym(k){
+  const g=GYM.find(x=>x[0]===k), o=document.createElement("div"); o.className="ov"; o.id="gymov";
+  o.innerHTML=`<div id="ghead"><button class="btn sm ghost" id="gx">나가기</button><b>${g[1]}</b><span class="pill">${g[2]} Lv <span class="num" id="glv"></span></span></div>
+   <div id="gstage"><canvas id="gcv"></canvas><div id="gfx"></div><p id="ghint">화면을 탭해서 ${g[4]}</p></div>
+   <div id="gpanel">
+     <div class="row between"><span class="small" style="font-weight:900">다음 강화까지</span><span class="num" id="gcnt"></span></div>
+     <div class="bar st"><i id="gbar"></i></div>
+     ${k==="atk"?`<span id="gmult" hidden></span>`:`<div class="row between"><span class="dim small">${g[5]}</span><span class="dim small" id="gmult"></span></div>
+     <div class="seg" id="gw">${g[3].map((w,i)=>`<button data-w="${i}">${w}<small>${TIER.unlock[i]?"Lv "+TIER.unlock[i]:"기본"}</small></button>`).join("")}</div>
+     <p class="dim small">무거울수록 한 번에 많이 오르지만 동작이 느려요.</p>`}
+     <button class="btn big red" id="gtap">${g[4]}</button>
+   </div>`;
+  $("#layer").appendChild(o);
+  GY={k,n:0,until:0,q:false,o};
+  const cv=o.querySelector("#gcv"); let ok=false; try{ok=R3.ok()&&GYM3.start(cv,k)}catch(e){console.warn(e)}
+  if(!ok){ cv.remove(); o.querySelector("#gstage").insertAdjacentHTML("afterbegin",`<div class="gflat">${ICON[k]}</div>`) }
+  const tap=e=>{e.preventDefault();gymTap()};
+  o.querySelector("#gstage").addEventListener("pointerdown",tap); o.querySelector("#gtap").addEventListener("pointerdown",tap);
+  o.addEventListener("contextmenu",e=>e.preventDefault());
+  o.querySelectorAll("[data-w]").forEach(b=>b.onclick=()=>{ const t=+b.dataset.w; if(P.tr[k]<TIER.unlock[t])return toast(g[2]+" 훈련 Lv "+TIER.unlock[t]+"부터 쓸 수 있어요"); P.wt[k]=t; saveSoon(); gymPaint() });
+  o.querySelector("#gx").onclick=()=>{ clearTimeout(svT); save(); GYM3.stop(); GY=null; o.remove(); render() };
+  gymPaint();
+}
+function gymPop(t,cls){ if(!GY)return; const f=GY.o.querySelector("#gfx"), d=document.createElement("span"); d.className="pop "+(cls||""); d.textContent=t; d.style.left=(38+Math.random()*24)+"%"; f.appendChild(d); setTimeout(()=>d.remove(),760) }
+function gymTap(){
+  const g=GY; if(!g)return; const now=performance.now(); if(now<g.until){g.q=true;return}
+  const k=g.k, t=k==="atk"?0:clamp(int(P.wt[k],0),0,3), dur=REPMS[k][t]; g.until=now+dur; GYM3.rep={t0:now,dur,n:++g.n,hit:0};
+  const fl=g.o.querySelector(".gflat"); if(fl){fl.classList.remove("hop");void fl.offsetWidth;fl.classList.add("hop")}
+  setTimeout(()=>{ if(GY===g&&g.q){g.q=false;gymTap()} },dur+5);
+  if(P.tr[k]>=trCap(P)){ gymPop("한계","tag"); gymPaint(); return }
+  const add=TIER.mult[t]; P.tp[k]=Math.round((P.tp[k]+add)*10)/10; gymPop("+"+add);
+  let up=0; while(P.tp[k]>=gNeed(k)&&P.tr[k]<trCap(P)){P.tp[k]=Math.round((P.tp[k]-gNeed(k))*10)/10;P.tr[k]++;up++}
+  if(P.tr[k]>=trCap(P))P.tp[k]=0;
+  if(up){ addXp(10*up); clearTimeout(svT); save(); gymPop(KNAME[k]+" +"+up,"tag big") } else saveSoon();
+  gymPaint();
+}
+function gymPaint(){
+  if(!GY)return; const o=GY.o,k=GY.k,n=gNeed(k),cap=trCap(P),full=P.tr[k]>=cap,t=k==="atk"?0:clamp(int(P.wt[k],0),0,3);
+  o.querySelector("#glv").textContent=P.tr[k]+"/"+cap;
+  o.querySelector("#gcnt").textContent=full?"한계 · 레벨업 필요":(Math.floor(P.tp[k]*10)/10)+" / "+n;
+  o.querySelector("#gbar").style.width=(full?100:clamp(P.tp[k]/n*100,0,100))+"%";
+  o.querySelector("#gmult").textContent="1번에 +"+TIER.mult[t];
+  o.querySelectorAll("[data-w]").forEach(b=>{const i=+b.dataset.w; b.classList.toggle("on",i===t); b.classList.toggle("lock",P.tr[k]<TIER.unlock[i])});
+}
+addEventListener("keydown",e=>{ if(GY&&!e.repeat&&(e.key===" "||e.key==="Enter")){e.preventDefault();gymTap()} });
+
+/* ---------- 스킬 ---------- */
+function skEff(id,lv){ const s=SK[id], r=skRate(id,lv), d=Math.round((skDmg(lv)-1)*100);
+  if(s.t==="p")return `발동 ${r}%`+(d?` · 피해 +${d}%`:"");
+  if(s.t==="a")return `성공 ${r}% · 피해 +${d}%`;
+  return `잡기 ${r}% · `+(s.m==="mash"?`연타 ${Math.max(16,26-lv)}회`:s.m==="timing"?`초록 구간 ${Math.round(13+lv*1.4)}%`:`구간 ${Math.round(13+lv*1.4)}% + 연타 ${Math.round(Math.max(16,26-lv)*.7)}회`) }
+function renderSkills(){
+  const own=SKID.filter(id=>P.sk[id]).sort((a,b)=>SK[b].g-SK[a].g||SKID.indexOf(a)-SKID.indexOf(b));
+  const slot=(k,i)=>{const id=P.eqs[k][i]; return `<button class="slot" data-slot="${k}${i}">${id?skBadge(id):`<span class="dim small">비어 있음</span>`}<span class="dim small">${k==="a"?"액티브":"패시브"} ${i+1}</span></button>`};
+  $("#view").innerHTML=`<div class="row between"><h1>스킬</h1>${coin(P.coins)}</div>
+   <p class="dim small">액티브 칸의 스킬은 전투 화면 버튼이 되고 기세를 써요. 패시브 칸의 스킬은 확률로 저절로 발동해요. 장착된 칸을 누르면 빠져요.</p>
+   <div class="grid2">${slot("a",0)}${slot("a",1)}${slot("p",0)}${slot("p",1)}</div>
+   <h2>보유 스킬 ${own.length}/${SKID.length}</h2>
+   ${own.map(id=>{ const s=SK[id], v=P.sk[id], g=GRADE[s.g], nd=skNeed(v.lv), on=P.eqs.a.includes(id)||P.eqs.p.includes(id), max=v.lv>=SKMAX;
+     return `<div class="skc" style="--gc:${g[1]}"><div class="row between"><div><b>${s.n}</b> <span class="gtag">${g[0]}</span></div><span class="num" style="font-size:20px">Lv ${v.lv}</span></div>
+       <div class="dim small">${s.c} · ${SKTYPE[s.t]}${s.cost?" · 기세 "+s.cost:""}${s.rng?" · 사거리 "+s.rng:""}</div>
+       <p class="small">${s.d}</p>
+       <div class="small"><b>${skEff(id,v.lv)}</b>${max?" · 최대 레벨":`<span class="dim"> → ${skEff(id,v.lv+1)}</span>`}</div>
+       <div class="row between"><span class="dim small">${max?"강화 완료":`조각 ${v.cp}/${nd.cp} · ${nd.c}코인`}</span>
+         <div class="row"><button class="btn sm ${on?"ghost":""}" data-eq="${id}">${on?"해제":"장착"}</button><button class="btn sm red" data-up="${id}" ${max||v.cp<nd.cp||P.coins<nd.c?"disabled":""}>강화</button></div></div></div>` }).join("")}
+   <button class="btn big red" id="togacha">스킬 뽑으러 가기</button>`;
+  const v=$("#view");
+  v.querySelectorAll("[data-slot]").forEach(b=>b.onclick=()=>{const k=b.dataset.slot[0],i=+b.dataset.slot[1]; if(P.eqs[k][i]){P.eqs[k][i]="";save();renderSkills()}});
+  v.querySelectorAll("[data-eq]").forEach(b=>b.onclick=()=>{ const id=b.dataset.eq, k=SK[id].t==="p"?"p":"a", i=P.eqs[k].indexOf(id);
+    if(i>=0){P.eqs[k][i]=""} else { const e=P.eqs[k].indexOf(""); if(e<0)return toast((k==="a"?"액티브":"패시브")+" 칸이 꽉 찼어요. 위에서 장착된 칸을 눌러 빼요"); P.eqs[k][e]=id }
+    save(); renderSkills() });
+  v.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{ const id=b.dataset.up, s=P.sk[id], nd=skNeed(s.lv); if(s.lv>=SKMAX||s.cp<nd.cp||P.coins<nd.c)return;
+    s.cp-=nd.cp; P.coins-=nd.c; s.lv++; save(); renderSkills(); toast(SK[id].n+" Lv "+s.lv+" · "+skEff(id,s.lv)) });
+  $("#togacha").onclick=()=>{tab="shop";shopCat="gacha";render()};
 }
 
 /* ---------- 상점 ---------- */
-let shopCat="color";
+let shopCat="gacha";
+function rollSkill(min){ min=min||0; const tot=GRADE.slice(min).reduce((a,g)=>a+g[2],0); let r=Math.random()*tot,g=min; for(;g<3;g++){if(r<GRADE[g][2])break;r-=GRADE[g][2]} const ids=SKID.filter(k=>SK[k].g===g); return ids[rnd(ids.length)] }
+function pull(n){
+  const cost=n===10?900:100; if(P.coins<cost)return toast("코인이 모자라요 ("+cost+" 필요)");
+  P.coins-=cost; const res=[]; for(let i=0;i<n;i++)res.push(rollSkill()); if(n===10&&res.every(id=>SK[id].g===0))res[9]=rollSkill(1);
+  const out=res.map(id=>{const had=!!P.sk[id]; if(had)P.sk[id].cp=Math.min(999,P.sk[id].cp+1); else P.sk[id]={lv:1,cp:0}; return {id,nw:!had}});
+  save(); renderShop();
+  const m=document.createElement("div"); m.className="modal";
+  m.innerHTML=`<div class="card"><h2>뽑기 결과</h2><div class="pulls ${n===1?"one":""}">${out.map((r,i)=>{const s=SK[r.id],g=GRADE[s.g];
+     return `<div class="pc g${s.g}" style="--gc:${g[1]};animation-delay:${i*.09}s"><span class="gtag">${g[0]}</span><b>${s.n}</b><span class="small dim">${s.c}</span><span class="small" style="color:${r.nw?"var(--gold)":"var(--sky)"}">${r.nw?"NEW":"조각 +1"}</span></div>`}).join("")}</div>
+   <div class="row"><button class="btn ghost grow" id="pok">확인</button><button class="btn red grow" id="pgo">스킬 창으로</button></div></div>`;
+  $("#layer").appendChild(m); m.querySelector("#pok").onclick=()=>m.remove(); m.querySelector("#pgo").onclick=()=>{m.remove();tab="skill";render()};
+}
 function renderShop(){
+  const cats=[["gacha","스킬 뽑기"]].concat(Object.keys(CAT).map(k=>[k,CATNAME[k]]));
+  let body;
+  if(shopCat==="gacha") body=`<div class="card">
+     ${GRADE.map((g,i)=>`<div class="gp"><span class="gtag" style="--gc:${g[1]}">${g[0]}</span><span class="small grow">${SKID.filter(k=>SK[k].g===i).map(k=>SK[k].n).join(", ")}</span><span class="num">${g[2]}%</span></div>`).join("")}
+     <div class="row"><button class="btn grow" id="g1">1회 · 100코인</button><button class="btn red grow" id="g10">10회 · 900코인</button></div>
+     <p class="dim small">10회 뽑기는 희귀 이상 1개 보장. 가진 스킬이 또 나오면 강화 조각이 돼요. 확률은 등급 안에서 스킬마다 같아요.</p></div>`;
+  else body=`<div class="hero" style="justify-content:center">${fighter(P)}</div>
+    <div class="grid3">${CAT[shopCat].map(it=>{const own=P.own.includes(it[0])||it[3]===0, on=P.eq[shopCat]===it[0];
+      const show=shopCat==="fx"?`<span class="emo" style="color:${it[2]};text-shadow:2px 2px 0 #000">HIT</span>`:fighter({face:P.face,emo:P.emo,eq:Object.assign({},P.eq,{[shopCat]:it[0]})},"");
+      return `<button class="tile ${on?"on":""}" data-it="${it[0]}">${show}<span>${it[1]}</span><span class="small ${own?"dim":""}">${on?"착용 중":own?"보유":it[3]+" 코인"}</span></button>`}).join("")}</div>`;
   $("#view").innerHTML=`<div class="row between"><h1>상점</h1>${coin(P.coins)}</div>
-  <div class="hero" style="justify-content:center">${fighter(P)}</div>
-  <div class="seg">${Object.keys(CAT).map(k=>`<button class="${shopCat===k?"on":""}" data-cat="${k}">${CATNAME[k]}</button>`).join("")}</div>
-  <div class="grid3">${CAT[shopCat].map(it=>{const own=P.own.includes(it[0])||it[3]===0, on=P.eq[shopCat]===it[0];
-    const show=shopCat==="fx"?`<span class="emo" style="color:${it[2]};text-shadow:2px 2px 0 #000">HIT</span>`:fighter({face:P.face,emo:P.emo,eq:Object.assign({},P.eq,{[shopCat]:it[0]})},"");
-    return `<button class="tile ${on?"on":""}" data-it="${it[0]}">${show}<span>${it[1]}</span><span class="small ${own?"dim":""}">${on?"착용 중":own?"보유":it[3]+" 코인"}</span></button>`}).join("")}</div>`;
+  <div class="seg">${cats.map(c=>`<button class="${shopCat===c[0]?"on":""}" data-cat="${c[0]}">${c[1]}</button>`).join("")}</div>${body}`;
   $("#view").querySelectorAll(".grid3 .ft").forEach(f=>f.style.fontSize="7px");
   $("#view").querySelectorAll("[data-cat]").forEach(b=>b.onclick=()=>{shopCat=b.dataset.cat;renderShop()});
+  if($("#g1")){$("#g1").onclick=()=>pull(1);$("#g10").onclick=()=>pull(10)}
   $("#view").querySelectorAll("[data-it]").forEach(b=>b.onclick=()=>{const it=item(shopCat,b.dataset.it), own=P.own.includes(it[0])||it[3]===0;
     if(own){P.eq[shopCat]=it[0];save();renderShop();return}
     if(P.coins<it[3])return toast("코인이 모자라요");
@@ -442,76 +793,111 @@ function renderShop(){
 }
 
 /* ---------- 랭킹 ---------- */
-let rankBy="rating";
+let rankBy="ufc";
 function renderRank(){
   loadRanks();
-  const all=Object.assign({},others); if(uid)all[uid]=P; else all.me=P;
-  const val={rating:p=>p.rating,power:p=>power(p),coins:p=>p.coins}[rankBy];
-  const list=Object.entries(all).filter(x=>x[1].made).sort((a,b)=>val(b[1])-val(a[1])).slice(0,50);
+  const me=uid||"me", all=Object.assign({},others); all[me]=P;
+  const row=(k,p,no,val,top)=>`<div class="rank ${top?"top":""} ${k===me?"me":""}"><span class="no">${no}</span>${fighter(k===me?p:Object.assign({},p,{face:faceFor(k)}))}<div class="grow"><div style="font-weight:900">${esc(p.nick)}${k===me?" · 나":""}</div><div class="dim small">전적 ${recStr(p)} · LV ${p.lvl}</div></div>${val}</div>`;
+  let body="";
+  if(rankBy==="ufc"){ const order=LADDER.filter(u=>all[u]&&all[u].made), ch=order[0];
+    body=(ch?`<div class="champ">${fighter(ch===me?all[ch]:Object.assign({},all[ch],{face:faceFor(ch)}))}<div class="grow"><span class="gtag" style="--gc:var(--gold)">CHAMPION</span><div class="nm">${esc(all[ch].nick)}</div><div class="dim small">전적 ${recStr(all[ch])}</div></div></div>`
+      :`<div class="note">아직 챔피언이 없어요. 친구와의 1대1에서 이기면 랭킹에 올라요.</div>`)
+      +order.slice(1,16).map((k,i)=>row(k,all[k],"#"+(i+1),"",i<3)).join("")
+      +`<p class="dim small">친구와의 1대1에서 나보다 순위가 높은 선수를 이기면 그 자리를 차지해요. 맨 위가 챔피언이고 챔피언이 걸린 경기는 5라운드 타이틀전이에요. 봇전은 이 순위에 들어가지 않아요.</p>`;
+  } else { const val={tier:p=>p.bp||0,power:p=>power(p)}[rankBy];
+    body=Object.entries(all).filter(x=>x[1].made).sort((a,b)=>val(b[1])-val(a[1])).slice(0,50)
+      .map((x,i)=>row(x[0],x[1],i+1,rankBy==="tier"?tierPill(x[1].bp):`<span class="num" style="font-size:22px">${power(x[1])}</span>`,i<3)).join("");
+  }
   $("#view").innerHTML=`<h1>랭킹</h1>${saveNote()}
-  <div class="seg">${[["rating","RP"],["power","전투력"],["coins","코인"]].map(x=>`<button class="${rankBy===x[0]?"on":""}" data-r="${x[0]}">${x[1]}</button>`).join("")}</div>
-  ${list.map((x,i)=>{const p=x[1],me=x[0]===(uid||"me");return `<div class="rank ${i<3?"top":""} ${me?"me":""}"><span class="no">${i+1}</span>${fighter(me?p:Object.assign({},p,{face:faceFor(x[0])}))}<div class="grow"><div style="font-weight:900">${esc(p.nick)}${me?" · 나":""}</div><div class="dim small">LV ${p.lvl} · ${p.wins}승 ${p.losses}패</div></div><span class="num" style="font-size:24px;color:${i<3?"var(--gold)":"var(--ink)"}">${val(p)}</span></div>`}).join("")}`;
+  <div class="seg">${[["ufc","챔피언 랭킹"],["tier","봇전 티어"],["power","전투력"]].map(x=>`<button class="${rankBy===x[0]?"on":""}" data-r="${x[0]}">${x[1]}</button>`).join("")}</div>${body}`;
   $("#view").querySelectorAll("[data-r]").forEach(b=>b.onclick=()=>{rankBy=b.dataset.r;renderRank()});
 }
 
 /* ---------- 대전: 공통 상태 ---------- */
-const MODES={"1v1":["1대1",2,2],"2v2":["2대2",4,4],"ffa":["난투전",3,8]};
+const MODES={"1v1":["1대1",2,2],"2v2":["2대2",4,4]};
 const M={on:false,room:null,code:"",mode:"1v1",host:false,myId:"me",st:null,bots:[],joinedAt:0,built:"",seen:0,offs:[],team:"A",ready:false,tick:null};
-const myIn={j:0,h:0,s:0,d:0,gd:0,tg:""};
+const myIn={j:0,h:0,d:0,gd:0,tg:"",x:0,z:0,m:"",k1:0,k2:0,sid:"",sm:0,sg:0,sx:0,em:0};
 let H=null;
-function myPl(){return {u:uid||"",n:P.nick,tm:M.team,rd:M.ready?1:0,st:stArr(P),eq:[P.eq.color,P.eq.hat,P.eq.outfit,P.eq.fx],em:P.emo}}
+const mySk=()=>({a:P.eqs.a.map(id=>id&&P.sk[id]?{i:id,l:P.sk[id].lv}:{i:"",l:0}),p:P.eqs.p.map(id=>id&&P.sk[id]?{i:id,l:P.sk[id].lv}:{i:"",l:0})});
+function myPl(){return {u:uid||"",n:P.nick,tm:M.team,rd:M.ready?1:0,st:stArr(P),eq:[P.eq.color,P.eq.hat,P.eq.outfit,P.eq.fx],em:P.emo,sk:mySk()}}
+function cleanSk(sk){ sk=sk&&typeof sk==="object"?sk:{}; const fix=(arr,act)=>[0,1].map(i=>{const v=arr&&arr[i]; const id=v&&SK[v.i]&&((SK[v.i].t!=="p")===act)?v.i:""; return {i:id,l:id?clamp(int(v.l,1),1,SKMAX):0}});
+  return {a:fix(sk.a,true),p:fix(sk.p,false)} }
 function cleanPl(d){d=d&&typeof d==="object"?d:{}; const st=Array.isArray(d.st)?d.st:[]; const eq=Array.isArray(d.eq)?d.eq:[];
   return {u:String(d.u||"").slice(0,80),n:String(d.n||"선수").slice(0,8),tm:d.tm==="B"?"B":"A",rd:d.rd?1:0,st:[0,1,2,3].map(i=>clamp(int(st[i],0),0,800)),
-    eq:[item("color",eq[0])[0],item("hat",eq[1])[0],item("outfit",eq[2])[0],item("fx",eq[3])[0]],em:FACE[d.em]?d.em:"a",bot:d.bot?1:0}}
-let lobSent="",lobAt=0,lobCode="";
-function lobbyPresence(){ if(!cloud)return; const now=Date.now();
-  if(M.on&&M.room&&M.host){ const n=roster().length, ph=M.st&&M.st.ph==="play"?"play":"wait", sum=M.mode+"|"+n+"|"+ph;
+    eq:[item("color",eq[0])[0],item("hat",eq[1])[0],item("outfit",eq[2])[0],item("fx",eq[3])[0]],em:FACE[d.em]?d.em:"a",bot:d.bot?1:0,sk:cleanSk(d.sk),bt:clamp(int(d.bt,0),0,5)}}
+let lobSent="",lobAt=0,lobCode="",lobErr=0;
+const errCode=e=>String(e&&(e.code||e.message)||e).slice(0,50);
+function lobbyPresence(){ if(!cloud)return; const now=now_();
+  if(M.on&&M.room&&M.host){ const n=roster().length, ph=M.st&&M.st.ph!=="end"?"play":"wait", sum=M.mode+"|"+n+"|"+ph;
     if(sum!==lobSent||M.code!==lobCode||now-lobAt>30000){ const lr=F.ref(fdb,"lobby/"+M.code);
       if(M.code!==lobCode)F.onDisconnect(lr).remove().catch(()=>{});
-      lobSent=sum;lobCode=M.code;lobAt=now; F.set(lr,{m:M.mode,n,ph,at:now}).catch(()=>{}) } }
+      lobSent=sum;lobCode=M.code;lobAt=now; F.set(lr,{m:M.mode,n,ph,at:now}).catch(e=>{ if(!lobErr){lobErr=1;toast("방 목록 등록 실패: "+errCode(e))} }) } }
   else if(lobCode){ F.remove(F.ref(fdb,"lobby/"+lobCode)).catch(()=>{}); lobCode="";lobSent="" } }
 function hostPeer(){ if(!M.room)return null; const hs=M.room.peers().filter(p=>p.presence&&p.presence.h===1).sort((a,b)=>a.peer<b.peer?-1:1); return hs[0]||null }
 function roster(){
-  if(!M.room) return [{id:"me",isMe:true,...myPl()}].concat(M.bots);
+  if(!M.room) return [{id:"me",isMe:true,...cleanPl(myPl())}].concat(M.bots);
   const hp=hostPeer(), list=M.room.peers().filter(p=>p.kind==="viewer"&&p.presence&&p.presence.pl).map(p=>({id:p.peer,isMe:p.isMe&&p.sameTab,host:hp&&hp.peer===p.peer,...cleanPl(p.presence.pl)}));
-  const bots=M.host?M.bots:(hp&&Array.isArray(hp.presence.bots)?hp.presence.bots.slice(0,7).map((b,i)=>({id:"bot"+i,...cleanPl(b),bot:1})):[]);
+  const bots=M.host?M.bots:(hp&&Array.isArray(hp.presence.bots)?hp.presence.bots.slice(0,3).map((b,i)=>({id:"bot"+i,...cleanPl(b),bot:1})):[]);
   return list.sort((a,b)=>a.id<b.id?-1:1).concat(bots);
 }
-function mkBot(i){const lv=Math.max(0,stArr(P).reduce((a,b)=>a+b,0)-2+rnd(5)), s=[0,0,0,0]; for(let k=0;k<lv;k++)s[rnd(4)]++;
-  const names=["스파링 봇","철권 봇","카운터 봇","러시 봇","가드 봇","아웃복서","인파이터"];
-  return {id:"bot"+i,u:"",n:names[i%7].slice(0,8),tm:"B",rd:1,st:s,eq:["c7","h0","o0","f0"],em:"z",bot:1}}
+const BOTSK=[[],[["s3",1]],[["s3",2],["s5",1],["s1",1]],[["s3",3],["s5",2],["s8",1],["s1",2],["s4",1]],[["s9",2],["s8",3],["s3",4],["s4",3],["s7",2]],[["s9",4],["s10",3],["s3",5],["s7",4],["s4",4]]];
+function mkBot(i){ const ti=tierOf(P.bp), f=[.75,.9,1,1.12,1.26,1.42][ti], tot=Math.round(stArr(P).reduce((a,b)=>a+b,0)*f)+rnd(3), s=[0,0,0,0]; for(let k=0;k<tot;k++)s[rnd(4)]++;
+  const L=BOTSK[ti], pick=t=>L.filter(x=>(SK[x[0]].t==="p")===t).slice(0,2), pad=a=>[0,1].map(j=>a[j]?{i:a[j][0],l:a[j][1]}:{i:"",l:0});
+  return {id:"bot"+i,u:"",n:(TIERS[ti][0]+" 봇").slice(0,8),tm:"B",rd:1,st:s,eq:[["c7","c2","c5","c4","c6","c8"][ti],"h0","o0","f0"],em:"z",bot:1,bt:ti,sk:{a:pad(pick(false)),p:pad(pick(true))}} }
 
 /* ---------- 대전: 로비 ---------- */
 function howTo(){const m=document.createElement("div");m.className="modal";
-  m.innerHTML=`<div class="card"><h2>조작법</h2>
-   <p><b>잽</b> 빠르고 약함. 같은 상대를 3번 연속 맞히면 콤보로 더 아파요. 강타를 준비 중인 상대를 맞히면 끊어요.</p>
-   <p><b>강타</b> 0.45초 준비 뒤 큰 피해. 방어를 깨뜨려 1.5초 동안 방어를 못 하게 해요.</p>
-   <p><b>방어</b> 누르고 있는 동안 잽을 거의 막아요. 방어 중엔 공격 못 해요.</p>
-   <p><b>회피</b> 0.4초 동안 전부 피해요. 강타나 필살기를 피하면 상대가 잠깐 굳어요. 1.8초에 한 번.</p>
-   <p><b>필살기</b> 노란 게이지 100일 때. 가장 큰 피해.</p>
-   <p class="dim small">잽은 강타를 이기고 강타는 방어를 이기고 방어는 잽을 이겨요. 상대를 눌러 목표를 바꿔요.</p>
-   <p class="dim small">키보드: <kbd>J</kbd> 잽 <kbd>K</kbd> 강타 <kbd>L</kbd> 필살기 <kbd>S</kbd> 방어 <kbd>D</kbd> 회피</p>
+  m.innerHTML=`<div class="card" style="max-height:88vh;overflow:auto"><h2>UFC 규칙과 조작</h2>
+   <p class="small"><b>라운드</b> 한 라운드 ${ROUND_S}초, 기본 3라운드이고 챔피언 타이틀전은 5라운드예요. 라운드 사이 ${BREAK_S}초 쉬며 체력이 조금 돌아와요.</p>
+   <p class="small"><b>승리 방법</b> KO(체력 0), TKO(한 라운드에 넉다운 3번), 서브미션(조르기·꺾기 성공), 판정(마지막 라운드까지 가면 심판 3명이 라운드마다 10-9로 채점).</p>
+   <p class="small"><b>잽</b> 빠르고 약해요. 3연속이면 콤보. 강타나 스킬을 준비 중인 상대를 끊어요.<br><b>강타</b> 0.45초 준비 뒤 큰 피해. 방어를 깨요.<br><b>방어</b> 누르고 있는 동안 잽을 거의 막아요.<br><b>회피</b> 조이스틱 방향으로 짧게 빠지며 모든 공격을 피해요.</p>
+   <p class="small"><b>스킬</b> 액티브 스킬 2개가 버튼으로 나오고 기세(노란 게이지)를 써요. 기세는 때리고 맞고 피할 때 차요. 패시브 스킬은 저절로 발동해요.</p>
+   <p class="small"><b>테이크다운과 서브미션</b> 테이크다운으로 넘어뜨리면 상대는 2.5초간 못 움직이고 더 아프게 맞아요. 암바와 초크는 넘어졌거나 경직된 상대에게만 들어가요. 잡히면 공격하는 쪽은 미니게임을, 당하는 쪽은 "탈출" 연타를 해요.</p>
+   <p class="dim small">키보드: 방향키 이동 · <kbd>J</kbd> 잽 · <kbd>K</kbd> 강타 · <kbd>S</kbd> 방어 · <kbd>D</kbd> 회피 · <kbd>Q</kbd><kbd>E</kbd> 스킬 · <kbd>C</kbd> 시점 변경 · <kbd>Space</kbd> 미니게임</p>
    <button class="btn red" id="hok">확인</button></div>`;
   $("#layer").appendChild(m); m.querySelector("#hok").onclick=()=>m.remove()}
 function renderLobby(){
   if(M.on)return;
-  const rooms=Object.keys(LOBBY).filter(c=>/^\d{4}$/.test(c)&&LOBBY[c]&&MODES[LOBBY[c].m]&&Date.now()-int(LOBBY[c].at,0)<300000).map(c=>Object.assign({c},LOBBY[c]));
-  $("#view").innerHTML=`<div class="row between"><h1>대전</h1><button class="btn sm ghost" id="how">조작법</button></div>
-  ${room?`<p class="dim small">접속 중 <span class="num" style="color:var(--mint);font-size:18px">${onlineN}</span> 명</p>`:`<div class="note">서버에 연결되지 않았어요. 혼자서는 봇과 스파링할 수 있어요. 친구와 싸우려면 인터넷 연결을 확인하고 새로고침해 보세요.</div>`}
-  <h2>방 만들기</h2><div class="grid3">${Object.keys(MODES).map(k=>`<button class="tile" data-mk="${k}" ${room?"":"disabled"}><span class="emo">${{"1v1":"1:1","2v2":"2:2","ffa":"ALL"}[k]}</span><span>${MODES[k][0]}</span><span class="dim small">${MODES[k][1]===MODES[k][2]?MODES[k][1]+"명":MODES[k][1]+"~"+MODES[k][2]+"명"}</span></button>`).join("")}</div>
-  <h2>열린 방</h2><div class="card">${rooms.length?rooms.map(r=>`<div class="row between"><span style="font-weight:900">${MODES[r.m][0]} <span class="dim small">#${esc(r.c)} · ${int(r.n,1)}명 ${r.ph==="play"?"· 경기 중":""}</span></span><button class="btn sm red" data-join="${esc(r.c)}" ${r.ph==="play"?"disabled":""}>입장</button></div>`).join(""):`<p class="dim small">열린 방이 없어요. 방을 만들고 친구에게 방 번호를 알려줘요.</p>`}
-    <div class="row"><input class="txt grow" id="code" inputmode="numeric" maxlength="4" placeholder="방 번호 4자리"><button class="btn gold" id="joinc" ${room?"":"disabled"}>입장</button></div></div>
-  <button class="btn big mint" id="bot">봇과 스파링 · 1:1</button>`;
-  $("#how").onclick=howTo;
+  const rooms=Object.keys(LOBBY).filter(c=>/^\d{4}$/.test(c)&&LOBBY[c]&&MODES[LOBBY[c].m]&&now_()-int(LOBBY[c].at,0)<300000).map(c=>Object.assign({c},LOBBY[c]));
+  const ti=tierOf(P.bp), nx=TIERS[ti+1];
+  $("#view").innerHTML=`<div class="row between"><h1>대전</h1><button class="btn sm ghost" id="how">규칙·조작</button></div>
+  <div class="card"><div class="row between"><h2>봇전 · 티어</h2>${tierPill(P.bp)}</div>
+    <p class="dim small">봇에게 이기면 티어 점수가 올라요. 티어가 오를수록 봇이 강해지고 스킬을 써요.${nx?` 다음 티어 ${nx[0]}까지 ${nx[1]-(P.bp||0)}점.`:""}</p>
+    <button class="btn big mint" id="bot">${TIERS[ti][0]} 봇과 대결 · 3라운드</button></div>
+  ${friendDuelHtml()}
+  ${room?`<p class="dim small">서버 연결됨 · 접속 중 <span class="num" style="color:var(--mint);font-size:18px">${onlineN}</span> 명 · 챔피언 랭킹은 친구와의 1대1로 정해져요</p>`:`<div class="note">서버에 연결되지 않았어요. 혼자서는 봇과 대결할 수 있어요.</div>`}
+  <h2>방 만들기</h2><div class="grid2">${Object.keys(MODES).map(k=>`<button class="tile" data-mk="${k}" ${room?"":"disabled"}><span class="emo">${{"1v1":"1 : 1","2v2":"2 : 2"}[k]}</span><span>${MODES[k][0]}</span><span class="dim small">${k==="1v1"?"랭킹전":"팀전"}</span></button>`).join("")}</div>
+  <h2>열린 방</h2><div class="card">${rooms.length?rooms.map(r=>`<div class="row between"><span style="font-weight:900">${MODES[r.m][0]} <span class="dim small">#${esc(r.c)} · ${int(r.n,1)}명 ${r.ph==="play"?"· 경기 중":""}</span></span><button class="btn sm red" data-join="${esc(r.c)}" ${r.ph==="play"?"disabled":""}>입장</button></div>`).join(""):`<p class="dim small">열린 방이 없어요. 방을 만들거나 프로필의 친구 목록에서 대전을 신청해요.</p>`}
+    <div class="row"><input class="txt grow" id="code" inputmode="numeric" maxlength="4" placeholder="방 번호 4자리"><button class="btn gold" id="joinc" ${room?"":"disabled"}>입장</button></div></div>`;
+  $("#how").onclick=howTo; bindFriendDuel();
   $("#view").querySelectorAll("[data-mk]").forEach(b=>b.onclick=()=>enterRoom(String(1000+rnd(9000)),b.dataset.mk,true));
   $("#view").querySelectorAll("[data-join]").forEach(b=>b.onclick=()=>enterRoom(b.dataset.join,null,false));
   $("#joinc").onclick=()=>{const c=$("#code").value.trim(); if(!/^\d{4}$/.test(c))return toast("방 번호 4자리를 넣어요"); enterRoom(c,null,false)};
-  $("#bot").onclick=()=>{Object.assign(M,{on:true,room:null,code:"연습",mode:"1v1",host:true,myId:"me",bots:[mkBot(0)],st:null,team:"A",ready:true}); startMatch()};
+  $("#bot").onclick=()=>{Object.assign(M,{on:true,room:null,code:"봇전",mode:"1v1",host:true,myId:"me",bots:[mkBot(0)],st:null,team:"A",ready:true,joinedAt:Date.now()}); startMatch()};
 }
-async function enterRoom(code,mode,asHost){
-  if(!room)return; let r; try{r=await fbRoom(code,asHost)}catch(e){return toast(e&&e.message==="none"?"그 번호의 방이 없어요":"방에 들어가지 못했어요")}
-  Object.assign(M,{on:true,room:r,code,mode:mode||"1v1",host:asHost,bots:[],st:null,team:"A",ready:false,joinedAt:Date.now(),built:"",seen:0,offs:[]});
-  await r.presence(Object.assign({pl:myPl(),in:Object.assign({},myIn)},asHost?{h:1,md:M.mode,bots:[],g:null}:{})).catch(()=>{});
+function liveInvites(){ return Object.keys(INVS).filter(f=>{const v=INVS[f]; return v&&typeof v==="object"&&/^\d{4}$/.test(String(v.code||""))&&now_()-int(v.at,0)<120000}) }
+function friendDuelHtml(){
+  if(AUTH!=="in")return `<div class="card"><h2>친구와 1대1</h2><p class="dim small">로그인하면 닉네임으로 친구를 추가하고 바로 1대1을 신청할 수 있어요. 프로필에서 계정을 만들어요.</p></div>`;
+  if(!room)return ""; loadRanks();
+  const inv=liveInvites(), fr=Object.keys(FRIENDS).sort((a,b)=>(ONLINE[b]?1:0)-(ONLINE[a]?1:0)), on=fr.filter(f=>ONLINE[f]).length;
+  return `<div class="card"><div class="row between"><h2>친구와 1대1</h2><span class="dim small">접속 ${on} / ${fr.length}</span></div>
+    ${inv.map(f=>`<div class="frow inv"><i class="dot on"></i><div class="grow"><b>${esc(String(INVS[f].n||"친구").slice(0,8))}</b><div class="dim small">1대1 대전 신청이 왔어요</div></div><button class="btn sm ghost" data-ivx="${esc(f)}">거절</button><button class="btn sm red" data-ivo="${esc(f)}">수락</button></div>`).join("")}
+    ${fr.length?fr.map(f=>{const p=others[f], o=!!ONLINE[f];
+      return `<div class="frow"><i class="dot ${o?"on":""}"></i><div class="grow"><b>${esc(p?p.nick:"…")}</b><div class="dim small">${o?"접속 중":"오프라인"}${p?" · "+recStr(p)+" · "+ladderLabel(f):""}</div></div><button class="btn sm red" data-lch="${esc(f)}" ${o?"":"disabled"}>대전 신청</button></div>`}).join("")
+      :`<p class="dim small">아직 친구가 없어요. 친구 닉네임을 넣어 요청을 보내요.</p>`}
+    <div class="row"><input class="txt grow" id="lfadd" maxlength="8" placeholder="친구 닉네임"><button class="btn gold" id="lfaddb">친구 요청</button></div>
+    <p class="dim small">신청하면 방이 만들어지고 친구가 수락하는 순간 바로 경기가 시작돼요. 친구끼리 1대1은 챔피언 랭킹에 반영돼요.</p></div>`}
+function bindFriendDuel(){ const v=$("#view");
+  if($("#lfaddb"))$("#lfaddb").onclick=()=>sendReq($("#lfadd").value);
+  v.querySelectorAll("[data-lch]").forEach(b=>b.onclick=()=>challenge(b.dataset.lch));
+  v.querySelectorAll("[data-ivo]").forEach(b=>b.onclick=()=>{const f=b.dataset.ivo; acceptInvite(f,INVS[f])});
+  v.querySelectorAll("[data-ivx]").forEach(b=>b.onclick=()=>{F.remove(F.ref(fdb,"invites/"+uid+"/"+b.dataset.ivx)).catch(()=>{}); document.querySelectorAll(".invite").forEach(x=>x.remove())}); }
+async function enterRoom(code,mode,asHost,opt){
+  if(!room)return; let r; try{r=await fbRoom(code,asHost)}catch(e){return toast(e&&e.message==="none"?"그 번호의 방이 없어요":"방 연결 실패: "+errCode(e))}
+  if(M.on){ r.leave().catch(()=>{}); return }
+  Object.assign(M,{on:true,room:r,code,mode:mode||"1v1",host:asHost,bots:[],st:null,team:"A",ready:!!(opt&&opt.ready),inv:!!(opt&&opt.inv),joinedAt:Date.now(),built:"",seen:0,offs:[]});
+  try{ await r.presence(Object.assign({pl:myPl(),in:Object.assign({},myIn)},asHost?{h:1,md:M.mode,bots:[],g:null}:{})) }
+  catch(e){ toast((asHost?"방 만들기 실패: ":"입장 실패: ")+errCode(e)); r.leave(); Object.assign(M,{on:false,room:null,host:false}); return }
   M.offs.push(r.onPeers(()=>syncRoom()));
   M.tick=setInterval(syncRoom,700);
   lobbyPresence(); renderWait();
@@ -523,35 +909,39 @@ function syncRoom(){
   if(!M.host){
     if(hp){ M.mode=MODES[hp.presence.md]?hp.presence.md:M.mode; const g=hp.presence.g; M.st=g&&typeof g==="object"&&g.P?g:null }
     else if(Date.now()-M.joinedAt>3000&&peers.length){ const first=peers.slice().sort((a,b)=>a.peer<b.peer?-1:1)[0];
-      if(first.isMe&&first.sameTab){ M.host=true; if(M.st)M.st=JSON.parse(JSON.stringify(M.st)); if(M.st&&M.st.ph==="play")adoptHost(0); M.room.presence({h:1,md:M.mode,bots:M.bots,g:M.st}).catch(()=>{}); toast("방장이 나가서 내가 방장이 됐어요") } }
+      if(first.isMe&&first.sameTab){ M.host=true; if(M.st){M.st=JSON.parse(JSON.stringify(M.st)); M.st.sub=null} if(M.st&&M.st.ph!=="end")adoptHost(0); M.room.presence({h:1,md:M.mode,bots:M.bots,g:M.st}).catch(()=>{}); toast("방장이 나가서 내가 방장이 됐어요") } }
   }
   lobbyPresence();
+  if(M.host&&M.inv&&!M.st&&M.mode==="1v1"&&!M.autoT){ const rs=roster(); if(rs.length===2&&!canStart(rs)){ toast("친구가 들어왔어요. 곧 시작해요");
+    M.autoT=setTimeout(()=>{ M.autoT=null; if(M.on&&M.host&&M.inv&&!M.st&&roster().length===2&&!canStart(roster())){ M.inv=false; startMatch() } },1500) } }
   if(M.st)renderBattle(); else renderWait();
 }
-function leaveRoom(){ clearInterval(M.tick); if(H){clearInterval(H.timer);H=null} M.offs.forEach(f=>{try{f()}catch(e){}});
-  if(M.room)M.room.leave().catch(()=>{}); Object.assign(M,{on:false,room:null,host:false,st:null,bots:[],offs:[],built:""}); myIn.j=myIn.h=myIn.s=myIn.d=myIn.gd=0;myIn.tg="";
+function leaveRoom(){ clearInterval(M.tick); clearTimeout(M.autoT); M.autoT=null; M.inv=false; if(H){clearInterval(H.timer);H=null} M.offs.forEach(f=>{try{f()}catch(e){}});
+  if(M.room)M.room.leave().catch(()=>{}); Object.assign(M,{on:false,room:null,host:false,st:null,bots:[],offs:[],built:""});
+  Object.assign(myIn,{j:0,h:0,d:0,gd:0,tg:"",m:"",k1:0,k2:0,sid:"",sm:0,sg:0,sx:0,em:0}); if(G3.cerT)clearTimeout(G3.cerT);
   $("#layer").querySelectorAll(".ov").forEach(x=>x.remove()); lobbyPresence(); render() }
 
 /* ---------- 대전: 대기실 ---------- */
-function canStart(rs){const n=rs.length,md=MODES[M.mode]; if(n<md[1]||n>md[2])return "인원이 맞지 않아요 ("+(md[1]===md[2]?md[1]+"명":md[1]+"~"+md[2]+"명")+")";
+function canStart(rs){const n=rs.length,md=MODES[M.mode]; if(n<md[1]||n>md[2])return "인원이 맞지 않아요 ("+md[1]+"명)";
   if(M.mode==="2v2"&&rs.filter(r=>r.tm==="A").length!==2)return "A팀과 B팀이 2명씩이어야 해요";
   if(rs.some(r=>!r.bot&&!r.isMe&&!r.rd))return "모두 준비해야 해요"; return ""}
 const eqObj=a=>({color:a[0],hat:a[1],outfit:a[2],fx:a[3]});
 function faceOf(r){ return r.isMe?P.face:faceFor(r.u) }
+function isTitle(rs){ const h=rs.filter(r=>!r.bot); return M.mode==="1v1"&&rs.length===2&&h.length===2&&!!LADDER[0]&&h.some(r=>r.u===LADDER[0]) }
 function renderWait(){
   if(!M.on)return; let o=$("#wait"); $("#layer").querySelectorAll("#battle").forEach(x=>x.remove());
   if(!o){o=document.createElement("div");o.className="ov";o.id="wait";$("#layer").appendChild(o)}
-  const rs=roster(), why=canStart(rs);
+  const rs=roster(), why=canStart(rs), tt=isTitle(rs);
   o.innerHTML=`<div class="pad"><div class="row between"><h1>${MODES[M.mode][0]}</h1><span class="pill">ROOM <span class="num" style="color:var(--gold);font-size:18px">${esc(M.code)}</span></span></div>
-   <p class="dim small">${M.host?"친구가 모이면 시작. 빈자리는 봇으로 채울 수 있어요.":"방장이 시작하기를 기다려요."}</p>
+   ${tt?`<div class="champ small"><span class="gtag" style="--gc:var(--gold)">TITLE FIGHT</span> 챔피언이 걸린 5라운드 타이틀전이에요</div>`:M.inv&&M.host?`<p class="dim small">친구에게 대전 신청을 보냈어요. 친구가 수락하면 자동으로 시작해요. 2분 안에 수락하지 않으면 만료돼요.</p>`:`<p class="dim small">${M.host?"친구가 모이면 시작. 빈자리는 봇으로 채울 수 있어요. 봇이 들어가면 랭킹에 반영되지 않아요.":"방장이 시작하기를 기다려요."}</p>`}
    <h2>ENTRY ${rs.length}/${MODES[M.mode][2]}</h2>
    ${rs.map(r=>`<div class="rank ${r.isMe?"me":""}">${fighter({face:faceOf(r),emo:r.em,eq:eqObj(r.eq)},"")}<div class="grow"><div style="font-weight:900">${esc(r.n)}${r.isMe?" · 나":""}</div>
-     <div class="dim small">전투력 ${100+r.st[0]*5+(r.st[1]+r.st[2]+r.st[3])*4}${M.mode==="2v2"?" · "+r.tm+"팀":""}</div></div><span class="pill" style="color:${r.rd||r.host?"var(--mint)":"var(--dim)"}">${r.bot?"BOT":r.host?"HOST":r.rd?"READY":"WAIT"}</span></div>`).join("")}
+     <div class="dim small">전투력 ${100+r.st[0]*5+(r.st[1]+r.st[2]+r.st[3])*4}${M.mode==="2v2"?" · "+r.tm+"팀":""}${!r.bot&&r.u?" · "+ladderLabel(r.u):""}</div></div><span class="pill" style="color:${r.rd||r.host?"var(--mint)":"var(--dim)"}">${r.bot?"BOT":r.host?"HOST":r.rd?"READY":"WAIT"}</span></div>`).join("")}
    ${M.mode==="2v2"?`<button class="btn ghost" id="wteam">팀 바꾸기 (지금 ${M.team}팀)</button>`:""}
    ${M.host?`<div class="row"><button class="btn ghost grow" id="wbot">봇 추가</button><button class="btn ghost grow" id="wbotx" ${M.bots.length?"":"disabled"}>봇 빼기</button></div>
      <button class="btn big red" id="wstart" ${why?"disabled":""}>FIGHT</button>${why?`<p class="dim small">${why}</p>`:""}`
    :`<button class="btn big ${M.ready?"mint":"red"}" id="wready">${M.ready?"준비 취소":"READY"}</button>`}
-   <div class="row"><button class="btn ghost grow" id="whow">조작법</button><button class="btn ghost grow" id="wleave">방 나가기</button></div></div>`;
+   <div class="row"><button class="btn ghost grow" id="whow">규칙·조작</button><button class="btn ghost grow" id="wleave">방 나가기</button></div></div>`;
   const pub=()=>{ if(M.room)M.room.presence(Object.assign({pl:myPl()},M.host?{bots:M.bots,md:M.mode}:{})).catch(()=>{}); renderWait() };
   if($("#wteam"))$("#wteam").onclick=()=>{M.team=M.team==="A"?"B":"A";pub()};
   if($("#wready"))$("#wready").onclick=()=>{M.ready=!M.ready;pub()};
@@ -562,181 +952,662 @@ function renderWait(){
   $("#whow").onclick=howTo; $("#wleave").onclick=leaveRoom;
 }
 
-/* ---------- 대전: 방장 계산 ---------- */
+/* ---------- 대전: 방장 계산 (UFC 규칙) ---------- */
 function publish(){ if(M.room)M.room.presence({g:JSON.parse(JSON.stringify(M.st))}).catch(()=>{}); renderBattle() }
 function startMatch(){
-  const rs=roster(), s={id:Date.now().toString(36)+rnd(999),ph:"play",md:M.mode,left:90,P:{},ev:[],win:"",ord:[],seq:0};
-  rs.forEach((r,i)=>{const tm=M.mode==="ffa"?r.id:M.mode==="1v1"?(i===0?"A":"B"):r.tm, mx=maxHp(r.st[3]);
-    s.P[r.id]={n:r.n,u:r.u,tm,hp:mx,mx,ga:0,gd:0,ch:0,dg:0,sn:0,gb:0,al:1,tg:"",st:r.st,eq:r.eq,em:r.em,bot:r.bot?1:0}});
-  M.st=s; adoptHost(1700); publish(); lobbyPresence();
+  const rs=roster(), title=isTitle(rs)?1:0;
+  const s={id:Date.now().toString(36)+rnd(999),ph:"play",md:M.mode,rd:1,nr:title?5:3,title,rs:0,left:ROUND_S,P:{},ev:[],win:"",ord:[],seq:0,sc:[],jd:[[0,0],[0,0],[0,0]],sub:null,meth:"",bot:rs.some(r=>r.bot)?1:0};
+  const cnt={A:0,B:0};
+  rs.forEach((r,i)=>{const tm=M.mode==="1v1"?(i===0?"A":"B"):r.tm, mx=maxHp(r.st[3]), two=M.mode==="2v2", k=cnt[tm]++;
+    s.P[r.id]={sx:two?(k?1.6:-1.6):0,sz:tm==="A"?3.0:-3.0,n:r.n,u:r.u,tm,hp:mx,mx,ga:0,gd:0,ch:0,dg:0,sn:0,gb:0,dn:0,kd:0,sl:0,cs:"",al:1,tg:"",st:r.st,eq:r.eq,em:r.em,bot:r.bot?1:0,bt:r.bt||0,sk:r.sk}});
+  M.st=s; adoptHost(1800); publish(); lobbyPresence();
 }
-function adoptHost(delay){ if(H)clearInterval(H.timer); const now=Date.now();
-  H={cd:{},la:{},ch:{},dg:{},dc:{},stun:{},gb:{},cb:{},bot:{},endAt:now+M.st.left*1000+delay,timer:setInterval(hostTick,80)};
-  for(const id in M.st.P){H.cd[id]=now+delay;const i=inputOf(id)||{};H.la[id]={j:int(i.j,0),h:int(i.h,0),s:int(i.s,0),d:int(i.d,0)}} }
+const lastOf=i=>({j:int(i.j,0),h:int(i.h,0),d:int(i.d,0),k1:int(i.k1,0),k2:int(i.k2,0)});
+function adoptHost(delay){ if(H)clearInterval(H.timer); const now=Date.now(), s=M.st;
+  H={cd0:now+delay,top:{},bp:{},bpAt:{},cd:{},la:{},ch:{},sw:{},fu:{},dg:{},dc:{},stun:{},gb:{},cb:{},bot:{},dn:{},sl:{},rd:{A:0,B:0},rk:{A:0,B:0},rt:{A:0,B:0},subN:0,sb:null,lastMeth:"",
+     endAt:now+s.left*1000+delay,brkEnd:s.ph==="break"?now+s.left*1000:0,timer:setInterval(hostTick,80)};
+  for(const id in s.P){H.cd[id]=now+delay; H.la[id]=lastOf(inputOf(id)||{})} }
 function inputOf(id){ const p=M.st.P[id]; if(id===M.myId)return myIn; if(p.bot)return null;
   const pr=M.room&&M.room.peers().find(x=>x.peer===id); if(!pr)return undefined; const i=pr.presence&&pr.presence.in||{};
-  return {j:int(i.j,0),h:int(i.h,0),s:int(i.s,0),d:int(i.d,0),gd:i.gd?1:0,tg:String(i.tg||"")} }
+  return {j:int(i.j,0),h:int(i.h,0),d:int(i.d,0),k1:int(i.k1,0),k2:int(i.k2,0),gd:i.gd?1:0,tg:String(i.tg||""),x:Number(i.x),z:Number(i.z),m:String(i.m||""),sid:String(i.sid||""),sm:int(i.sm,0),sg:int(i.sg,0),sx:int(i.sx,0),em:int(i.em,0)} }
 function enemies(s,id){const me=s.P[id];return Object.keys(s.P).filter(k=>k!==id&&s.P[k].al&&s.P[k].tm!==me.tm)}
+const inR=(x,z)=>{const d=Math.hypot(x,z);return d>6.4?[x/d*6.4,z/d*6.4]:[x,z]};
+function posOf(s,id){ const p=s.P[id]; if(!p)return null; if(p.bot)return H.bp[id]||[p.sx,p.sz]; const i=inputOf(id);
+  return i&&i.m===s.id&&Number.isFinite(i.x)&&Number.isFinite(i.z)?inR(i.x,i.z):null }
+function distOf(s,a,b){const pa=posOf(s,a),pb=posOf(s,b); return pa&&pb?Math.hypot(pa[0]-pb[0],pa[1]-pb[1]):0}
+function setBotPos(s,id,x,z,now){ const p=s.P[id], bp=H.bp[id]=inR(x,z); if(now-(H.bpAt[id]||0)>150){const rx=Math.round(bp[0]*100)/100,rz=Math.round(bp[1]*100)/100; if(rx!==p.px||rz!==p.pz){p.px=rx;p.pz=rz;H.bpAt[id]=now;return true}} return false }
+function moveBot(s,id,now){ const p=s.P[id], bp=H.bp[id]||(H.bp[id]=[p.sx,p.sz]), tp=p.tg&&posOf(s,p.tg);
+  if(p.tp){ const t2=posOf(s,p.tp); if(t2){const dx=bp[0]-t2[0],dz=bp[1]-t2[1],l=Math.hypot(dx,dz)||1; return setBotPos(s,id,t2[0]+dx/l*.85,t2[1]+dz/l*.85,now)} } if(!tp||now<(H.stun[id]||0)||H.ch[id]||H.sw[id]||now<H.cd0)return false;
+  const dx=tp[0]-bp[0],dz=tp[1]-bp[1],d=Math.hypot(dx,dz)||.001, step=2.6*.08*(p.sl?.55:1); let mx=0,mz=0;
+  if(d>2.15){const m=Math.min(step,d-2.05);mx=dx/d*m;mz=dz/d*m} else if(d<1.6){mx=-dx/d*step;mz=-dz/d*step}
+  const sd=Math.sin(now/1100+id.length*2)*step*.35; mx+=-dz/d*sd; mz+=dx/d*sd;
+  return setBotPos(s,id,bp[0]+mx,bp[1]+mz,now) }
 const dmgBase=(a,d)=>(8+a.st[0]*1.5+rnd(6))*100/(100+d.st[1]*4);
 const gain=(p,n)=>{p.ga=Math.min(100,p.ga+n)};
-function pushEv(s,o){o.i=++s.seq;s.ev.push(o);if(s.ev.length>8)s.ev.shift()}
-function apply(s,f,t,dm,k,x){const d=s.P[t];dm=Math.max(1,Math.round(dm));d.hp=Math.max(0,d.hp-dm);gain(d,6);
-  pushEv(s,Object.assign({f,t,d:dm,k},x||{})); if(d.hp<=0){d.al=0;d.gd=d.ch=d.dg=d.sn=0;H.ch[t]=null;s.ord.push(t)}}
+const roll=pct=>Math.random()*100<pct;
+const skOf=(p,i)=>{const v=p.sk&&p.sk.a&&p.sk.a[i];return v&&v.i&&SK[v.i]?v:null};
+const hasP=(p,id)=>{const a=p.sk&&p.sk.p; if(!a)return 0; for(const k of[0,1]){const v=a[k]; if(v&&v.i===id)return clamp(int(v.l,1),1,SKMAX)} return 0};
+function pushEv(s,o){o.i=++s.seq;s.ev.push(o);if(s.ev.length>10)s.ev.shift()}
 const guarding=(s,t,now)=>s.P[t].gd&&now>=(H.gb[t]||0);
 const dodging=(t,now)=>now<(H.dg[t]||0);
+function KO(s,f,t,meth){ const d=s.P[t]; d.hp=0; d.al=0; d.gd=d.ch=d.dg=d.sn=d.dn=0; d.cs=""; H.ch[t]=null; H.sw[t]=null; if(!s.ord.includes(t))s.ord.push(t); H.lastMeth=meth; if(s.sub&&(s.sub.a===t||s.sub.d===t))s.sub=null }
+function knock(s,f,t,now){ const d=s.P[t]; if(!d.al)return; d.kd=(d.kd||0)+1; H.dn[t]=now+1600; d.dn=1; d.gd=0; H.ch[t]=null; H.sw[t]=null; d.ch=0; d.cs=""; H.rk[s.P[f].tm]++; pushEv(s,{f,t,d:0,k:"kd"});
+  if(d.kd>=3)KO(s,f,t,"TKO") }
+function apply(s,f,t,dm,k,x){ const a=s.P[f], d=s.P[t]; x=Object.assign({},x||{}); if(!d.al)return;
+  if(d.dn&&!a.dn)dm*=1.3;
+  const bl=hasP(a,"s4"); if(bl&&k!=="td"&&roll(skRate("s4",bl)*.7)){ dm*=1.1*skDmg(bl); d.ga=Math.max(0,d.ga-20); x.bs=1 }
+  dm=Math.max(1,Math.round(dm)); d.hp=Math.max(0,d.hp-dm); gain(d,6); H.rd[a.tm]=(H.rd[a.tm]||0)+dm;
+  pushEv(s,Object.assign({f,t,d:dm,k},x));
+  if(d.hp<=0){ KO(s,f,t,k==="j"&&dm<d.mx*.12?"TKO":"KO"); return }
+  if(dm>=d.mx*.2&&k!=="td"&&!x.kd&&roll(45))knock(s,f,t,Date.now()) }
+function counter(s,d,a,now){ const D=s.P[d], l=hasP(D,"s7"); if(!l||!D.al||!s.P[a].al||!roll(skRate("s7",l)))return; gain(D,5); apply(s,d,a,dmgBase(D,s.P[a])*1.5*skDmg(l),"h",{a:"s7"}) }
+function interrupt(s,t,now,x){ if(H.ch[t]){H.ch[t]=null;s.P[t].ch=0;H.cd[t]=now+350;x.it=1} if(H.sw[t]){H.sw[t]=null;s.P[t].cs="";H.cd[t]=now+350;x.it=1} }
 function doJab(s,id,tg,now){const a=s.P[id]; H.cd[id]=now+cool(a.st[2])*0.55;
-  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m"});gain(s.P[tg],10);return}
+  if(distOf(s,id,tg)>2.7){pushEv(s,{f:id,t:tg,d:0,k:"w",a:"j"});return}
+  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m",a:"j"});gain(s.P[tg],10);counter(s,tg,id,now);return}
   const c=H.cb[id], n=c&&c.tg===tg&&now-c.at<1400?c.n+1:1; H.cb[id]={tg,at:now,n};
   let dm=dmgBase(a,s.P[tg])*0.6*(n>=3?1.4:1); if(guarding(s,tg,now))dm*=0.25;
-  const x={}; if(n>=3)x.c=n; if(H.ch[tg]){H.ch[tg]=null;s.P[tg].ch=0;H.cd[tg]=now+350;x.it=1}
-  gain(a,7); apply(s,id,tg,dm,"j",x)}
+  const x={}; if(n>=3)x.c=n; interrupt(s,tg,now,x);
+  gain(a,7); apply(s,id,tg,dm,"j",x);
+  const ol=hasP(a,"s1"); if(ol&&s.P[tg].al&&!guarding(s,tg,now)&&roll(skRate("s1",ol)))H.fu[id]={t:tg,at:now+170,l:ol} }
 function endHeavy(s,id,now){const c=H.ch[id],a=s.P[id],tg=c.tg;H.ch[id]=null;a.ch=0;H.cd[id]=now+cool(a.st[2])*1.1;
   if(!s.P[tg]||!s.P[tg].al)return;
-  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m"});H.stun[id]=now+700;gain(s.P[tg],10);return}
+  if(distOf(s,id,tg)>2.95){pushEv(s,{f:id,t:tg,d:0,k:"w",a:"h"});return}
+  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m",a:"h"});H.stun[id]=now+700;gain(s.P[tg],10);counter(s,tg,id,now);return}
   let dm=dmgBase(a,s.P[tg])*1.8;const x={}; if(guarding(s,tg,now)){dm*=0.6;H.gb[tg]=now+1500;x.gb=1}
+  const cl=hasP(a,"s2"); if(cl&&roll(skRate("s2",cl))){dm*=1.15*skDmg(cl);H.sl[tg]=now+3000;x.a="s2"}
   gain(a,15); apply(s,id,tg,dm,"h",x)}
-function doSpecial(s,id,tg,now){const a=s.P[id];a.ga=0;H.cd[id]=now+cool(a.st[2])+300;
-  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m"});H.stun[id]=now+700;return}
-  let dm=dmgBase(a,s.P[tg])*2.8; if(guarding(s,tg,now))dm*=0.5; apply(s,id,tg,dm,"s")}
-function botThink(s,id,en,now){const p=s.P[id], b=H.bot[id]||(H.bot[id]={g:0}), w={j:0,h:0,s:0,d:0,gd:0,tg:en.includes(p.tg)?p.tg:(en[rnd(en.length)]||"")};
-  if(en.some(e=>H.ch[e]&&H.ch[e].tg===id)&&Math.random()<0.1)w.d=1;
-  if(b.g&&now>b.g)b.g=0; if(!b.g&&Math.random()<0.01)b.g=now+700; w.gd=b.g?1:0;
-  if(now>=H.cd[id]&&w.tg&&Math.random()<0.45){ if(p.ga>=100)w.s=1; else if(Math.random()<(s.P[w.tg].gd?0.6:0.22))w.h=1; else w.j=1 }
+function useSkill(s,id,slot,tg,now){ const a=s.P[id], v=skOf(a,slot); if(!v||!tg)return false; const S=SK[v.i], d=s.P[tg];
+  if(a.ga<S.cost)return false;
+  if(distOf(s,id,tg)>S.rng){ a.ga-=Math.round(S.cost*.25); H.cd[id]=now+400; pushEv(s,{f:id,t:tg,d:0,k:"w",a:v.i}); return true }
+  if(S.t==="s"){
+    if(v.i!=="s10"&&!(d.dn||d.sn)){ pushEv(s,{f:id,t:tg,d:0,k:"x",a:v.i}); H.cd[id]=now+300; return true }
+    a.ga-=S.cost; H.cd[id]=now+600;
+    if(!roll(skRate(v.i,v.l)-clamp(d.st[1]*.3,0,15)+(d.dn?10:0))){ H.stun[id]=now+800; pushEv(s,{f:id,t:tg,d:0,k:"f",a:v.i}); return true }
+    startSub(s,id,tg,v,now); return true }
+  a.ga-=S.cost; H.sw[id]={until:now+(v.i==="s3"?300:v.i==="s5"?480:560),tg,v}; a.cs=v.i; return true }
+function endSkill(s,id,now){ const w=H.sw[id], a=s.P[id], v=w.v, S=SK[v.i], tg=w.tg; H.sw[id]=null; a.cs=""; H.cd[id]=now+cool(a.st[2])*1.1;
+  const d=s.P[tg]; if(!d||!d.al)return;
+  if(distOf(s,id,tg)>S.rng+.25){pushEv(s,{f:id,t:tg,d:0,k:"w",a:v.i});return}
+  if(dodging(tg,now)){pushEv(s,{f:id,t:tg,d:0,k:"m",a:v.i}); H.stun[id]=now+700; counter(s,tg,id,now); return}
+  if(!roll(skRate(v.i,v.l))){ if(v.i==="s3")H.stun[id]=now+700; pushEv(s,{f:id,t:tg,d:0,k:"f",a:v.i}); return }
+  if(v.i==="s3"){ H.top[id]=tg; a.tp=tg; H.dn[tg]=now+2500; d.dn=1; d.gd=0; d.ch=0; d.cs=""; H.ch[tg]=null; H.sw[tg]=null; H.rt[a.tm]++; gain(a,10); apply(s,id,tg,dmgBase(a,d)*.35,"td",{a:v.i}); return }
+  let dm=dmgBase(a,d)*S.dm*skDmg(v.l); if(guarding(s,tg,now)){dm*=.55;H.gb[tg]=now+1500}
+  const kd=roll(S.kd+v.l*2); apply(s,id,tg,dm,"sk",{a:v.i,kd:kd?1:0}); if(kd&&d.al)knock(s,id,tg,now) }
+function startSub(s,a,d,v,now){ const S=SK[v.i], l=v.l; H.subN++;
+  const u={id:s.id+"-"+H.subN,a,d,sk:v.i,m:S.m,t0:now,until:now+(S.m==="both"?5500:4500),need:S.m==="both"?Math.round(Math.max(16,26-l)*.7):Math.max(16,26-l),zw0:Math.round(13+l*1.4),zw:Math.round(13+l*1.4),zc:+(0.22+Math.random()*.56).toFixed(2),st:S.m==="both"?1:0,mp:0,em:0,g:0,x:0};
+  s.sub=u; const A=s.P[a],D=s.P[d]; for(const q of[A,D]){q.gd=0;q.ch=0;q.cs=""} H.ch[a]=H.ch[d]=null; H.sw[a]=H.sw[d]=null; H.dn[d]=0; D.dn=0;
+  const bt=A.bt||0; H.sb={tries:[1.0,2.0,3.0,4.0],ok:[0,1,2,3].map(()=>roll(42+bt*7))};
+  pushEv(s,{f:a,t:d,d:0,k:"sub",a:v.i}) }
+function subTick(s,now){ const u=s.sub, A=s.P[u.a], D=s.P[u.d]; if(!A||!D||!A.al||!D.al){s.sub=null;return true}
+  const el=(now-u.t0)/1000; let sm=0,sg=0,sx=0,em=0;
+  const ia=inputOf(u.a), idf=inputOf(u.d);
+  if(ia===null){ sm=Math.floor(Math.max(0,el-(u.st?1.2:0))*(7+(A.bt||0)*1.6)); H.sb.tries.forEach((t,i)=>{if(el>t){sx++;if(H.sb.ok[i])sg++}}) }
+  else if(ia&&ia.sid===u.id){ sm=ia.sm; sg=ia.sg; sx=ia.sx }
+  if(idf===null)em=Math.floor(el*(3+(D.bt||0)*1.1)); else if(idf&&idf.sid===u.id)em=idf.em;
+  const zw=Math.max(6,Math.round(u.zw0-em*.35)); let mp=u.mp, done=0;
+  if(u.m==="timing"){ mp=Math.min(1,sg/2); if(sg>=2)done=1; else if(sx>=4)done=-1 }
+  else if(u.m==="mash"){ mp=clamp((sm-em*.45)/u.need,0,1); if(mp>=1)done=1 }
+  else { if(u.st===1){ if(sg>=1){u.st=2;u.sm0=sm} else if(sx>=3)done=-1; mp=0 } else { mp=clamp((sm-(u.sm0||0)-em*.45)/u.need,0,1); if(mp>=1)done=1 } }
+  if(!done&&now>=u.until)done=-1;
+  let ch=false; mp=Math.round(mp*100)/100;
+  if(mp!==u.mp||zw!==u.zw||em!==u.em||sg!==u.g||sx!==u.x){u.mp=mp;u.zw=zw;u.em=em;u.g=sg;u.x=sx;ch=true}
+  if(A.bot){ const dp=H.bp[u.d]||posOf(s,u.d)||[D.sx,D.sz], ap=H.bp[u.a]||[A.sx,A.sz], dx=ap[0]-dp[0], dz=ap[1]-dp[1], l=Math.hypot(dx,dz)||1; if(setBotPos(s,u.a,dp[0]+dx/l*.85,dp[1]+dz/l*.85,now))ch=true }
+  if(done===1){ s.subk=u.sk; s.sub=null; pushEv(s,{f:u.a,t:u.d,d:0,k:"tap",a:u.sk}); KO(s,u.a,u.d,"SUB"); return true }
+  if(done===-1){ s.sub=null; H.stun[u.a]=now+700; H.cd[u.d]=now+300; pushEv(s,{f:u.d,t:u.a,d:0,k:"esc",a:u.sk}); return true }
+  return ch }
+function botThink(s,id,en,now){const p=s.P[id], b=H.bot[id]||(H.bot[id]={g:0}), w={j:0,h:0,d:0,k:0,gd:0,tg:en.includes(p.tg)?p.tg:(en[rnd(en.length)]||"")};
+  const tgt=s.P[w.tg]; if(!tgt)return w;
+  if(en.some(e=>(H.ch[e]&&H.ch[e].tg===id)||(H.sw[e]&&H.sw[e].tg===id))&&Math.random()<.08+p.bt*.02)w.d=1;
+  if(b.g&&now>b.g)b.g=0; if(!b.g&&Math.random()<.01)b.g=now+700; w.gd=b.g?1:0;
+  if(now<H.cd[id])return w; const dist=distOf(s,id,w.tg);
+  for(const i of[0,1]){ const v=skOf(p,i); if(!v)continue; const S=SK[v.i]; if(p.ga<S.cost||dist>S.rng)continue;
+    if(S.t==="s"&&v.i!=="s10"&&!(tgt.dn||tgt.sn))continue; if(Math.random()<(S.t==="s"?.5:.18)){w.k=i+1;w.gd=0;return w} }
+  if(dist<=2.6&&Math.random()<.45){ if(Math.random()<(tgt.gd?.6:.22))w.h=1; else w.j=1 }
   return w}
+const fmtT=sec=>Math.floor(sec/60)+":"+String(sec%60).padStart(2,"0");
+function finish(s,winTm,meth){ s.win=winTm||""; s.meth=meth; s.mr=s.rd; s.mt=fmtT(clamp(ROUND_S-s.left,0,ROUND_S)); s.ph="end"; s.sub=null; endLadder(s) }
+function endRound(s,now){ const pa=(H.rd.A||0)+(H.rk.A||0)*25+(H.rt.A||0)*8, pb=(H.rd.B||0)+(H.rk.B||0)*25+(H.rt.B||0)*8, tot=Math.max(1,pa+pb);
+  for(let j=0;j<3;j++){ let diff=pa-pb; if(Math.abs(diff)<tot*.12&&roll(40))diff=roll(50)?-diff:0;
+    let sa=10,sb=10; if(diff>0)sb=(pa>=pb*2.2||(H.rk.A||0)-(H.rk.B||0)>=2)?8:9; else if(diff<0)sa=(pb>=pa*2.2||(H.rk.B||0)-(H.rk.A||0)>=2)?8:9;
+    s.jd[j][0]+=sa; s.jd[j][1]+=sb; if(j===0)s.sc.push([sa,sb]) }
+  H.rd={A:0,B:0};H.rk={A:0,B:0};H.rt={A:0,B:0};
+  if(s.rd>=s.nr){ let wa=0,wb=0; for(const j of s.jd){ if(j[0]>j[1])wa++; else if(j[1]>j[0])wb++ }
+    const dr=3-wa-wb; if(wa===wb){finish(s,"","DRAW");return} const w=wa>wb?"A":"B", hi=Math.max(wa,wb), lo=Math.min(wa,wb);
+    finish(s,w,hi===3?"UD":lo===1?"SD":dr?"MD":"UD"); return }
+  s.ph="break"; s.left=BREAK_S; H.brkEnd=now+BREAK_S*1000;
+  for(const k in s.P){const p=s.P[k]; if(p.al){p.hp=Math.min(p.mx,p.hp+Math.round(p.mx*.12))} Object.assign(p,{kd:0,dn:0,sn:0,gd:0,ch:0,cs:"",sl:0,dg:0,gb:0,tp:""}); H.top[k]=null; H.dn[k]=0;H.ch[k]=null;H.sw[k]=null;H.stun[k]=0;H.sl[k]=0;H.gb[k]=0;H.fu[k]=null}
+  pushEv(s,{f:"",t:"",d:0,k:"rend"}) }
+function startRound(s,now){ s.rd++; s.ph="play"; s.left=ROUND_S; s.rs=(s.rs||0)+1; H.endAt=now+ROUND_S*1000+1500; H.cd0=now+1500;
+  for(const k in s.P){H.cd[k]=now+1500; H.bp[k]=null; const p=s.P[k]; delete p.px; delete p.pz} }
+function endLadder(s){ if(!cloud||s.bot||s.md!=="1v1"||!s.win||s.meth==="DRAW")return; const ps=Object.values(s.P); if(ps.length!==2||ps.some(p=>p.bot||!p.u))return;
+  const W=ps.find(p=>p.tm===s.win).u, L=ps.find(p=>p.tm!==s.win).u; if(!W||!L||W===L)return;
+  F.runTransaction(F.ref(fdb,"ladder"),cur=>{ let o=cur&&cur.o?Object.values(cur.o).filter(x=>typeof x==="string").slice(0,100):[];
+    if(!o.includes(L))o.push(L); if(!o.includes(W))o.push(W); const wi=o.indexOf(W), li=o.indexOf(L); if(wi>li){o.splice(wi,1);o.splice(li,0,W)}
+    return {o,at:Date.now(),w:W,l:L,t:s.title||0} }).catch(e=>toast("랭킹 반영 실패: "+errCode(e))) }
 function hostTick(){
-  const s=M.st; if(!s||s.ph!=="play"||!M.host){ if(H){clearInterval(H.timer);H=null} return }
+  const s=M.st; if(!s||s.ph==="end"||!M.host){ if(H){clearInterval(H.timer);H=null} return }
   const now=Date.now(); let ch=false; const before=s.seq;
+  if(s.ph==="break"){ const left=clamp(Math.ceil((H.brkEnd-now)/1000),0,BREAK_S); if(left!==s.left){s.left=left;ch=true}
+    if(now>=H.brkEnd){startRound(s,now);ch=true} if(ch)publish(); return }
+  if(s.sub&&subTick(s,now))ch=true;
   for(const id in s.P){ const p=s.P[id]; if(!p.al)continue;
     const inp=inputOf(id), en=enemies(s,id);
-    if(inp===undefined){ if(now-M.joinedAt>4000){p.al=0;p.hp=0;s.ord.push(id);ch=true} continue }
-    const sn=now<(H.stun[id]||0)?1:0, dg=dodging(id,now)?1:0, gb=now<(H.gb[id]||0)?1:0;
-    if(p.sn!==sn||p.dg!==dg||p.gb!==gb){p.sn=sn;p.dg=dg;p.gb=gb;ch=true}
+    if(inp===undefined){ if(now-M.joinedAt>4000){KO(s,"",id,"TKO");ch=true} continue }
+    const u=s.sub, inSub=u&&(u.a===id||u.d===id);
+    const dn=now<(H.dn[id]||0)?1:0, sn=now<(H.stun[id]||0)?1:0, dg=dodging(id,now)?1:0, gb=now<(H.gb[id]||0)?1:0, sl=now<(H.sl[id]||0)?1:0;
+    if(p.dn!==dn||p.sn!==sn||p.dg!==dg||p.gb!==gb||p.sl!==sl){Object.assign(p,{dn,sn,dg,gb,sl});ch=true}
+    const tv=H.top[id], tpv=tv&&s.P[tv]&&s.P[tv].al&&now<(H.dn[tv]||0)?tv:""; if(!tpv)H.top[id]=null; if((p.tp||"")!==tpv){p.tp=tpv;ch=true}
     let w;
-    if(inp===null) w=H.ch[id]||sn?{}:botThink(s,id,en,now);
-    else { const l=H.la[id]; w={j:inp.j>l.j,h:inp.h>l.h,s:inp.s>l.s,d:inp.d>l.d,gd:inp.gd,tg:inp.tg}; H.la[id]={j:inp.j,h:inp.h,s:inp.s,d:inp.d} }
+    if(inp===null){ if(!p.tg||!en.includes(p.tg))p.tg=en[0]||""; if(!inSub&&!dn&&moveBot(s,id,now))ch=true; w=H.ch[id]||H.sw[id]||sn||dn||inSub?{}:botThink(s,id,en,now) }
+    else { const l=H.la[id]; w={j:inp.j>l.j,h:inp.h>l.h,d:inp.d>l.d,k:inp.k1>l.k1?1:inp.k2>l.k2?2:0,gd:inp.gd,tg:inp.tg}; H.la[id]=lastOf(inp) }
+    if(inSub||dn){ if(p.gd){p.gd=0;ch=true} continue }
+    const fu=H.fu[id]; if(fu&&now>=fu.at){ H.fu[id]=null; const d=s.P[fu.t]; if(d&&d.al&&distOf(s,id,fu.t)<=2.9&&!dodging(fu.t,now)){apply(s,id,fu.t,dmgBase(p,d)*.85*skDmg(fu.l),"h",{a:"s1"});ch=true} }
     if(H.ch[id]){ if(p.gd){p.gd=0;ch=true} if(now>=H.ch[id].until){endHeavy(s,id,now);ch=true} continue }
+    if(H.sw[id]){ if(p.gd){p.gd=0;ch=true} if(now>=H.sw[id].until){endSkill(s,id,now);ch=true} continue }
     const tg=en.includes(w.tg)?w.tg:(en.includes(p.tg)?p.tg:en[0]||""); if(p.tg!==tg){p.tg=tg;ch=true}
     if(sn){ if(p.gd){p.gd=0;ch=true} continue }
     if(w.d&&!dg&&now>=(H.dc[id]||0)){H.dg[id]=now+400;H.dc[id]=now+1800;p.dg=1;p.gd=0;ch=true;continue}
     const gd=w.gd&&!gb&&!dg?1:0; if(p.gd!==gd){p.gd=gd;ch=true}
     if(!gd&&!dg&&now>=H.cd[id]&&tg){
-      if(w.s&&p.ga>=100){doSpecial(s,id,tg,now);ch=true}
+      if(w.k){ if(useSkill(s,id,w.k-1,tg,now))ch=true }
       else if(w.h){H.ch[id]={until:now+450,tg};p.ch=1;ch=true}
       else if(w.j){doJab(s,id,tg,now);ch=true} }
   }
   if(s.seq!==before)ch=true;
   const alive=Object.keys(s.P).filter(k=>s.P[k].al), teams=[...new Set(alive.map(k=>s.P[k].tm))];
-  const left=clamp(Math.ceil((H.endAt-now)/1000),0,90); if(left!==s.left){s.left=left;ch=true}
-  if(teams.length<=1||left<=0){
-    const ratio=tm=>{const ks=Object.keys(s.P).filter(k=>s.P[k].tm===tm);return ks.reduce((a,k)=>a+s.P[k].hp/s.P[k].mx,0)/ks.length};
-    const rest=alive.slice().sort((a,b)=>ratio(s.P[a].tm)-ratio(s.P[b].tm)); s.ord=s.ord.concat(rest);
-    s.win=rest.length?s.P[rest[rest.length-1]].tm:""; s.ph="end"; s.ko=teams.length<=1?1:0; ch=true; clearInterval(H.timer); H=null;
-  }
+  const left=clamp(Math.ceil((H.endAt-now)/1000),0,ROUND_S); if(left!==s.left){s.left=left;ch=true}
+  if(teams.length<=1){ finish(s,teams[0]||"",H.lastMeth||"KO"); ch=true }
+  else if(left<=0&&!s.sub){ endRound(s,now); ch=true }
+  if(s.ph==="end"&&H){clearInterval(H.timer);H=null}
   if(ch)publish();
 }
 
+/* ---------- 3D 공통 (WebGL, 상자로 만든 캐릭터) ---------- */
+const M4={
+  mul(a,b){const o=new Array(16);for(let c=0;c<4;c++)for(let r=0;r<4;r++)o[c*4+r]=a[r]*b[c*4]+a[4+r]*b[c*4+1]+a[8+r]*b[c*4+2]+a[12+r]*b[c*4+3];return o},
+  tr:(x,y,z)=>[1,0,0,0,0,1,0,0,0,0,1,0,x,y,z,1],
+  sc:(x,y,z)=>[x,0,0,0,0,y,0,0,0,0,z,0,0,0,0,1],
+  rx(a){const c=Math.cos(a),s=Math.sin(a);return[1,0,0,0,0,c,s,0,0,-s,c,0,0,0,0,1]},
+  ry(a){const c=Math.cos(a),s=Math.sin(a);return[c,0,-s,0,0,1,0,0,s,0,c,0,0,0,0,1]},
+  rz(a){const c=Math.cos(a),s=Math.sin(a);return[c,s,0,0,-s,c,0,0,0,0,1,0,0,0,0,1]},
+  persp(f,a,n,r){const t=1/Math.tan(f/2);return[t/a,0,0,0,0,t,0,0,0,0,(r+n)/(n-r),-1,0,0,2*r*n/(n-r),0]},
+  look(e,c){let z=[e[0]-c[0],e[1]-c[1],e[2]-c[2]];const zl=Math.hypot(...z);z=z.map(v=>v/zl);
+    let x=[z[2],0,-z[0]];const xl=Math.hypot(...x);x=x.map(v=>v/xl);const y=[z[1]*x[2]-z[2]*x[1],z[2]*x[0]-z[0]*x[2],z[0]*x[1]-z[1]*x[0]];
+    const d=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2];return[x[0],y[0],z[0],0,x[1],y[1],z[1],0,x[2],y[2],z[2],0,-d(x,e),-d(y,e),-d(z,e),1]}
+};
+const hex3=h=>{h=String(h||"#888888").replace("#","");return[parseInt(h.slice(0,2),16)/255,parseInt(h.slice(2,4),16)/255,parseInt(h.slice(4,6),16)/255]};
+const shade=(c,k)=>[c[0]*k,c[1]*k,c[2]*k];
+const fnum=(v,d)=>{v=Number(v);return Number.isFinite(v)?v:d};
+const RING=3.6;
+const angd=(a,b)=>{let d=a-b;while(d>Math.PI)d-=2*Math.PI;while(d<-Math.PI)d+=2*Math.PI;return d};
+const R3={
+  ok(){ try{const c=document.createElement("canvas");return !!(c.getContext("webgl")||c.getContext("experimental-webgl"))}catch(e){return false} },
+  init(cv){
+    const gl=cv.getContext("webgl",{antialias:true,alpha:false})||cv.getContext("experimental-webgl"); if(!gl)return null;
+    const sh=(t,src)=>{const x=gl.createShader(t);gl.shaderSource(x,src);gl.compileShader(x);return x};
+    const pr=gl.createProgram();
+    gl.attachShader(pr,sh(gl.VERTEX_SHADER,"attribute vec3 aP,aN;attribute vec2 aU;uniform mat4 uVP,uM,uR;varying vec3 vN,vW;varying vec2 vU;varying float vD;void main(){vec4 w=uM*vec4(aP,1.);vW=w.xyz;gl_Position=uVP*w;vN=(uR*vec4(aN,0.)).xyz;vU=aU;vD=gl_Position.w;}"));
+    gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,"precision mediump float;uniform vec3 uC,uE,uG;uniform float uT,uF,uO,uFn,uFf;uniform sampler2D uS;varying vec3 vN,vW;varying vec2 vU;varying float vD;void main(){if(uO>.5){gl_FragColor=vec4(.02,.02,.03,1.);return;}vec3 c=uT>.5?texture2D(uS,vU).rgb:uC;vec3 n=normalize(vN);float d=max(dot(n,normalize(vec3(.4,1.,.65))),0.);float h=.5+.5*n.y;float r=pow(1.-max(dot(n,normalize(uE-vW)),0.),3.);c=c*(.36+.56*d+.14*h)+r*.16;c=mix(c,vec3(1.),uF);c=mix(c,uG,clamp((vD-uFn)/uFf,0.,.85));gl_FragColor=vec4(c,1.);}"));
+    gl.linkProgram(pr);gl.useProgram(pr);
+    const x={gl,cv,u:{},vp:null};["uVP","uM","uR","uC","uE","uG","uT","uF","uO","uFn","uFf","uS"].forEach(n=>x.u[n]=gl.getUniformLocation(pr,n));
+    const VP=[],VN=[],VU=[],face=(n,a,b)=>{const v=(i,j)=>[n[0]*.5+a[0]*i+b[0]*j,n[1]*.5+a[1]*i+b[1]*j,n[2]*.5+a[2]*i+b[2]*j];
+      [[-.5,-.5],[.5,-.5],[.5,.5],[-.5,-.5],[.5,.5],[-.5,.5]].forEach(q=>{VP.push(...v(q[0],q[1]));VN.push(...n);VU.push(q[0]+.5,q[1]+.5)})};
+    face([0,0,1],[1,0,0],[0,1,0]);face([0,0,-1],[-1,0,0],[0,1,0]);face([1,0,0],[0,0,-1],[0,1,0]);face([-1,0,0],[0,0,1],[0,1,0]);face([0,1,0],[1,0,0],[0,0,-1]);face([0,-1,0],[1,0,0],[0,0,1]);
+    const buf=(d,loc,n)=>{const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(d),gl.STATIC_DRAW);const l=gl.getAttribLocation(pr,loc);gl.enableVertexAttribArray(l);gl.vertexAttribPointer(l,n,gl.FLOAT,false,0,0)};
+    buf(VP,"aP",3);buf(VN,"aN",3);buf(VU,"aU",2);
+    gl.enable(gl.DEPTH_TEST);gl.enable(gl.CULL_FACE);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.uniform1f(x.u.uO,0);
+    return x },
+  view(x,eye,ctr,fov,bg,fn,ff){ const gl=x.gl,cv=x.cv,dpr=Math.min(window.devicePixelRatio||1,2),w=Math.max(1,Math.round(cv.clientWidth*dpr)),h=Math.max(1,Math.round(cv.clientHeight*dpr));
+    if(cv.width!==w||cv.height!==h){cv.width=w;cv.height=h} gl.viewport(0,0,w,h);gl.clearColor(bg[0],bg[1],bg[2],1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+    const vp=M4.mul(M4.persp(fov,w/h,.2,70),M4.look(eye,ctr)); x.vp=vp; gl.uniformMatrix4fv(x.u.uVP,false,vp); gl.uniform3fv(x.u.uE,eye); gl.uniform3fv(x.u.uG,bg); gl.uniform1f(x.u.uFn,fn); gl.uniform1f(x.u.uFf,ff) },
+  box(x,m,sx,sy,sz,col,fl,ol){ const gl=x.gl,u=x.u; gl.uniformMatrix4fv(u.uR,false,m);
+    if(ol){ gl.cullFace(gl.FRONT); gl.uniform1f(u.uO,1); gl.uniformMatrix4fv(u.uM,false,M4.mul(m,M4.sc(sx+ol,sy+ol,sz+ol))); gl.drawArrays(gl.TRIANGLES,0,36); gl.cullFace(gl.BACK); gl.uniform1f(u.uO,0) }
+    gl.uniformMatrix4fv(u.uM,false,M4.mul(m,M4.sc(sx,sy,sz))); gl.uniform3fv(u.uC,col); gl.uniform1f(u.uT,0); gl.uniform1f(u.uF,fl||0); gl.drawArrays(gl.TRIANGLES,0,36) },
+  faceTex(x,photo,em){ const gl=x.gl,t=gl.createTexture(),c=document.createElement("canvas");c.width=c.height=128;const g=c.getContext("2d"),fp=FACE[em]||FACE.a;
+    const up=()=>{gl.bindTexture(gl.TEXTURE_2D,t);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,c);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE)};
+    if(em==="z"){g.fillStyle="#1b1c22";g.fillRect(0,0,128,128);g.fillStyle="#e0162b";g.beginPath();g.moveTo(22,50);g.lineTo(54,60);g.lineTo(22,68);g.fill();g.beginPath();g.moveTo(106,50);g.lineTo(74,60);g.lineTo(106,68);g.fill();g.fillStyle="#55555f";g.fillRect(44,92,40,6)}
+    else{g.fillStyle=fp[0];g.fillRect(0,0,128,128); if(fp[1]){g.fillStyle=fp[1];g.fillRect(0,0,128,24);g.beginPath();g.moveTo(0,24);g.lineTo(34,24);g.lineTo(0,44);g.fill();g.beginPath();g.moveTo(128,24);g.lineTo(94,24);g.lineTo(128,44);g.fill()}
+      g.fillStyle="rgba(0,0,0,.08)";g.fillRect(0,108,128,20);
+      g.strokeStyle="#111";g.lineWidth=7;g.lineCap="round";g.beginPath();g.moveTo(22,46);g.lineTo(54,54);g.moveTo(106,46);g.lineTo(74,54);g.stroke();
+      g.fillStyle="#fff";g.fillRect(28,60,26,15);g.fillRect(74,60,26,15);g.fillStyle="#111";g.fillRect(40,61,12,13);g.fillRect(76,61,12,13);
+      g.fillStyle="rgba(0,0,0,.18)";g.fillRect(60,70,8,18);
+      g.strokeStyle="#111";g.lineWidth=5;g.beginPath();g.moveTo(48,100);g.quadraticCurveTo(64,96,82,99);g.stroke();
+      if(fp[2]==="scar"){g.strokeStyle="#7a1f1f";g.lineWidth=4;g.beginPath();g.moveTo(98,72);g.lineTo(110,94);g.stroke()}
+      if(fp[2]==="tape"){g.fillStyle="#f3f1ec";g.fillRect(90,82,26,10);g.strokeStyle="#bbb";g.lineWidth=1;g.strokeRect(90,82,26,10)} }
+    up(); if(photo){const im=new Image();im.onload=()=>{g.drawImage(im,0,0,128,128);up()};im.src=photo} return t },
+  char(x,o){ const eq=o.eq||{}, em=FACE[o.emo]?o.emo:"a", fp=FACE[em], photo=okFace(o.face);
+    return {col:hex3(item("color",eq.color)[2]),skin:hex3(photo?"#d9a47a":em==="z"?"#3a3c46":fp[0]),hair:photo?hex3("#17171a"):fp[1]?hex3(fp[1]):null,
+      hat:item("hat",eq.hat)[0],out:item("outfit",eq.outfit)[0],tex:this.faceTex(x,photo,em)} },
+  pose(){ return {la:-.95,lb:-1.45,ra:-.7,rb:-1.75,inn:0,tw:-.25,lean:.05,ox:0,oz:0,dp:-.05,rz:0,hl:-.25,hr:.2,kl:.3,kr:.3,fl:0} },
+  /* 캐릭터 그리기. base는 발밑 위치·방향. 손 위치 행렬 [왼손, 오른손]을 돌려준다 */
+  drawChar(x,c,base,q,o){ o=o||{}; const fl=q.fl||0, OL=o.ol==null?.06:o.ol, B=(m,a,b,d,col)=>this.box(x,m,a,b,d,col,fl,OL), T=M4.tr, X=M4.mul;
+    const W=[.95,.94,.92], K=[.09,.09,.11], RED=[.86,.1,.16], GOLD=[1,.76,.1], sk=c.skin, skD=shade(c.skin,.84), out=c.out;
+    const root=X(X(X(base,T(q.ox||0,q.dp||0,q.oz||0)),M4.rx(-(q.lean||0))),M4.rz(q.rz||0));
+    const longP=out==="o1"||out==="o5"||out==="o6"||out==="o3", trunk=out==="o1"?W:out==="o5"||out==="o3"?K:out==="o6"?shade(c.col,.7):c.col;
+    const sleeves=out==="o1"||out==="o3"||out==="o5"||out==="o6", tc=out==="o1"||out==="o3"?W:out==="o5"||out==="o4"?K:c.col, ac=!sleeves?sk:out==="o6"?c.col:tc;
+    for(const sx of[1,-1]){ const hip=X(X(root,T(sx*.26,1.16,0)),M4.rx(sx>0?q.hl:q.hr));
+      B(X(hip,T(0,-.17,0)),.46,.36,.48,trunk); B(X(hip,T(0,-.42,0)),.38,.2,.4,longP?trunk:sk);
+      const kn=X(X(hip,T(0,-.52,0)),M4.rx(sx>0?q.kl:q.kr));
+      B(X(kn,T(0,-.12,0)),.36,.24,.38,longP?trunk:sk); B(X(kn,T(0,-.27,0)),.39,.08,.41,W);
+      B(X(kn,T(0,-.42,0)),.41,.24,.43,K); B(X(kn,T(0,-.55,.08)),.43,.08,.6,W); B(X(kn,T(0,-.47,.2)),.39,.14,.22,K) }
+    B(X(root,T(0,1.3,0)),1.0,.34,.58,trunk); B(X(root,T(0,1.47,0)),1.02,.1,.6,trunk===W?c.col:W);
+    if(o.belt){B(X(root,T(0,1.4,0)),1.08,.24,.66,GOLD);B(X(root,T(0,1.4,.34)),.46,.36,.05,[1,.9,.4]);B(X(root,T(0,1.4,.37)),.2,.16,.03,[.85,.1,.15])}
+    const tm=X(X(root,T(0,1.52,0)),M4.ry(q.tw||0));
+    B(X(tm,T(0,.22,0)),.9,.36,.5,tc); B(X(tm,T(0,.6,0)),1.12,.48,.58,tc);
+    if(out==="o0")B(X(tm,T(0,.82,.02)),.5,.06,.6,sk);
+    if(out==="o1")B(X(tm,T(0,.05,0)),.96,.12,.56,c.col);
+    if(out==="o3"||out==="o5"){B(X(tm,T(0,.72,.29)),.3,.22,.03,W);B(X(tm,T(0,.5,.3)),.13,.56,.03,c.col)}
+    if(out==="o2"){for(const sx of[1,-1])B(X(tm,T(sx*.58,.46,0)),.05,.84,.6,W)}
+    if(out==="o6")B(X(tm,T(0,.82,-.36)),.86,.34,.24,c.col);
+    if(out==="o4")this.box(x,X(X(tm,T(0,.42,-.34)),M4.rx(-.18)),1.2,1.8,.06,c.col,fl,OL);
+    B(X(tm,T(0,.92,0)),.32,.18,.32,sk);
+    const hm=X(X(X(tm,T(0,1.38,0)),M4.rx(q.hp||0)),M4.sc(.84,.84,.84));
+    B(hm,.92,.92,.92,sk); for(const sx of[1,-1])B(X(hm,T(sx*.49,-.04,0)),.08,.22,.18,skD);
+    if(c.hair){B(X(hm,T(0,.39,-.03)),.97,.2,.95,c.hair);B(X(hm,T(0,.04,-.41)),.97,.78,.16,c.hair);for(const sx of[1,-1])B(X(hm,T(sx*.45,.2,-.1)),.08,.34,.7,c.hair)}
+    if(c.hat==="h1"){B(X(hm,T(0,.5,0)),1,.2,1,c.col);B(X(hm,T(0,.42,.62)),.8,.06,.4,c.col)}
+    if(c.hat==="h5")B(X(hm,T(0,.25,0)),1,.14,1,RED);
+    if(c.hat==="h2")B(X(hm,T(0,.48,0)),1,.34,1,[.17,.17,.2]);
+    if(c.hat==="h4"){B(X(hm,T(0,.46,0)),1.02,.2,1.02,RED);for(const sx of[1,-1])B(X(hm,T(sx*.5,0,0)),.12,.7,.6,RED)}
+    if(c.hat==="h6"){B(X(hm,T(0,.5,-.05)),1.06,.16,1.02,K);B(X(hm,T(0,0,-.5)),1.06,1,.12,K);for(const sx of[1,-1])B(X(hm,T(sx*.51,0,-.15)),.08,1,.7,K)}
+    if(c.hat==="h3"){B(X(hm,T(0,.54,0)),.8,.16,.8,GOLD);for(const sx of[-1,0,1])B(X(hm,T(sx*.3,.7,0)),.14,.2,.14,GOLD)}
+    const gl=x.gl; gl.uniformMatrix4fv(x.u.uM,false,X(X(hm,T(0,0,.465)),M4.sc(.9,.9,1)));gl.uniformMatrix4fv(x.u.uR,false,hm);gl.uniform1f(x.u.uT,1);gl.uniform1f(x.u.uF,fl);gl.bindTexture(gl.TEXTURE_2D,c.tex);gl.drawArrays(gl.TRIANGLES,0,6);
+    const hands=[];
+    for(const sx of[1,-1]){ const a=sx>0?q.la:q.ra, b=sx>0?q.lb:q.rb, sh=X(X(tm,T(sx*(.66-(q.inn||0)),.72,0)),M4.rx(a));
+      B(X(sh,T(0,-.02,0)),.42,.4,.46,ac); B(X(sh,T(0,-.34,0)),.34,.46,.36,ac);
+      const el=X(X(sh,T(0,-.6,0)),M4.rx(b));
+      B(X(el,T(0,-.22,0)),.32,.44,.32,out==="o6"||out==="o3"||out==="o5"||out==="o1"?ac:sk);
+      if(o.gloves!==false){ B(X(el,T(0,-.45,0)),.42,.14,.42,W); B(X(el,T(0,-.72,.03)),.56,.5,.6,RED); B(X(el,T(-sx*.3,-.66,.16)),.14,.26,.2,RED) }
+      else { B(X(el,T(0,-.46,0)),.36,.12,.36,W); B(X(el,T(0,-.62,0)),.3,.26,.34,sk) }
+      hands.push(X(el,T(0,-.66,0))) }
+    return hands },
+  screen(x,p){ const v=x.vp; if(!v)return null; const cx=v[0]*p[0]+v[4]*p[1]+v[8]*p[2]+v[12], cy=v[1]*p[0]+v[5]*p[1]+v[9]*p[2]+v[13], cw=v[3]*p[0]+v[7]*p[1]+v[11]*p[2]+v[15]; if(cw<=.2)return null;
+    return [(cx/cw*.5+.5)*x.cv.clientWidth,(1-(cy/cw*.5+.5))*x.cv.clientHeight] }
+};
+
+/* ---------- 3D 전투 화면 (옥타곤) ---------- */
+const OCT=7.4, MOVE_R=6.4;
+const clampR=(x,z)=>{const d=Math.hypot(x,z);return d>MOVE_R?[x/d*MOVE_R,z/d*MOVE_R]:[x,z]};
+const ACTMS={j:260,h:380,s1:380,s7:340,s2:300,s3:420,s5:400,s9:600,sk:400,spr:480};
+const PUNCH={j:1,h:1,s1:1,s7:1};
+/* 펀치 진행도 0~1 → 뻗은 정도 0~1. 빠르게 뻗고(30%) 잠깐 멈췄다가 천천히 회수 */
+const punchExt=pr=>{ if(pr<.06)return -.12*Math.sin(pr/.06*Math.PI); if(pr<.34){const x=(pr-.06)/.28;return 1-Math.pow(1-x,3)} if(pr<.44)return 1; const x=(pr-.44)/.56; return 1-x*x*(3-2*x) };
+const ease=x=>x<=0?0:x>=1?1:x<.5?2*x*x:1-Math.pow(-2*x+2,2)/2;
+function punchPose(k,pr,ground){ const e=punchExt(pr), ep=Math.max(0,e);
+  if(ground) return k==="j"?{la:-1.25+.5*ep,lb:-1.75+1.65*ep,lean:.55+.3*ep,tw:-.2*ep}:{ra:-1.25+.45*ep,rb:-1.75+1.7*ep,tw:.5*ep,lean:.55+.32*ep};
+  if(k==="j") return {la:-.95-.62*ep,lb:-1.45+1.45*ep,ra:-.8,rb:-1.85,tw:-.25-.3*e,lean:.05+.12*ep,oz:.42*e,hl:-.25-.22*ep,kl:.3+.12*ep,kr:.3,inn:0};
+  return {ra:-.7-.82*ep,rb:-1.75+1.65*ep,la:-1.05,lb:-1.8,tw:-.3+.95*e,lean:.05+(k==="s7"?.3:.22)*ep,oz:.68*e,hr:.2+.2*ep,kr:.3-.18*ep,kl:.32,hl:-.25,inn:0} }
+const lerpP=(a,b,x)=>{const o={}; for(const k in b)o[k]=(a[k]??b[k])+(b[k]-(a[k]??b[k]))*x; return o};
+const lying=P0=>Object.assign(P0,{lean:-1.42,dp:.3,la:-.4,ra:-.7,lb:-1.1,rb:-.8,hl:-.25,hr:.1,kl:.55,kr:.2,tw:0,oz:0,ox:0,rz:0});
+const kneel=P0=>Object.assign(P0,{lean:.55,dp:-.78,hl:-1.3,hr:-1.3,kl:2.3,kr:2.3,la:-1.25,ra:-1.25,lb:-1.75,rb:-1.75,inn:.22,tw:0,oz:.1});
+const SHOOT=()=>Object.assign(R3.pose(),{lean:1.0,dp:-.5,oz:1.25,la:-1.45,ra:-1.45,lb:-.35,rb:-.35,hl:-.75,hr:.35,kl:1.0,kr:1.35,tw:0,inn:.15});
+const KNEEL=()=>kneel(R3.pose()), LYING=()=>lying(R3.pose());
+const STAGGER=()=>Object.assign(R3.pose(),{lean:-.45,dp:-.12,la:-2.3,ra:-2.1,lb:-.7,rb:-.9,hl:.35,hr:-.15,kl:.35,kr:.5,tw:.2,oz:-.25});
+const G3={x:null,chars:{},run:0,joy:{x:0,y:0},keys:{},camYaw:0,dash:null,sentAt:0,sent:"",crowd:null,ctr:null,fx:[],shk:0,frz:0,slw:0,cer:null,cerT:0,last:0,
+  ok(){ return R3.ok() },
+  start(cv,s,myId){
+    const x=R3.init(cv); if(!x)return false;
+    Object.assign(this,{x,chars:{},myId,joy:{x:0,y:0},keys:{},dash:null,sent:"",ctr:null,eyeS:null,sideS:1,fx:[],shk:0,frz:0,slw:0,cer:null,last:performance.now()}); this.run++;
+    for(const k in s.P){const p=s.P[k],c=cleanPl(p),photo=k===myId?P.face:faceFor(c.u),pz=clamp(fnum(p.sz,0),-7,7);
+      this.chars[k]=Object.assign(R3.char(x,{face:photo,emo:c.em,eq:eqObj(c.eq)}),{x:clamp(fnum(p.sx,0),-7,7),z:pz,yaw:pz>0?Math.PI:0,mv:0,walk:0,cur:R3.pose(),act:null,hitT:0,belt:0})}
+    const me=this.chars[myId]; if(me){this.camYaw=me.yaw;myIn.x=me.x;myIn.z=me.z;myIn.m=s.id;send()}
+    if(!this.crowd){this.crowd=[];let sd=7;const rr=()=>{sd=(sd*16807)%2147483647;return sd/2147483647};
+      for(let i=0;i<96;i++){const a=i/96*Math.PI*2+rr()*.1,r=11.5+rr()*3.5;this.crowd.push([Math.sin(a)*r,Math.cos(a)*r,1.5+rr()*.9+(r-11.5)*.35,.09+rr()*.07,rr()*6])}}
+    const run=this.run, loop=t=>{ if(run!==this.run||!document.body.contains(cv))return; this.frame(t); requestAnimationFrame(loop) };
+    const iv=setInterval(()=>{ if(run!==this.run||!document.body.contains(cv)){clearInterval(iv);return} this.sim(.033) },33);
+    requestAnimationFrame(loop); return true },
+  act(id,k){const c=this.chars[id]; if(c)c.act={k,t0:performance.now(),dur:ACTMS[k]||260}},
+  hit(id,pw){ const c=this.chars[id]; if(!c)return; const now=performance.now(); c.hitT=now+150;
+    this.shk=Math.max(this.shk,[0,.07,.15,.26,.36][pw]||.1); this.frz=Math.max(this.frz,now+([0,30,65,105,150][pw]||50));
+    const hx=c.x+Math.sin(c.yaw)*.45, hz=c.z+Math.cos(c.yaw)*.45, n=[0,7,12,18,26][pw]||8;
+    for(let i=0;i<n;i++){const a=Math.random()*Math.PI*2,sp=2.5+Math.random()*2.2*pw; this.fx.push({x:hx,y:2.9+Math.random()*.4,z:hz,vx:Math.cos(a)*sp,vy:(Math.random()*1.4-.2)*sp,vz:Math.sin(a)*sp,l:.3+Math.random()*.25,c:Math.random()<.55?[1,.9,.35]:[1,1,1],s:.06+Math.random()*.08,g:10,gl:.7})}
+    if(pw>=2)for(let i=0;i<8;i++){const a=Math.random()*Math.PI*2; this.fx.push({x:hx,y:3.1,z:hz,vx:Math.cos(a)*1.6,vy:2+Math.random()*2,vz:Math.sin(a)*1.6,l:.6,c:[.7,.88,1],s:.06,g:9,gl:.3})} },
+  dust(id){ const c=this.chars[id]; if(!c)return; for(let i=0;i<16;i++){const a=i/16*Math.PI*2; this.fx.push({x:c.x,y:.15,z:c.z,vx:Math.cos(a)*2.4,vy:.6,vz:Math.sin(a)*2.4,l:.5,c:[.75,.74,.7],s:.14,g:2,gl:0})} this.shk=Math.max(this.shk,.3) },
+  slow(ms){ this.slw=performance.now()+ms },
+  takedown(a,d){ const now=performance.now(), A=this.chars[a], D=this.chars[d]; if(A){A.act=null;A.td={t0:now,dur:720,role:"a",q0:Object.assign({},A.cur)}} if(D){D.act=null;D.td={t0:now,dur:760,role:"d",q0:Object.assign({},D.cur)}} this.slow(260) },
+  camMode:(()=>{try{return clamp(int(localStorage.getItem("pfc_cam"),0),0,2)}catch(e){return 0}})(),
+  CAMN:["어깨 뒤","옆 중계","위에서"],
+  cycleCam(){ this.camMode=(this.camMode+1)%3; this.camT=performance.now()+700; try{localStorage.setItem("pfc_cam",String(this.camMode))}catch(e){} return this.CAMN[this.camMode] },
+  moveYaw(){ return this.camMode&&Number.isFinite(this.viewYaw)?this.viewYaw:this.camYaw },
+  reset(s){ for(const k in this.chars){const c=this.chars[k],p=s.P[k]; if(!p)continue; c.x=clamp(fnum(p.sx,0),-7,7); c.z=clamp(fnum(p.sz,0),-7,7); c.yaw=c.z>0?Math.PI:0}
+    const me=this.chars[this.myId]; if(me){this.camYaw=me.yaw;myIn.x=me.x;myIn.z=me.z;send()} this.dash=null; this.ctr=null },
+  ceremony(win,lose,meth,title){ this.cer={t0:performance.now(),win,lose,meth}; for(const k of win){const c=this.chars[k]; if(c&&title)c.belt=1}
+    const c=this.chars[win[0]]; if(!c)return; for(let i=0;i<170;i++)this.fx.push({x:c.x+(Math.random()-.5)*7,y:5+Math.random()*5,z:c.z+(Math.random()-.5)*7,vx:(Math.random()-.5)*.7,vy:-(.7+Math.random()*.9),vz:(Math.random()-.5)*.7,l:4+Math.random()*2,c:[[1,.2,.25],[1,.8,.1],[.2,.6,1],[1,1,1],[.3,.9,.4]][rnd(5)],s:.12,g:0,gl:.2,spin:1+Math.random()*5}) },
+  dodge(){ const me=this.chars[this.myId]; if(!me)return; const cy=this.moveYaw(), f=[Math.sin(cy),Math.cos(cy)], r=[-Math.cos(cy),Math.sin(cy)];
+    let jx=this.joy.x+(this.keys.r?1:0)-(this.keys.l?1:0), jy=this.joy.y+(this.keys.u?1:0)-(this.keys.d?1:0); const l=Math.hypot(jx,jy); if(l<.3){jx=0;jy=-1}else{jx/=l;jy/=l}
+    this.dgSide=jx>.3?-1:jx<-.3?1:0; this.dash={vx:(f[0]*jy+r[0]*jx)*8.5,vz:(f[1]*jy+r[1]*jx)*8.5,until:performance.now()+240} },
+  sim(dt){ const s=M.st, me=this.chars[this.myId]; if(!s)return; const peers=M.room?M.room.peers():[];
+    for(const id in this.chars){ if(id===this.myId)continue; const c=this.chars[id], q=s.P[id]; if(!q)continue; let t=[clamp(fnum(q.sx,0),-7,7),clamp(fnum(q.sz,0),-7,7)];
+      if(q.bot){ if(Number.isFinite(q.px)&&Number.isFinite(q.pz))t=clampR(q.px,q.pz) }
+      else { const pr=peers.find(x=>x.peer===id), i=pr&&pr.presence&&pr.presence.in; if(i&&i.m===s.id&&Number.isFinite(Number(i.x))&&Number.isFinite(Number(i.z)))t=clampR(Number(i.x),Number(i.z)) }
+      const dx=t[0]-c.x,dz=t[1]-c.z; c.mv=Math.hypot(dx,dz)>.04?1:0; c.x+=dx*.3; c.z+=dz*.3 }
+    if(!me)return; const p=s.P[this.myId], u=s.sub, now=performance.now(); let moved=false;
+    const fol=u&&u.a===this.myId?u.d:p&&p.tp?p.tp:null;
+    if(fol&&this.chars[fol]){ const d=this.chars[fol], dx=me.x-d.x, dz=me.z-d.z, l=Math.hypot(dx,dz)||1; me.x+=(d.x+dx/l*.85-me.x)*.3; me.z+=(d.z+dz/l*.85-me.z)*.3; me.mv=0; moved=true }
+    else if(p&&p.al&&s.ph==="play"&&!p.dn&&!p.tp&&!(u&&u.d===this.myId)&&!this.cer){ let jx=this.joy.x+(this.keys.r?1:0)-(this.keys.l?1:0), jy=this.joy.y+(this.keys.u?1:0)-(this.keys.d?1:0); const jl=Math.hypot(jx,jy); if(jl>1){jx/=jl;jy/=jl}
+      const cy=this.moveYaw(), sp=(3+fnum(p.st&&p.st[2],0)*.02)*(p.sn?0:p.gd?.45:p.ch||p.cs?.5:1)*(p.sl?.55:1), f=[Math.sin(cy),Math.cos(cy)], r=[-Math.cos(cy),Math.sin(cy)];
+      let vx=(f[0]*jy+r[0]*jx)*sp, vz=(f[1]*jy+r[1]*jx)*sp;
+      if(this.dash){ if(now<this.dash.until){vx=this.dash.vx;vz=this.dash.vz} else this.dash=null }
+      let x=me.x+vx*dt, z=me.z+vz*dt;
+      for(const id in this.chars){ if(id===this.myId)continue; const o=this.chars[id], q=s.P[id]; if(!q||!q.al)continue; const dx=x-o.x,dz=z-o.z,d=Math.hypot(dx,dz); if(d<1.35&&d>.001){x=o.x+dx/d*1.35;z=o.z+dz/d*1.35} }
+      [x,z]=clampR(x,z); me.mv=Math.hypot(x-me.x,z-me.z)>.004?1:0; me.x=x;me.z=z; moved=true }
+    else me.mv=0;
+    if(moved){ myIn.x=Math.round(me.x*100)/100; myIn.z=Math.round(me.z*100)/100; myIn.m=s.id;
+      const key=myIn.x+","+myIn.z; if(key!==this.sent&&now-this.sentAt>110){this.sent=key;this.sentAt=now;send()} } },
+  frame(t){
+    const x=this.x,s=M.st, T=M4.tr, X=M4.mul, B=(m,a,b,d,col,fl)=>R3.box(x,m,a,b,d,col,fl||0,0), now=performance.now(), dt=Math.min(.05,(now-this.last)/1000); this.last=now;
+    const fr=now<this.frz, sw=now<this.slw, kf=fr?0:sw?.22:1;
+    const me=this.chars[this.myId]; let eye=[9.5,5.5,.01], ctr=[0,1.4,0];
+    if(this.cer){ const w=this.chars[this.cer.win[0]]||me, e=(now-this.cer.t0)/1000; if(this.cer.a0===undefined)this.cer.a0=(w?w.yaw:0)+.6; const a=this.cer.a0+e*.45, wx=w?w.x:0, wz=w?w.z:0;
+      const r=Math.max(8,10.5-e*1.1); eye=[wx+Math.sin(a)*r,3.4+Math.min(1,e*.3),wz+Math.cos(a)*r]; ctr=[wx,1.9,wz] }
+    else if(me){ this.camYaw+=angd(me.yaw,this.camYaw)*.07*Math.max(kf,.15); const f=[Math.sin(this.camYaw),Math.cos(this.camYaw)], r=[-Math.cos(this.camYaw),Math.sin(this.camYaw)];
+      const mp=s&&s.P[this.myId], tc=mp&&this.chars[(myIn.tg&&this.chars[myIn.tg]?myIn.tg:mp.tg)];
+      const cl=tc?clamp(2.6-Math.hypot(tc.x-me.x,tc.z-me.z),0,1.2):0; this.cl=(this.cl||0)+(cl-(this.cl||0))*.08;
+      const mid=tc?[(me.x+tc.x)/2,(me.z+tc.z)/2]:[me.x+f[0]*1.2,me.z+f[1]*1.2]; let want, we;
+      if(this.camMode===1){ let dx=tc?tc.x-me.x:f[0], dz=tc?tc.z-me.z:f[1]; const l=Math.hypot(dx,dz)||1; dx/=l; dz/=l; let px=-dz, pz=dx;
+        if(this.eyeS){ const a=(this.eyeS[0]-mid[0])*px+(this.eyeS[2]-mid[1])*pz; if(Math.abs(a)>1.5)this.sideS=a>0?1:-1 } const sg=this.sideS||1;
+        const cv=this.x&&this.x.cv, asp=cv&&cv.clientHeight?cv.clientWidth/cv.clientHeight:.7, sep=tc?Math.hypot(tc.x-me.x,tc.z-me.z):0;
+        const dist=clamp((sep/2+1.4)/(Math.tan(.4)*Math.min(asp,1.4)),7.5,16); we=[mid[0]+px*sg*dist,2.6+dist*.22,mid[1]+pz*sg*dist]; want=[mid[0],1.55,mid[1]] }
+      else if(this.camMode===2){ we=[mid[0]*.55,15.5,mid[1]*.55+6.8]; want=[mid[0]*.55,0,mid[1]*.55-.2] }
+      else { we=[me.x-f[0]*(5+this.cl*1.1)-r[0]*(4.6+this.cl*.7),5.8+this.cl*1.5,me.z-f[1]*(5+this.cl*1.1)-r[1]*(4.6+this.cl*.7)]; want=tc?[(me.x+tc.x)/2,1.6,(me.z+tc.z)/2]:[me.x+f[0]*2.4,1.6,me.z+f[1]*2.4] }
+      const sm=this.camMode||now<(this.camT||0)?.09*Math.max(kf,.3):1; if(!this.eyeS||sm>=1)this.eyeS=we.slice(); else for(let i=0;i<3;i++)this.eyeS[i]+=(we[i]-this.eyeS[i])*sm; eye=this.eyeS.slice();
+      if(!this.ctr)this.ctr=want; for(let i=0;i<3;i++)this.ctr[i]+=(want[i]-this.ctr[i])*.12; ctr=this.ctr.slice();
+      this.viewYaw=Math.atan2(ctr[0]-eye[0],ctr[2]-eye[2]) }
+    if(this.shk>.003){ eye=eye.map(v=>v+(Math.random()-.5)*this.shk); ctr=ctr.map(v=>v+(Math.random()-.5)*this.shk*.5); this.shk*=Math.pow(.003,dt) }
+    R3.view(x,eye,ctr,.8,[.03,.03,.04],20,24);
+    const W=[.93,.92,.9], R=[.83,.09,.16], K=[.06,.06,.07], MESH=[.22,.22,.25], CV=[.6,.6,.58];
+    B(T(0,-1.3,0),70,.1,70,[.045,.045,.055]);
+    for(const c of this.crowd){const b=Math.sin(now/300+c[4])*.04; B(T(c[0],-1.25+c[2]/2+b,c[1]),.85,c[2],.6,[c[3],c[3],c[3]+.02]);B(T(c[0],-1.25+c[2]+.28+b,c[1]),.5,.5,.5,[c[3]+.07,c[3]+.06,c[3]+.06])}
+    const fs=2*OCT*Math.cos(Math.PI/8);
+    for(const r of[0,Math.PI/4]){ B(X(T(0,-.65,0),M4.ry(r)),fs+.8,1.2,fs+.8,[.07,.07,.09]); B(X(T(0,-.02,0),M4.ry(r)),fs,.08,fs,CV); B(X(T(0,.025,0),M4.ry(r)),4.4,.01,4.4,[.55,.55,.53]) }
+    B(T(0,.03,0),5.4,.01,.12,R); B(T(0,.03,0),.12,.01,5.4,R);
+    const side=2*OCT*Math.sin(Math.PI/8), ap=OCT*Math.cos(Math.PI/8);
+    for(let i=0;i<8;i++){ const a=i*Math.PI/4, sa=Math.sin(a), ca=Math.cos(a); if(eye[0]*sa+eye[2]*ca>ap+.2)continue;
+      const m=X(T(sa*ap,0,ca*ap),M4.ry(a));
+      B(X(m,T(0,2.78,0)),side,.2,.24,K); B(X(m,T(0,.3,0)),side,.6,.14,K);
+      for(const y of[.85,1.35,1.85,2.35])B(X(m,T(0,y,0)),side,.025,.025,MESH);
+      for(let j=-3;j<=3;j++)B(X(m,T(j*side/7,1.55,0)),.025,2.45,.025,MESH);
+      const pa=a+Math.PI/8; B(T(Math.sin(pa)*OCT,1.45,Math.cos(pa)*OCT),.2,2.95,.2,K); B(T(Math.sin(pa)*OCT,2.95,Math.cos(pa)*OCT),.32,.14,.32,R) }
+    const u=s&&s.sub, cer=this.cer;
+    for(const id in this.chars){ const c=this.chars[id], p=s&&s.P[id]||{al:0}, q=c.cur, inA=u&&u.a===id, inD=u&&u.d===id;
+      const tgId=inA?u.d:p.tp?p.tp:id===this.myId&&myIn.tg&&this.chars[myIn.tg]?myIn.tg:p.tg, tg=tgId&&this.chars[tgId];
+      if(p.al&&!p.dn&&!inD&&!cer){ const ty=tg?Math.atan2(tg.x-c.x,tg.z-c.z):Math.atan2(-c.x,-c.z||.001); c.yaw+=angd(ty,c.yaw)*.2*Math.max(kf,.2) }
+      if(p.dg&&!c.dgP){ c.dgs=id===this.myId&&this.dgSide?this.dgSide:-(c.dgs||1); c.ghost={x:c.x,z:c.z,yaw:c.yaw,q:Object.assign({},c.cur),until:now+300};
+        for(let i=0;i<12;i++)this.fx.push({x:c.x+(Math.random()-.5)*1.2,y:.6+Math.random()*2.6,z:c.z+(Math.random()-.5)*1.2,vx:(Math.random()-.5)*2,vy:0,vz:(Math.random()-.5)*2,l:.3,c:[.7,.85,1],s:.08,g:0,gl:.6}) }
+      c.dgP=p.dg;
+      const P0=R3.pose(); let spin=0;
+      if(cer&&cer.win.includes(id)){ const e=(now-cer.t0)/1000; Object.assign(P0,{la:-2.95,ra:-2.95,lb:-.25,rb:-.25,tw:0,lean:-.06,hl:0,hr:0,kl:.1,kr:.1,dp:e>.6?Math.abs(Math.sin(e*5))*.45:0}); if(e>.6)spin=Math.sin(e*1.3)*.4 }
+      else if(cer&&cer.lose.includes(id)){ if(["KO","TKO","SUB"].includes(cer.meth))lying(P0); else Object.assign(P0,{lean:.2,hp:.55,la:-.15,ra:-.15,lb:-.3,rb:-.3,tw:0,hl:0,hr:0,kl:.15,kr:.15}) }
+      else if(!p.al||p.dn||inD){ lying(P0); if(inD)P0.rz=Math.sin(t/55)*.07 }
+      else if(inA||p.tp){ kneel(P0) }
+      else { if(p.gd){P0.la=P0.ra=-1.25;P0.lb=P0.rb=-1.95;P0.inn=.16;P0.tw=0;P0.kl=P0.kr=.4;P0.dp=-.08}
+        if(p.ch){P0.ra=-.4;P0.rb=-2.0;P0.la=-1.1;P0.lb=-1.6;P0.tw=-.5;P0.lean=.02;P0.kr=.5;P0.dp=-.14;P0.fl=.12+.1*Math.sin(t/40)}
+        if(p.cs){ P0.fl=.15+.12*Math.sin(t/35); if(p.cs==="s3")Object.assign(P0,{lean:.4,dp:-.3,kl:.9,kr:.9,la:-1.2,ra:-1.2,lb:-.9,rb:-.9}); else if(p.cs==="s5")Object.assign(P0,{hr:-.7,kr:1.5,lean:-.12,tw:.3}); else Object.assign(P0,{tw:-1.1,lean:.1}) }
+        if(p.dg)Object.assign(P0,{rz:.6*(c.dgs||1),dp:-.42,kl:1.1,kr:1.1,hl:-.38,hr:-.38,lean:.15,la:-1.25,ra:-1.25,lb:-1.95,rb:-1.95,inn:.16,tw:0});
+        if(p.sn){P0.rz=Math.sin(t/45)*.18;P0.la=P0.ra=-.3;P0.lb=P0.rb=-.4}
+        const A=c.act; if(A&&now<A.t0+A.dur){ const pr=(now-A.t0)/A.dur, k=A.k;
+          if(k==="spr"){Object.assign(P0,{lean:.9,dp:-.55,oz:-.35,hl:.55,hr:.75,kl:.25,kr:.25,la:-1.35,ra:-1.35,lb:-.55,rb:-.55,tw:0})}
+          else if(k==="s2"){Object.assign(P0,{hr:-.85,kr:.3,tw:.5,lean:-.12,ra:.2})}
+          else if(k==="s5"){Object.assign(P0,{hr:-1.95,kr:.08,lean:-.32,tw:.6,ra:.5,rb:-.3,la:-1.3,lb:-1.8})}
+          else if(k==="s9"){spin=Math.PI*Math.sin(Math.min(1,pr)*Math.PI); if(pr>.3&&pr<.85)Object.assign(P0,{hr:1.65,kr:.05,lean:.5,tw:0})}
+          else if(k==="s3"){Object.assign(P0,{lean:.95,dp:-.45,oz:1.3,la:-1.4,ra:-1.4,lb:-.4,rb:-.4,hl:-.6,kl:.9,kr:1.3})} }
+        if(now<c.hitT){P0.lean=-.3;P0.fl=.7;P0.hp=-.3} }
+      const sp=(p.al||cer?.38:.12)*kf; for(const k in P0)q[k]+=(P0[k]-q[k])*(k==="fl"?Math.min(1,.5*Math.max(kf,.4)):sp);
+      { const A3=c.act, gnd=!!(inA||p.tp); if(A3&&PUNCH[A3.k]&&!cer&&p.al&&!p.dn&&!inD&&now<A3.t0+A3.dur&&(gnd||!p.dg)){ const pp=punchPose(A3.k,(now-A3.t0)/A3.dur,gnd); for(const k in pp)q[k]=pp[k] } }
+      if(c.td&&!cer){ const pr=(now-c.td.t0)/c.td.dur;
+        if(pr>=1)c.td=null;
+        else if(c.td.role==="a"){ const v=pr<.32?lerpP(c.td.q0,SHOOT(),ease(pr/.32)):lerpP(SHOOT(),KNEEL(),ease((pr-.32)/.68)); Object.assign(q,v) }
+        else { const v=pr<.3?lerpP(c.td.q0,STAGGER(),ease(pr/.3)):lerpP(STAGGER(),LYING(),Math.pow((pr-.3)/.7,2)); Object.assign(q,v);
+          if(pr>.78&&!c.td.dust){c.td.dust=1;this.dust(id)} } }
+      if(c.mv&&p.al)c.walk+=.3*kf; const swg=c.mv&&p.al?Math.sin(c.walk)*.5:0;
+      const qq=swg?Object.assign({},q,{hl:q.hl+swg,hr:q.hr-swg,kl:q.kl+Math.max(0,swg)*.7,kr:q.kr+Math.max(0,-swg)*.7}):q;
+      const bob=p.al&&!p.dn?Math.sin(t/260+c.x*3+c.z)*.03:0;
+      B(T(c.x,.06,c.z),1.5,.02,1.5,[.3,.3,.3]);
+      if(c.ghost&&now<c.ghost.until)R3.drawChar(x,c,X(T(c.ghost.x,0,c.ghost.z),M4.ry(c.ghost.yaw)),Object.assign({},c.ghost.q,{fl:.8}),{ol:0});
+      const hands=R3.drawChar(x,c,X(T(c.x,bob,c.z),M4.ry(c.yaw+spin)),qq,{belt:c.belt});
+      const A2=c.act; if(A2&&kf&&now<A2.t0+A2.dur){const pr=(now-A2.t0)/A2.dur, hk=A2.k==="j"?0:A2.k==="h"||A2.k==="s1"||A2.k==="s7"?1:-1;
+        if(hk>=0&&pr>.1&&pr<.5){const m=hands[hk]; this.fx.push({x:m[12],y:m[13],z:m[14],vx:0,vy:0,vz:0,l:.13,c:hk?[1,.85,.35]:[1,1,1],s:.26,g:0,gl:.85})}}
+      if(now<c.hitT)for(let i=0;i<5;i++){const a=i*1.26+now/30;B(T(c.x+Math.cos(a)*.7,3.05+Math.sin(a)*.5,c.z+Math.sin(a*1.3)*.3),.14,.14,.14,[1,.85,.2],.4)}
+    }
+    const pdt=dt*kf; if(this.fx.length>500)this.fx.splice(0,this.fx.length-500);
+    for(let i=this.fx.length-1;i>=0;i--){ const f=this.fx[i]; f.l-=pdt||dt*.05; if(f.l<=0){this.fx.splice(i,1);continue}
+      f.vy-=f.g*pdt; f.x+=f.vx*pdt; f.y+=f.vy*pdt; f.z+=f.vz*pdt; if(f.y<.06){f.y=.06;f.vy*=-.25;f.vx*=.6;f.vz*=.6}
+      R3.box(x,f.spin?X(T(f.x,f.y,f.z),M4.rx(f.spin*now/400)):T(f.x,f.y,f.z),f.s,f.spin?f.s*.3:f.s,f.s,f.c,f.gl,0) }
+  },
+  screen(id,y){ const c=this.chars[id]; if(!c||!this.x)return null; return R3.screen(this.x,[c.x,y,c.z]) }
+};
+
+/* ---------- 3D 체육관 ---------- */
+const PLATE=[[.58,.59,.63],[.18,.4,.85],[.95,.74,.1],[.84,.14,.17]];
+const GYM3={x:null,run:0,k:"atk",c:null,q:null,rep:null,bag:{a:0,v:0},sb:{a:0,v:0},last:0,
+  start(cv,k){ const x=R3.init(cv); if(!x)return false; this.run++;
+    Object.assign(this,{x,k,c:R3.char(x,{face:P.face,emo:P.emo,eq:P.eq}),q:R3.pose(),rep:null,bag:{a:0,v:0},sb:{a:0,v:0},last:performance.now()});
+    const run=this.run, loop=t=>{ if(run!==this.run||!document.body.contains(cv))return; this.frame(t); requestAnimationFrame(loop) }; requestAnimationFrame(loop); return true },
+  stop(){ this.run++ },
+  frame(t){ const x=this.x,k=this.k,tier=k==="atk"?0:clamp(int(P.wt&&P.wt[k],0),0,3),now=performance.now(),dt=Math.min(.05,(now-this.last)/1000); this.last=now;
+    const T=M4.tr, X=M4.mul, B=(m,a,b,d,col)=>R3.box(x,m,a,b,d,col,0,0), BO=(m,a,b,d,col)=>R3.box(x,m,a,b,d,col,0,.05);
+    const CAM={atk:[[6.3,3.3,2.6],[0,2.0,.95]],def:[[2.7,3.1,7.0],[0,1.85,0]],spd:[[5.4,3.1,3.0],[0,2.55,.45]],hp:[[2.8,3.2,7.6],[0,2.25,0]]}[k];
+    R3.view(x,CAM[0],CAM[1],.8,[.05,.05,.06],11,12);
+    const K=[.09,.09,.11], ST=[.45,.46,.5], RD=[.62,.1,.13];
+    B(T(0,-.05,0),18,.1,18,[.12,.12,.14]); B(T(0,.005,0),4.4,.02,4.4,[.17,.17,.2]);
+    for(let i=-2;i<=2;i++)B(T(i*.88,.012,0),.02,.01,4.4,[.13,.13,.15]);
+    B(T(0,3,-4.2),18,6.2,.2,[.1,.1,.12]); B(T(0,1.5,-4.08),18,.22,.04,RD); B(T(-5.2,3,0),.2,6.2,18,[.09,.09,.11]);
+    B(T(2.3,2.2,-4.07),2.8,2.6,.04,[.2,.23,.28]);
+    B(T(-2.4,.55,-3.6),2.6,.1,.7,K); for(let i=0;i<5;i++)B(T(-3.4+i*.5,.72,-3.6),.16,.24,.5,ST);
+    let e=0,side=1,pp=-1; const r=this.rep; if(r){pp=(now-r.t0)/r.dur; if(pp>=1){this.rep=null;pp=-1} else {e=Math.sin(Math.PI*pp); side=r.n%2?1:-1}}
+    const Q=R3.pose(); let gloves=true;
+    if(k==="atk"){
+      if(pp>=0){ if(side>0){Q.la=-.95-.62*e;Q.lb=-1.45*(1-e);Q.tw=-.25-.35*e;Q.hl=-.25-.15*e;Q.kl=.3+.15*e} else {Q.ra=-.7-.8*e;Q.rb=-1.75*(1-e)-.1*e;Q.tw=-.25+.9*e;Q.kr=.3+.2*e} Q.lean=.05+.12*e;
+        if(pp>.42&&!r.hit){r.hit=1;this.bag.v-=(.55-tier*.09)*(.85+.3*Math.random())} }
+      this.bag.v+=(-9*this.bag.a-3.2*this.bag.v)*dt; this.bag.a=clamp(this.bag.a+this.bag.v*dt,-.35,.12) }
+    else if(k==="def"){ gloves=false; Object.assign(Q,{la:-.08,ra:-.08,lb:-.3,rb:-.3,inn:-.08,tw:0,lean:0,hl:0,hr:0,kl:.06,kr:.06,dp:0});
+      if(pp>=0){ if(side>0){Q.lb=-.3-2.05*e;Q.la=-.08-.3*e} else {Q.rb=-.3-2.05*e;Q.ra=-.08-.3*e} Q.lean=-.03*e } }
+    else if(k==="spd"){ Object.assign(Q,{la:-2.2,lb:-1.05,ra:-2.1,rb:-1.15,inn:.12,tw:0,lean:.02,hl:-.12,hr:.12,kl:.2,kr:.2});
+      if(pp>=0){ if(side>0){Q.la=-2.2-.34*e;Q.lb=-1.05+1.05*e} else {Q.ra=-2.1-.44*e;Q.rb=-1.15+1.15*e}
+        if(pp>.45&&!r.hit){r.hit=1;this.sb.v-=(9-tier*1.2)} }
+      this.sb.v+=(-140*this.sb.a-7*this.sb.v)*dt; this.sb.a=clamp(this.sb.a+this.sb.v*dt,-.6,.3) }
+    else { gloves=false; Object.assign(Q,{la:-.38,ra:-.38,lb:-2.4,rb:-2.4,inn:-.04,tw:0,lean:0,hl:0,hr:0,kl:.12,kr:.12,dp:-.02});
+      if(pp>=0){ Q.la=Q.ra=-.38-2.55*e; Q.lb=Q.rb=-2.4+2.3*e; Q.kl=Q.kr=.12+.18*Math.max(0,1-pp*4); Q.dp=-.02-.08*Math.max(0,1-pp*4) } }
+    const q=this.q; for(const kk in Q)q[kk]+=(Q[kk]-q[kk])*.45;
+    B(T(0,.02,0),1.4,.02,1.4,[.08,.08,.1]);
+    const base=X(T(0,Math.sin(t/420)*.015,k==="spd"?.2:0),M4.ry(0));
+    const hands=R3.drawChar(x,this.c,base,q,{gloves});
+    if(k==="atk"){ const s=[.74,.82,.9,.98][tier], col=[[.5,.1,.12],[.36,.08,.1],[.2,.2,.24],[.1,.1,.12]][tier];
+      B(T(0,4.75,1.9),.3,.3,7,K);
+      const pv=X(T(0,4.6,1.9),M4.rx(this.bag.a)); B(X(pv,T(0,-.38,0)),.05,.76,.05,ST);
+      const bc=X(pv,T(0,-1.72,0)); BO(bc,s,1.9,s,col); B(X(bc,M4.ry(.785)),s,1.9,s,col);
+      for(const yy of[.9,-.9])BO(X(bc,T(0,yy,0)),s+.04,.12,s+.04,K);
+      BO(X(bc,T(0,.1,s/2+.01)),s*.5,.5,.02,[.85,.84,.8]) }
+    else if(k==="def"){ const s=[.26,.32,.38,.44][tier];
+      for(const hm of hands){ BO(hm,.09,.09,.66,ST); for(const sz of[1,-1]){ BO(X(hm,T(0,0,sz*.23)),s,s,.09,PLATE[tier]); if(tier>=2)BO(X(hm,T(0,0,sz*.32)),s*.82,s*.82,.08,PLATE[tier]) } } }
+    else if(k==="spd"){ B(T(0,4.1,1.3),1.9,.14,1.4,[.36,.24,.14]); B(T(0,4.6,1.3),.12,1,.12,K);
+      const pv=X(T(0,4.0,1.02),M4.rx(this.sb.a)); B(X(pv,T(0,-.06,0)),.12,.14,.12,K);
+      const ss=[.36,.38,.4,.42][tier]; BO(X(pv,T(0,-.36,0)),ss,.46,ss,[.58,.38,.2]); BO(X(pv,T(0,-.66,0)),ss*.7,.16,ss*.7,[.58,.38,.2]) }
+    else { const L=hands[0],R=hands[1], bm=T((L[12]+R[12])/2,(L[13]+R[13])/2,(L[14]+R[14])/2); BO(bm,2.6,.07,.07,ST);
+      const s=[.5,.6,.7,.82][tier], n=tier>=3?2:tier>=1?2:1;
+      for(const sx of[1,-1]){ BO(X(bm,T(sx*.8,0,0)),.06,.15,.15,ST); for(let j=0;j<n;j++){const f=j?(tier>=3?1:.78):1; BO(X(bm,T(sx*(.88+j*.12),0,0)),.1,s*f,s*f,PLATE[j&&tier<3?Math.max(0,tier-1):tier])} } }
+  }
+};
+
 /* ---------- 대전: 화면 ---------- */
-function send(){ if(M.room&&!M.host)M.room.presence({in:Object.assign({},myIn)}).catch(()=>{}) }
-function announce(t){const o=$("#battle"); if(!o)return; const a=o.querySelector("#ann"); a.innerHTML=`<b>${esc(t)}</b>`; setTimeout(()=>{if(a.firstChild&&a.textContent===t)a.innerHTML=""},900)}
-function dim(b,ms){b.classList.add("cdn");setTimeout(()=>b.classList.remove("cdn"),ms)}
+function send(){ if(M.room)M.room.presence({in:Object.assign({},myIn)}).catch(()=>{}) }
+function announce(t,cls){const o=$("#battle"); if(!o)return; const a=o.querySelector("#ann"); a.innerHTML=`<b class="${cls||""}">${esc(t)}</b>`; setTimeout(()=>{if(a.textContent===t)a.innerHTML=""},1100)}
+function dim(b,ms){if(!b)return;b.classList.add("cdn");setTimeout(()=>b.classList.remove("cdn"),ms)}
 function act(k){ const s=M.st, o=$("#battle"); if(!s||s.ph!=="play"||!o)return; const me=s.P[M.myId]; if(!me||!me.al)return;
+  if(s.sub&&(s.sub.a===M.myId||s.sub.d===M.myId))return subTap();
   if(k==="gd1"||k==="gd0"){const v=k==="gd1"?1:0; if(myIn.gd!==v){myIn.gd=v;send()} return}
-  if(k==="s"&&me.ga<100)return;
+  if(me.dn)return;
+  if(k==="k1"||k==="k2"){ const id=P.eqs.a[k==="k1"?0:1]; if(!id)return toast("스킬 창에서 액티브 스킬을 장착해요"); const S=SK[id];
+    if(me.ga<S.cost)return toast("기세가 모자라요 ("+Math.floor(me.ga)+"/"+S.cost+")"); myIn[k]++; send(); dim(o.querySelector("#"+k),700); return }
+  if(M.use3d){ if(k==="j"&&!o.querySelector("#bj").classList.contains("cdn"))G3.act(M.myId,"j"); if(k==="d"&&!o.querySelector("#bd").classList.contains("cdn")&&!me.sn&&!me.ch)G3.dodge() }
   myIn[k]++; send(); const c=cool(pt(P,"spd"));
   if(k==="j")dim(o.querySelector("#bj"),c*0.55); if(k==="h")dim(o.querySelector("#bh"),450+c*1.1); if(k==="d")dim(o.querySelector("#bd"),1800) }
-const KEYMAP={j:"j",k:"h",l:"s",d:"d"};
-addEventListener("keydown",e=>{ if(!M.st||e.repeat)return; const k=e.key.toLowerCase(); if(KEYMAP[k])act(KEYMAP[k]); else if(k==="s")act("gd1") });
+function subTap(){ const s=M.st, u=s&&s.sub; if(!u)return;
+  if(u.d===M.myId){ myIn.em++; send(); return }
+  if(u.a!==M.myId)return;
+  const timing=u.m==="timing"||(u.m==="both"&&u.st===1);
+  if(timing){ const lim=u.m==="both"?3:4; if(myIn.sx>=lim)return; const pos=needle(); myIn.sx++; const hit=Math.abs(pos-u.zc)<=u.zw/200; if(hit)myIn.sg++; send();
+    const f=$("#subov .sflash"); if(f){f.textContent=hit?"좋아!":"빗나감";f.style.color=hit?"var(--mint)":"#ff6b78";f.classList.remove("on");void f.offsetWidth;f.classList.add("on")} }
+  else { myIn.sm++; send() } }
+const needle=()=>(Math.sin(performance.now()/1000*Math.PI*2/1.3)+1)/2;
+const KEYMAP={j:"j",k:"h",d:"d",q:"k1",e:"k2"};
+const ARROW={arrowup:"u",arrowdown:"d",arrowleft:"l",arrowright:"r"};
+addEventListener("keydown",e=>{ const a=ARROW[e.key.toLowerCase()]; if(a&&M.st){G3.keys[a]=1;e.preventDefault()} });
+addEventListener("keyup",e=>{ const a=ARROW[e.key.toLowerCase()]; if(a)G3.keys[a]=0 });
+addEventListener("keydown",e=>{ if(!M.st||e.repeat||document.activeElement.matches("input"))return; const k=e.key.toLowerCase(); if(k===" "){e.preventDefault();subTap()} else if(KEYMAP[k])act(KEYMAP[k]); else if(k==="s")act("gd1"); else if(k==="c"&&G3.x){ const b=$("#bcam"); const n=G3.cycleCam(); if(b)b.textContent="시점 · "+n } });
 addEventListener("keyup",e=>{ if(M.st&&e.key.toLowerCase()==="s")act("gd0") });
-function sideHtml(s,ids,flip){const n=ids.length, fs=n<=1?21:n<=2?12:n<=4?9:7.5;
+function sideHtml(s,ids,flip){const n=ids.length, fs=n<=1?21:n<=2?12:9;
   return `<div class="side ${n>2?"two":""}" style="font-size:${fs}px">${ids.map(k=>{const p=s.P[k],c=cleanPl(p);
     return `<div class="fcard ${k===M.myId?"me":""}" data-f="${esc(k)}"><div class="mini"><span class="nm">${esc(c.n)}</span><div class="bar hp"><i class="gh"></i><i class="fl"></i></div></div>${fighter({face:k===M.myId?P.face:faceFor(c.u),emo:c.em,eq:eqObj(c.eq)},flip?"flip":"")}</div>`}).join("")}</div>`}
+const LBL={s1:"원투!",s2:"카프킥",s3:"테이크다운!",s4:"바디샷",s5:"하이킥!",s6:"암바",s7:"카운터!",s8:"초크",s9:"스피닝 백킥!",s10:"길로틴"};
+function skBtn(i){ const id=P.eqs.a[i]; return id?`${SK[id].s}<small>기세 ${SK[id].cost}</small>`:`스킬 ${i+1}<small>비어 있음</small>` }
+function renderSub(o,s){
+  const box=o.querySelector("#subov"), u=s.sub;
+  if(!u||s.ph!=="play"){ if(box.innerHTML){box.innerHTML="";box.className=""} M.subUi=""; return }
+  if(myIn.sid!==u.id){ myIn.sid=u.id; myIn.sm=myIn.sg=myIn.sx=myIn.em=0 }
+  const role=u.a===M.myId?"a":u.d===M.myId?"d":"v", timing=u.m==="timing"||(u.m==="both"&&u.st===1), key=u.id+role+timing;
+  if(M.subUi!==key){ M.subUi=key; box.className="on";
+    const nm=SK[u.sk]?SK[u.sk].n:"서브미션", an=cleanPl(s.P[u.a]||{}).n;
+    box.innerHTML=role==="a"?(timing?`<p class="st">${nm} · 초록 구간에서 멈춰요</p><div class="tbar"><i class="zone"></i><i class="ndl"></i></div><p class="small" id="sinfo"></p><span class="sflash"></span><button class="btn big red" id="stap">지금!</button>`
+        :`<p class="st">${nm} · 조여요!</p><div class="bar sbar"><i id="smp"></i></div><p class="small" id="sinfo">빠르게 연타해요</p><button class="btn big red" id="stap">조르기 연타!</button>`)
+      :role==="d"?`<p class="st" style="color:#ff6b78">${esc(an)}의 ${nm}!</p><div class="bar sbar danger"><i id="smp"></i></div><p class="small">게이지가 다 차면 탭아웃이에요. 연타해서 빠져나가요</p><button class="btn big gold" id="stap">탈출 연타!</button>`
+      :`<p class="st">${esc(an)}의 ${nm} 시도 중</p><div class="bar sbar"><i id="smp"></i></div>`;
+    const b=box.querySelector("#stap"); if(b)b.addEventListener("pointerdown",e=>{e.preventDefault();subTap()});
+    if(role==="a"&&timing){ const run=()=>{ if(M.subUi!==key||!document.body.contains(box))return; const z=box.querySelector(".zone"), n=box.querySelector(".ndl"), cu=M.st&&M.st.sub;
+        if(cu&&z){ z.style.left=((cu.zc-cu.zw/200)*100)+"%"; z.style.width=cu.zw+"%" } if(n)n.style.left=(needle()*100)+"%"; requestAnimationFrame(run) }; requestAnimationFrame(run) } }
+  const mp=role==="a"&&!timing?clamp(Math.max(u.mp,(myIn.sm-(u.sm0||0)-u.em*.45)/u.need),0,1):u.mp, bar=box.querySelector("#smp"); if(bar)bar.style.width=(mp*100)+"%";
+  const inf=box.querySelector("#sinfo"); if(inf&&timing)inf.textContent=`성공 ${myIn.sg}/${u.m==="both"?1:2} · 남은 기회 ${(u.m==="both"?3:4)-myIn.sx}`;
+}
+function hitPow(e){ return e.k==="j"?1:e.k==="h"||e.k==="td"?2:e.k==="sk"?(e.a==="s9"?4:3):2 }
 function renderBattle(){
   const s=M.st; if(!s)return; const w=$("#wait"); if(w)w.remove();
-  let o=$("#battle");
-  if(!o||M.built!==s.id){ if(o)o.remove(); M.built=s.id; M.seen=0;
-    o=document.createElement("div");o.className="ov";o.id="battle";
+  let o=$("#battle"); const card=k=>{const b=$("#battle");return b&&b.querySelector(`[data-f="${CSS.escape(k)}"]`)};
+  if(!o||M.built!==s.id){ if(o)o.remove(); M.built=s.id; M.seen=0; M.lastRs=s.rs||0; M.lastPh=s.ph; M.cerDone=""; M.subUi="";
+    o=document.createElement("div");o.className="ov";o.id="battle"; M.use3d=G3.ok();
     const me=s.P[M.myId], ids=Object.keys(s.P), mine=me?ids.filter(k=>s.P[k].tm===me.tm):ids.slice(0,Math.ceil(ids.length/2)), foes=ids.filter(k=>!mine.includes(k));
-    o.innerHTML=`<div id="hud"><div class="who l"><span class="nm" id="hn1"></span><div class="bar hp"><i class="gh" id="hg1"></i><i class="fl" id="hf1"></i></div><div class="bar ga" style="width:70%"><i id="ha1"></i></div></div>
-      <div id="bt">90</div><div class="who r"><span class="nm" id="hn2"></span><div class="bar hp"><i class="gh" id="hg2"></i><i class="fl" id="hf2"></i></div><div class="bar ga" style="width:70%"><i id="ha2"></i></div></div></div>
-      <div id="arena">${sideHtml(s,mine,false)}${sideHtml(s,foes,true)}<div id="ann"></div></div>
-      <div class="row between" style="position:relative;padding:4px 10px;background:#000"><span class="dim small" id="bmsg"></span><button class="btn sm ghost" id="bx">기권</button></div>
-      <div id="ctl"><button class="btn" id="bg">방어<small>누르고 있기</small></button><button class="btn" id="bd">회피<small>강타·필살기 대응</small></button><button class="btn" id="bs" disabled>필살기<small>게이지 100</small></button>
-        <button class="btn" id="bj">잽</button><button class="btn" id="bh">강타<small>방어 깨기</small></button></div><div id="bend"></div>`;
+    o.innerHTML=`<div id="hud"><div class="who l"><span class="nm" id="hn1"></span><div class="bar hp"><i class="gh" id="hg1"></i><i class="fl" id="hf1"></i></div><div class="bar ga" style="width:78%"><i id="ha1"></i></div></div>
+      <div id="rt"><span id="rd"></span><b id="bt">${ROUND_S}</b>${s.title?`<span class="tt">TITLE</span>`:""}</div><div class="who r"><span class="nm" id="hn2"></span><div class="bar hp"><i class="gh" id="hg2"></i><i class="fl" id="hf2"></i></div><div class="bar ga" style="width:78%"><i id="ha2"></i></div></div></div>
+      <div id="arena" class="${M.use3d?"g3":""}">${M.use3d?`<canvas id="gl"></canvas><div id="lbl">${ids.map(k=>`<div class="fcard c3 ${k===M.myId?"me":""}" data-f="${esc(k)}"><div class="mini"><span class="nm">${esc(cleanPl(s.P[k]).n)}</span><div class="bar hp"><i class="gh"></i><i class="fl"></i></div></div></div>`).join("")}</div>`:sideHtml(s,mine,false)+sideHtml(s,foes,true)}<div id="hurt"></div><div id="subov"></div><div id="ann"></div><div id="cer"></div></div>
+      <div class="row between" style="position:relative;padding:4px 10px;background:#000"><span class="dim small" id="bmsg"></span><div class="row" style="gap:6px">${M.use3d?`<button class="btn sm ghost" id="bcam">시점 · ${G3.CAMN[G3.camMode]}</button>`:""}<button class="btn sm ghost" id="bx">기권</button></div></div>
+      <div id="ctl"><div id="joy"><i id="knob"></i></div>
+        <div id="atk"><button class="btn sk" id="k1">${skBtn(0)}</button><button class="btn sk" id="k2">${skBtn(1)}</button><button class="btn" id="bd">회피</button><button class="btn" id="bg">방어</button><button class="btn" id="bh">강타</button><button class="btn" id="bj">잽</button></div></div><div id="bend"></div>`;
     $("#layer").appendChild(o);
-    o.querySelector("#bx").onclick=()=>confirmBox("기권","경기에서 나가면 패배로 처리돼요. 나갈까요?",()=>{ if(M.st&&M.st.ph==="play"&&M.st.P[M.myId])reward(false,true); leaveRoom() });
+    if(M.use3d){ let ok=false; try{ok=G3.start(o.querySelector("#gl"),s,M.myId)}catch(e){console.warn(e)}
+      if(!ok){ M.use3d=false; const a=o.querySelector("#arena"); a.className=""; a.querySelector("#gl").remove(); a.querySelector("#lbl").remove(); a.insertAdjacentHTML("afterbegin",sideHtml(s,mine,false)+sideHtml(s,foes,true)) }
+      else { const lay=()=>{ if(!document.body.contains(o)||M.built!==s.id)return; for(const k in G3.chars){const c=card(k); if(!c)continue; const a=G3.screen(k,3.75), b=G3.screen(k,0); if(!a||!b||G3.cer){c.style.display="none";continue}
+          const h=Math.max(40,b[1]-a[1]), w=h*.5; c.style.display=""; c.style.left=(a[0]-w/2)+"px"; c.style.top=a[1]+"px"; c.style.width=w+"px"; c.style.height=h+"px"} requestAnimationFrame(lay) }; requestAnimationFrame(lay) } }
+    const bc=o.querySelector("#bcam"); if(bc){ if(!G3.x)bc.remove(); else bc.onclick=()=>{ bc.textContent="시점 · "+G3.cycleCam() } }
+    o.querySelector("#bx").onclick=()=>confirmBox("기권","기권하면 패배로 기록돼요. 나갈까요?",()=>{ const st=M.st; if(st&&st.ph!=="end"&&st.P[M.myId])reward(st,st.P[M.myId],true); leaveRoom() });
     o.querySelector("#arena").addEventListener("pointerdown",e=>{const c=e.target.closest("[data-f]"); if(!c)return; const k=c.dataset.f, st=M.st, m=st.P[M.myId]; if(m&&st.P[k]&&st.P[k].tm!==m.tm&&st.P[k].al){myIn.tg=k;send();renderBattle()}});
     const bind=(id,k)=>o.querySelector(id).addEventListener("pointerdown",e=>{e.preventDefault();act(k)});
-    bind("#bj","j");bind("#bh","h");bind("#bs","s");bind("#bd","d");bind("#bg","gd1");
+    bind("#bj","j");bind("#bh","h");bind("#bd","d");bind("#bg","gd1");bind("#k1","k1");bind("#k2","k2");
     ["pointerup","pointercancel","pointerleave"].forEach(n=>o.querySelector("#bg").addEventListener(n,e=>{e.preventDefault();act("gd0")}));
     o.addEventListener("contextmenu",e=>e.preventDefault());
-    if(s.ph==="play"&&s.left>=89){announce("ROUND 1");setTimeout(()=>{if(M.built===s.id)announce("FIGHT")},850)}
+    const joy=o.querySelector("#joy"), knob=o.querySelector("#knob"); let jp=null; if(!M.use3d)joy.style.visibility="hidden";
+    const jmove=e=>{const r=joy.getBoundingClientRect(); let x=(e.clientX-r.left-r.width/2)/40, y=(e.clientY-r.top-r.height/2)/40; const l=Math.hypot(x,y); if(l>1){x/=l;y/=l} G3.joy={x,y:-y}; knob.style.transform=`translate(${x*32}px,${y*32}px)`};
+    joy.addEventListener("pointerdown",e=>{e.preventDefault();jp=e.pointerId;try{joy.setPointerCapture(jp)}catch(_){} jmove(e)});
+    joy.addEventListener("pointermove",e=>{if(e.pointerId===jp)jmove(e)});
+    ["pointerup","pointercancel"].forEach(n=>joy.addEventListener(n,e=>{if(e.pointerId===jp){jp=null;G3.joy={x:0,y:0};knob.style.transform=""}}));
+    if(s.ph==="play"&&s.rd===1&&s.left>=ROUND_S-1){announce(s.title?"TITLE FIGHT":"ROUND 1");setTimeout(()=>{if(M.built===s.id)announce("FIGHT")},950)}
   }
-  const me=s.P[M.myId], card=k=>o.querySelector(`[data-f="${CSS.escape(k)}"]`);
-  o.querySelector("#bt").textContent=clamp(int(s.left,0),0,99);
+  const me=s.P[M.myId];
+  if((s.rs||0)!==M.lastRs){ M.lastRs=s.rs||0; if(M.use3d)G3.reset(s); announce("ROUND "+s.rd); setTimeout(()=>{if(M.built===s.id&&M.st&&M.st.ph==="play")announce("FIGHT")},950) }
+  o.querySelector("#bt").textContent=s.ph==="break"?"휴식 "+s.left:clamp(int(s.left,0),0,99);
+  o.querySelector("#rd").textContent=s.ph==="end"?"종료":s.rd+"R / "+s.nr+"R";
   const tgId=me?(en=>en.includes(myIn.tg)?myIn.tg:(en.includes(me.tg)?me.tg:en[0]||""))(Object.keys(s.P).filter(k=>s.P[k].al&&s.P[k].tm!==me.tm)):"";
   for(const k in s.P){const p=s.P[k], c=card(k); if(!c)continue; const r=clamp(p.hp/p.mx*100,0,100);
     c.querySelector(".fl").style.width=r+"%"; c.querySelector(".gh").style.width=r+"%"; c.querySelector(".fl").classList.toggle("low",r<30);
     c.classList.toggle("tg",k===tgId&&!!me&&!!me.al);
-    const f=c.querySelector(".ft"); f.classList.toggle("guard",!!p.gd&&!!p.al); f.classList.toggle("charge",!!p.ch&&!!p.al); f.classList.toggle("dodge",!!p.dg&&!!p.al); f.classList.toggle("stun",!!p.sn&&!!p.al); f.classList.toggle("dead",!p.al) }
+    const f=c.querySelector(".ft"); if(f){f.classList.toggle("guard",!!p.gd&&!!p.al); f.classList.toggle("charge",!!(p.ch||p.cs)&&!!p.al); f.classList.toggle("dodge",!!p.dg&&!!p.al); f.classList.toggle("stun",!!p.sn&&!!p.al); f.classList.toggle("dead",!p.al||!!p.dn)} }
   const hud=(n,p)=>{o.querySelector("#hn"+n).textContent=p?cleanPl(p).n:"—"; const r=p?clamp(p.hp/p.mx*100,0,100):0; o.querySelector("#hf"+n).style.width=r+"%"; o.querySelector("#hg"+n).style.width=r+"%"; o.querySelector("#hf"+n).classList.toggle("low",r<30); o.querySelector("#ha"+n).style.width=(p?clamp(p.ga,0,100):0)+"%"};
   hud(1,me); hud(2,s.P[tgId]);
   for(const e of s.ev){ if(e.i<=M.seen)continue; M.seen=e.i;
     const tc=card(e.t), fc=card(e.f), att=s.P[e.f], col=item("fx",att&&att.eq&&att.eq[3])[2];
-    if(fc){const f=fc.querySelector(".ft"), cl=e.k==="s"?"sp":e.k==="h"?"heavy":"jab";f.classList.add(cl);setTimeout(()=>f.classList.remove(cl),e.k==="j"?130:220)}
-    if(tc){const f=tc.querySelector(".ft"); const pop=(t,cls,st)=>{const d=document.createElement("span");d.className="pop "+(cls||"");d.textContent=t;if(st)d.style.color=st;tc.appendChild(d);setTimeout(()=>d.remove(),760)};
-      if(e.k==="m")pop("MISS","","#84848f");
-      else{ f.classList.add("hit");setTimeout(()=>f.classList.remove("hit"),110); pop(String(int(e.d,0)),e.k==="j"?"":"big",col);
-        if(e.gb)pop("GUARD BREAK","tag"); else if(e.it)pop("COUNTER","tag"); else if(e.c)pop(int(e.c,3)+" HIT","tag"); else if(e.k==="s")pop("SUPER","tag");
-        if(e.k!=="j"){const a=o.querySelector("#arena");a.classList.remove("shake");void a.offsetWidth;a.classList.add("shake")} } } }
-  const live=me&&me.al&&s.ph==="play";
-  ["#bj","#bh","#bg","#bd"].forEach(i=>o.querySelector(i).disabled=!live); o.querySelector("#bs").disabled=!(live&&me.ga>=100);
-  o.querySelector("#bg").disabled=!live||!!(me&&me.gb);
-  o.querySelector("#bmsg").textContent=!me?"관전 중":!me.al?"K.O. · 관전 중":me.gb?"가드 브레이크! 방어 불가":me.sn?"경직!":me.ch?"강타 준비…":"상대를 눌러 목표 변경";
-  if(s.ph==="end")renderEnd(o,s);
+    const pop=(el,t,cls,st)=>{ if(!el)return; const d=document.createElement("span");d.className="pop "+(cls||"");d.textContent=t;if(st)d.style.color=st;el.appendChild(d);setTimeout(()=>d.remove(),800)};
+    const anim=e.k==="j"||e.k==="h"||e.k==="sk"||e.k==="td"||e.k==="m"||e.k==="w"||e.k==="f"?(e.a&&SK[e.a]?e.a:e.k==="m"||e.k==="w"||e.k==="f"?(e.a||"j"):e.k):"";
+    if(anim&&M.use3d&&!(e.f===M.myId&&anim==="j"))G3.act(e.f,anim==="sk"?"h":anim);
+    if(M.use3d&&e.k==="td"&&e.a==="s3")G3.takedown(e.f,e.t);
+    if(M.use3d&&e.k==="f"&&e.a==="s3")G3.act(e.t,"spr");
+    if(e.k==="j"||e.k==="h"||e.k==="sk"||e.k==="td"){ const pw=hitPow(e); if(M.use3d)G3.hit(e.t,pw); else if(tc){const f=tc.querySelector(".ft"); if(f){f.classList.add("hit");setTimeout(()=>f.classList.remove("hit"),110)}}
+      pop(tc,String(int(e.d,0)),pw>=3?"big crit":pw>=2?"big":"",col);
+      const lb=e.gb?"GUARD BREAK":e.it?"COUNTER":e.c?int(e.c,3)+" HIT":e.a&&LBL[e.a]?LBL[e.a]:e.bs?"바디샷":""; if(lb)pop(tc,lb,"tag"); if(e.bs&&lb!=="바디샷")pop(fc,"바디샷","tag");
+      if(e.t===M.myId){const h=o.querySelector("#hurt");h.classList.remove("on");void h.offsetWidth;h.classList.add("on")}
+      if(pw>=2&&!M.use3d){const a=o.querySelector("#arena");a.classList.remove("shake");void a.offsetWidth;a.classList.add("shake")} }
+    else if(e.k==="kd"){ announce("KNOCKDOWN","kd"); if(M.use3d){G3.dust(e.t);G3.slow(520)} }
+    else if(e.k==="sub"){ announce(SK[e.a]?SK[e.a].n:"서브미션","sm"); if(M.use3d)G3.shk=.2 }
+    else if(e.k==="tap"){ announce("TAP OUT","kd"); if(M.use3d)G3.slow(900) }
+    else if(e.k==="esc"){ pop(fc,"탈출!","tag") }
+    else if(e.k==="m")pop(tc,"MISS","","#84848f");
+    else if(e.k==="w")pop(fc,"빗나감","","#84848f");
+    else if(e.k==="f")pop(tc,e.a==="s3"?"스프롤!":"디펜스!","tag");
+    else if(e.k==="x"){ if(e.f===M.myId)toast("넘어졌거나 경직된 상대에게만 들어가요. 테이크다운을 먼저 써요") }
+    else if(e.k==="rend")announce("ROUND "+s.rd+" 종료");
+  }
+  renderSub(o,s);
+  const live=me&&me.al&&s.ph==="play"&&!me.dn, inSub=s.sub&&(s.sub.a===M.myId||s.sub.d===M.myId);
+  ["#bj","#bh","#bg","#bd"].forEach(i=>o.querySelector(i).disabled=!live||inSub);
+  o.querySelector("#bg").disabled=!live||inSub||!!(me&&me.gb);
+  ["k1","k2"].forEach((k,i)=>{const id=P.eqs.a[i], b=o.querySelector("#"+k); b.disabled=!live||inSub||!id; b.classList.toggle("rdy",!!(id&&me&&me.ga>=SK[id].cost&&live))});
+  o.querySelector("#bmsg").textContent=!me?"관전 중":s.ph==="break"?"라운드 사이 휴식":!me.al?"K.O. · 관전 중":me.dn?"다운! 일어나는 중":inSub?"서브미션 공방":me.gb?"가드 브레이크! 방어 불가":me.sn?"경직!":me.ch||me.cs?"준비 중…":"상대를 눌러 목표 변경";
+  if(s.ph==="end"&&M.cerDone!==s.id){ M.cerDone=s.id; startCeremony(o,s) }
 }
-function reward(win,quit,place,n){
-  const s=M.st; if(!s||P.last===s.id)return null; P.last=s.id;
-  const humans=Object.values(s.P).filter(p=>!p.bot).length, ranked=humans>=2; let c,r,x;
-  if(!ranked){c=win?15:5;r=0;x=win?20:10}
-  else if(s.md==="1v1"){c=win?50:10;r=win?20:-15;x=win?40:15}
-  else if(s.md==="2v2"){c=win?40:10;r=win?15:-10;x=win?40:15}
-  else {c=place===1?30*n:place===2?30:10;r=place===1?25:place===2?5:-10;x=place===1?40:15}
-  if(quit){c=0;x=0;if(ranked)r=-15}
-  P.coins+=c; P.rating=Math.max(0,P.rating+r); if(ranked){win?P.wins++:P.losses++} addXp(x); save();
-  return {c,r,x,ranked};
+function methText(s){ if(!s.meth)return ""; const st=["KO","TKO","SUB"].includes(s.meth);
+  if(st)return METH[s.meth]+(s.meth==="SUB"&&SK[s.subk]?" ("+SK[s.subk].n+")":"")+" · "+s.mr+"R "+(s.mt||"");
+  const w=s.win==="B"?1:0; return METH[s.meth]+" · "+(s.jd||[]).map(j=>j[w]+"-"+j[1-w]).join(", ") }
+function startCeremony(o,s){
+  const me=s.P[M.myId], wins=Object.keys(s.P).filter(k=>s.P[k].tm===s.win), lose=Object.keys(s.P).filter(k=>s.P[k].tm!==s.win);
+  const rw=me?reward(s,me,false):null, wn=wins.map(k=>cleanPl(s.P[k]).n).join(" · ");
+  const champ=s.title&&s.win&&!s.bot, wasChamp=champ&&wins.some(k=>s.P[k].u===LADDER[0]);
+  if(M.use3d&&s.win)G3.ceremony(wins,lose,s.meth,champ);
+  if(["KO","TKO","SUB"].includes(s.meth)&&M.use3d)G3.slow(1100);
+  const c=o.querySelector("#cer");
+  setTimeout(()=>{ if(!document.body.contains(c))return; c.className="on";
+    c.innerHTML=s.win?`${champ?`<span class="gtag" style="--gc:var(--gold)">${wasChamp?"AND STILL":"AND NEW"}</span>`:""}<p class="w1">WINNER</p><p class="w2">${esc(wn)}</p>${champ?`<p class="w3">CHAMPION</p>`:""}<p class="w4">${esc(methText(s))}</p><p class="dim small">눌러서 넘기기</p>`
+      :`<p class="w1">DRAW</p><p class="w4">${esc(methText(s))}</p><p class="dim small">눌러서 넘기기</p>`;
+    const go=()=>{ c.onclick=null; clearTimeout(G3.cerT); c.className=""; c.innerHTML=""; renderEnd(o,s,rw) };
+    c.onclick=go; G3.cerT=setTimeout(go,4200) }, ["KO","TKO","SUB"].includes(s.meth)?1200:500);
 }
-function renderEnd(o,s){
+function reward(s,me,quit){
+  if(!s||P.last===s.id)return null; P.last=s.id;
+  const win=!quit&&me.tm===s.win, draw=!quit&&s.meth==="DRAW", fin=["KO","TKO","SUB"].includes(s.meth), botM=!!s.bot, pro=!botM&&s.md==="1v1";
+  let c,x,b=0;
+  if(botM){ c=draw?8:win?(fin?30:20):5; x=draw?12:win?25:10; b=quit?-20:draw?0:win?(fin?40:30):-15; const old=tierOf(P.bp); P.bp=Math.max(0,(P.bp||0)+b); const nw=tierOf(P.bp); if(nw>old)toast("티어 승급! "+TIERS[nw][0]); else if(nw<old)toast("티어 강등 · "+TIERS[nw][0]) }
+  else { c=draw?20:win?(fin?80:60):15; x=draw?25:win?50:20; if(s.title&&win)c+=150; if(quit){c=0;x=0}
+    if(draw)P.draws=(P.draws||0)+1; else if(win)P.wins++; else P.losses++ }
+  P.coins+=c; addXp(x); save(); return {c,x,b,botM,pro,win,draw} }
+function renderEnd(o,s,rw){
   const box=o.querySelector("#bend"); if(box.dataset.id===s.id)return; box.dataset.id=s.id;
-  const me=s.P[M.myId], n=Object.keys(s.P).length; let win=false,place=0,rw=null;
-  if(me){ win=me.tm===s.win; place=n-s.ord.indexOf(M.myId); if(s.md!=="ffa")place=win?1:2; rw=reward(win,false,place,n) }
-  const wn=Object.values(s.P).filter(p=>p.tm===s.win).map(p=>cleanPl(p).n).join(", ");
-  announce(s.ko?"K.O.":"TIME UP");
-  setTimeout(()=>{ if(!document.body.contains(box))return; const m=document.createElement("div");m.className="modal";
-  m.innerHTML=`<div class="card" style="text-align:center;align-items:center"><div class="num" style="font-size:64px;line-height:1;font-style:italic;color:${win?"var(--gold)":"var(--ink)"}">${!me?"END":win?"YOU WIN":s.md==="ffa"?place+"위":"YOU LOSE"}</div>
-   <p style="font-weight:900">승자 · ${esc(wn||"없음")}</p>
-   ${rw?`<div class="row wrap" style="justify-content:center">${coin("+"+rw.c)}<span class="pill">EXP <span class="num">+${rw.x}</span></span>${rw.ranked?`<span class="pill">RP <span class="num">${rw.r>=0?"+":""}${rw.r}</span></span>`:`<span class="pill">연습 경기</span>`}</div>`:""}
-   <p class="dim small">상금은 게임 속 코인이에요.</p>
-   ${M.host?`<button class="btn big red" id="again">REMATCH</button>`:`<p class="dim small">방장이 다시 시작하면 대기실로 돌아가요.</p>`}
+  const me=s.P[M.myId], win=me&&me.tm===s.win, draw=s.meth==="DRAW";
+  const m=document.createElement("div");m.className="modal";
+  m.innerHTML=`<div class="card" style="text-align:center;align-items:center"><div class="num" style="font-size:58px;line-height:1;font-style:italic;color:${win?"var(--gold)":"var(--ink)"}">${!me?"END":draw?"DRAW":win?"YOU WIN":"YOU LOSE"}</div>
+   <p style="font-weight:900">${esc(methText(s))}</p>
+   ${s.sc&&s.sc.length?`<div class="sc">${s.sc.map((r,i)=>`<span>${i+1}R <b class="num">${r[0]}-${r[1]}</b></span>`).join("")}</div>`:""}
+   ${rw?`<div class="row wrap" style="justify-content:center">${coin("+"+rw.c)}<span class="pill">EXP <span class="num">+${rw.x}</span></span>${rw.botM?`<span class="pill">티어 <span class="num">${rw.b>=0?"+":""}${rw.b}</span></span>${tierPill(P.bp)}`:`<span class="pill">전적 ${recStr(P)}</span>`}</div>`:""}
+   ${rw&&rw.pro?`<p class="small">${s.title?"타이틀전 · ":""}챔피언 랭킹은 잠시 뒤 반영돼요</p>`:""}
+   ${M.host?`<button class="btn big red" id="again">${s.bot?"다시 대결":"REMATCH"}</button>`:`<p class="dim small">방장이 다시 시작하면 대기실로 돌아가요.</p>`}
    <button class="btn ghost" id="out">나가기</button></div>`;
   box.appendChild(m);
   if(m.querySelector("#again"))m.querySelector("#again").onclick=()=>{ M.st=null; M.built=""; if(M.room){M.room.presence({g:null}).catch(()=>{});renderWait()} else {$("#battle").remove();M.bots=[mkBot(0)];startMatch()} lobbyPresence() };
-  m.querySelector("#out").onclick=leaveRoom; },950);
+  m.querySelector("#out").onclick=leaveRoom;
 }
 
 /* ---------- Firebase 방 연결 ---------- */
+const DYNK=["hp","ga","gd","ch","dg","sn","gb","al","tg","dn","kd","sl","cs","px","pz","tp"];
 function fbRoom(code,create){
   const rr=F.ref(fdb,"rooms/"+code), me=F.ref(fdb,"rooms/"+code+"/players/"+uid);
   let R=null, subs=[], off=null, giSent="", cache=null, gone=false;
   const build=()=>{ const ps=R&&R.players||{}; let g=null;
-    if(R&&R.g&&R.gi&&R.gi.id===R.g.id&&R.g.P&&R.gi.P){ g=Object.assign({},R.g,{ev:R.g.ev||[],ord:R.g.ord||[],P:{}}); for(const k in R.gi.P)g.P[k]=Object.assign({},R.gi.P[k],R.g.P[k]||{}) }
-    cache=Object.keys(ps).filter(k=>ps[k]&&ps[k].pl).map(k=>({peer:k,isMe:k===uid,sameTab:k===uid,kind:"viewer",presence:Object.assign({pl:ps[k].pl,in:ps[k].in||{}},R.host===k?{h:1,md:R.mode,bots:R.bots||[],g}:{})})) };
+    if(R&&R.g&&R.gi&&R.gi.id===R.g.id&&R.g.P&&R.gi.P){ g=Object.assign({},R.g,{ev:R.g.ev?Object.values(R.g.ev):[],ord:R.g.ord?Object.values(R.g.ord):[],sc:R.g.sc?Object.values(R.g.sc):[],jd:R.g.jd?Object.values(R.g.jd):[[0,0],[0,0],[0,0]],sub:R.g.sub||null,P:{}});
+      for(const k in R.gi.P)g.P[k]=Object.assign({},R.gi.P[k],R.g.P[k]||{}) }
+    cache=Object.keys(ps).filter(k=>ps[k]&&ps[k].pl).map(k=>({peer:k,isMe:k===uid,sameTab:k===uid,kind:"viewer",presence:Object.assign({pl:ps[k].pl,in:ps[k].in||{}},R.host===k?{h:1,md:R.mode,bots:R.bots?Object.values(R.bots):[],g}:{})})) };
   const api={ name:code, peers:()=>cache||[],
     presence(p){ if(gone)return Promise.resolve(); const u={};
       if("pl" in p)u["players/"+uid+"/pl"]=p.pl; if("in" in p)u["players/"+uid+"/in"]=p.in;
       if(p.h===1)u.host=uid; if("md" in p)u.mode=p.md; if("bots" in p)u.bots=p.bots&&p.bots.length?p.bots:null;
-      if("g" in p){ const g=p.g; if(!g)u.g=null; else { const dyn={id:g.id,ph:g.ph,md:g.md,left:g.left,ev:g.ev||[],win:g.win||"",ord:g.ord||[],seq:g.seq||0,ko:g.ko||0,P:{}}, st={id:g.id,P:{}};
-        for(const k in g.P){const q=g.P[k]; dyn.P[k]={hp:q.hp,ga:q.ga,gd:q.gd||0,ch:q.ch||0,dg:q.dg||0,sn:q.sn||0,gb:q.gb||0,al:q.al,tg:q.tg||""}; st.P[k]={n:q.n,u:q.u||"",tm:q.tm,mx:q.mx,st:q.st,eq:q.eq,em:q.em,bot:q.bot||0}}
-        u.g=dyn; if(giSent!==g.id){u.gi=st;giSent=g.id} } }
+      if("g" in p){ const g=p.g; if(!g)u.g=null; else { const dyn=Object.assign({},g,{P:{}}), st={id:g.id,P:{}};
+        for(const k in g.P){const q=g.P[k]; dyn.P[k]={}; for(const f of DYNK)if(q[f]!==undefined&&q[f]!==null)dyn.P[k][f]=q[f];
+          st.P[k]={n:q.n,u:q.u||"",tm:q.tm,mx:q.mx,st:q.st,eq:q.eq,em:q.em,bot:q.bot||0,bt:q.bt||0,sx:q.sx||0,sz:q.sz||0,sk:q.sk||null}}
+        u.g=JSON.parse(JSON.stringify(dyn)); if(giSent!==g.id){u.gi=JSON.parse(JSON.stringify(st));giSent=g.id} } }
       return F.update(rr,u) },
     onPeers(fn){ subs.push(fn); if(cache)Promise.resolve().then(fn); return ()=>{subs=subs.filter(x=>x!==fn)} },
     async leave(){ gone=true; if(off)off(); subs=[]; try{await F.onDisconnect(me).cancel()}catch(e){}
@@ -750,28 +1621,38 @@ function fbRoom(code,create){
 }
 
 /* ---------- 시작 ---------- */
+let AU=null, FA=null, AUTH="";
+async function enterAs(user,nick){
+  uid=user.uid;
+  const [ps,fs]=await Promise.all([F.get(F.ref(fdb,"players/"+uid)),F.get(F.ref(fdb,"faces/"+uid))]);
+  cloud=true;
+  if(ps.exists()){ P=clean(ps.val()); P.face=okFace(fs.val()); faceSaved=P.face }
+  else { P=blank(); if(nick)P.nick=nick }
+  if(user.isAnonymous){ if(!P.made){ await FA.signOut(AU); uid=null; cloud=false; AUTH="out"; booted=true; render(); return } AUTH="anon" } else AUTH="in";
+  try{localStorage.setItem(lsKey(),JSON.stringify(P))}catch(e){}
+  const on=F.ref(fdb,"online/"+uid);
+  F.onValue(F.ref(fdb,".info/connected"),s=>{ if(s.val()===true){F.onDisconnect(on).remove().catch(()=>{});F.set(on,true).catch(()=>{})} });
+  const relobby=()=>{ if(booted&&P&&P.made&&tab==="fight"&&!M.on)renderLobby() };
+  F.onValue(F.ref(fdb,".info/serverTimeOffset"),s=>{srvOff=Number(s.val())||0});
+  F.onValue(F.ref(fdb,"online"),s=>{ONLINE=s.val()||{};onlineN=Object.keys(ONLINE).length;relobby()},()=>{});
+  F.onValue(F.ref(fdb,"lobby"),s=>{LOBBY=s.val()||{};relobby()},()=>{});
+  F.onValue(F.ref(fdb,"ladder"),s=>{const v=s.val(); LADDER=v&&v.o?Object.values(v.o).filter(x=>typeof x==="string"):[]; rankAt=0;
+    if(booted&&P&&P.made&&!M.on&&(tab==="rank"||tab==="home")&&!document.activeElement.matches("input"))render()},()=>{});
+  room=true; startSocial(); booted=true; render();
+}
 async function boot(){
-  try{const l=JSON.parse(localStorage.getItem(LS)); if(l)P=clean(l)}catch(e){}
   render();
   try{
     let A,U,D;
     if(window.__FB){A=window.__FB.A;U=window.__FB.U;D=window.__FB.D}
     else{ const b="https://www.gstatic.com/firebasejs/"+FBV+"/";
       [A,U,D]=await Promise.race([Promise.all([import(b+"firebase-app.js"),import(b+"firebase-auth.js"),import(b+"firebase-database.js")]),new Promise((_,j)=>setTimeout(()=>j(new Error("timeout")),12000))]) }
-    const app=A.initializeApp(FB_CFG), cred=await U.signInAnonymously(U.getAuth(app));
-    uid=cred.user.uid; F=D; fdb=D.getDatabase(app);
-    const [ps,fs]=await Promise.all([F.get(F.ref(fdb,"players/"+uid)),F.get(F.ref(fdb,"faces/"+uid))]);
-    cloud=true;
-    if(ps.exists()){ P=clean(ps.val()); P.face=okFace(fs.val()); faceSaved=P.face; try{localStorage.setItem(LS,JSON.stringify(P))}catch(e){} }
-    else if(P&&P.made){dirty=true;pump()}
-    const on=F.ref(fdb,"online/"+uid);
-    F.onValue(F.ref(fdb,".info/connected"),s=>{ if(s.val()===true){F.onDisconnect(on).remove().catch(()=>{});F.set(on,true).catch(()=>{})} });
-    const relobby=()=>{ if(booted&&P&&P.made&&tab==="fight"&&!M.on)renderLobby() };
-    F.onValue(F.ref(fdb,"online"),s=>{onlineN=s.exists()?Object.keys(s.val()).length:0;relobby()},()=>{});
-    F.onValue(F.ref(fdb,"lobby"),s=>{LOBBY=s.val()||{};relobby()},()=>{});
-    room=true;
-  }catch(e){ console.warn(e); netErr=String(e&&(e.code||e.message)||e).slice(0,60) }
-  booted=true; render();
+    const app=A.initializeApp(FB_CFG); AU=U.getAuth(app); FA=U; F=D; fdb=D.getDatabase(app);
+    const user=await new Promise(r=>{const off=U.onAuthStateChanged(AU,u=>{off();r(u)})});
+    if(!user){ AUTH="out"; booted=true; render(); return }
+    await enterAs(user,"");
+  }catch(e){ console.warn(e); netErr=String(e&&(e.code||e.message)||e).slice(0,60); AUTH="local"; cloud=false;
+    try{const l=JSON.parse(localStorage.getItem(LS)); if(l)P=clean(l)}catch(_){} booted=true; render() }
 }
 boot();
 </script>
